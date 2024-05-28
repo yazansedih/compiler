@@ -1,11 +1,16 @@
 #include "fd.h"
 
-FileDescriptor::FileDescriptor(char *FileName) {
-    if (FileName == nullptr) {
+FileDescriptor::FileDescriptor(char *FileName)
+{
+    if (FileName == nullptr)
+    {
         fp = stdin;
-    } else {
+    }
+    else
+    {
         fp = fopen(FileName, "r");
-        if (!fp) {
+        if (!fp)
+        {
             perror(FileName);
             exit(EXIT_FAILURE);
         }
@@ -19,77 +24,99 @@ FileDescriptor::FileDescriptor(char *FileName) {
     flag2 = UNSET;
 }
 
-FileDescriptor::~FileDescriptor() {
-    if (fp != stdin) {
+FileDescriptor::~FileDescriptor()
+{
+    if (fp != stdin)
+    {
         fclose(fp);
     }
     delete[] buffer;
-    if (file) {
+    if (file)
+    {
         free(file);
     }
 }
 
 FileDescriptor::FileDescriptor() : FileDescriptor(nullptr) {}
 
-void FileDescriptor::Close() {
-    if (fp != stdin) {
+void FileDescriptor::Close()
+{
+    if (fp != stdin)
+    {
         fclose(fp);
     }
 }
 
-char FileDescriptor::GetChar() {
-    if (flag == SET) {
+char FileDescriptor::GetChar()
+{
+    if (flag == SET)
+    {
         flag = UNSET;
         return buffer[char_number++];
     }
     char c = fgetc(fp);
-    if (c == '\n') {
+    if (c == '\n')
+    {
         line_number++;
         char_number = 0;
-    } else {
+    }
+    else
+    {
         char_number++;
     }
     return c;
 }
 
-void FileDescriptor::UngetChar(char c) {
-    if (flag == SET) {
+void FileDescriptor::UngetChar(char c)
+{
+    if (flag == SET)
+    {
         flag2 = SET;
-    } else {
+    }
+    else
+    {
         flag = SET;
         buffer[char_number - 1] = c;
         char_number--;
-        if (c == '\n') {
+        if (c == '\n')
+        {
             line_number--;
         }
     }
 }
 
-void FileDescriptor::ReportError(const char *msg) {
+void FileDescriptor::ReportError(char *msg)
+{
     printf("%s\n", buffer);
-    for (int i = 0; i < char_number; i++) {
+    for (int i = 0; i < char_number; i++)
+    {
         printf(" ");
     }
     printf("^\n");
     printf("Error: \"%s\" on line %d\n", msg, line_number);
 }
 
-char *FileDescriptor::GetFileName() {
+char *FileDescriptor::GetFileName()
+{
     return file;
 }
 
-bool FileDescriptor::IsOpen() {
+bool FileDescriptor::IsOpen()
+{
     return fp != nullptr;
 }
 
-char *FileDescriptor::GetCurrLine() {
+char *FileDescriptor::GetCurrLine()
+{
     return buffer;
 }
 
-int FileDescriptor::GetLineNum() {
+int FileDescriptor::GetLineNum()
+{
     return line_number;
 }
 
-int FileDescriptor::GetCharNum() {
+int FileDescriptor::GetCharNum()
+{
     return char_number;
 }
