@@ -8,21 +8,27 @@
 
 using namespace std;
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     FileDescriptor *fd;
-    if (argc > 1) {
+    if (argc > 1)
+    {
         fd = new FileDescriptor(argv[1]);
-        if (!fd->IsOpen()) {
+        if (!fd->IsOpen())
+        {
             fprintf(stderr, "Failed to open file: %s\n", argv[1]);
             return 1;
         }
-    } else {
+    }
+    else
+    {
         fd = new FileDescriptor();
     }
 
     SCANNER scanner(fd);
     TOKEN *token;
-    while ((token = scanner.Scan())->type != lx_eof) {
+    while ((token = scanner.Scan())->type != lx_eof)
+    {
         // Process the token
         printf("Token type: %d\n", token->type);
         delete token;

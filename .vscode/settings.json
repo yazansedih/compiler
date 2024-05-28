@@ -3,6 +3,7 @@
     "*.embeddedhtml": "html",
     "cstring": "cpp",
     "cstdlib": "cpp",
-    "cstdio": "cpp"
+    "cstdio": "cpp",
+    "iostream": "cpp"
   }
 }
