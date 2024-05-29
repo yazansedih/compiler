@@ -16,6 +16,7 @@ int main(int argc, char **argv)
         fd = new FileDescriptor(argv[1]);
         if (!fd->IsOpen())
         {
+
             fprintf(stderr, "Failed to open file: %s\n", argv[1]);
             return 1;
         }
