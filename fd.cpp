@@ -1,99 +1,63 @@
 #include "fd.h"
 
-FileDescriptor::FileDescriptor(char *FileName)
+void FileDescriptor::doubleBufferSize()
 {
-    if (FileName == nullptr)
+    buf_size *= 2;
+    buffer = (char *)realloc(buffer, buf_size);
+    if (!buffer)
     {
-        fp = stdin;
+        perror("Failed to reallocate buffer");
+        exit(EXIT_FAILURE);
     }
-    else
+}
+
+FileDescriptor::FileDescriptor(char *FileName) : line_number(0), char_number(0), flag(UNSET), buf_size(BUFFER_SIZE)
+{
+    buffer = (char *)malloc(buf_size);
+    if (!buffer)
     {
+        perror("Failed to allocate buffer");
+        exit(EXIT_FAILURE);
+    }
+
+    if (FileName)
+    {
+        file = strdup(FileName);
         fp = fopen(FileName, "r");
         if (!fp)
         {
-            perror(FileName);
+            perror("Failed to open file");
+            free(buffer);
+            free(file);
             exit(EXIT_FAILURE);
         }
     }
-    line_number = 1;
-    char_number = 0;
-    flag = UNSET;
-    buf_size = BUFFER_SIZE;
-    buffer = new char[buf_size];
-    file = FileName ? strdup(FileName) : nullptr;
-    flag2 = UNSET;
+    else
+    {
+        file = nullptr;
+        fp = stdin;
+    }
 }
 
 FileDescriptor::~FileDescriptor()
 {
-    if (fp != stdin)
+    if (fp && fp != stdin)
     {
         fclose(fp);
     }
-    delete[] buffer;
-    if (file)
-    {
-        free(file);
-    }
+    free(buffer);
+    free(file);
 }
 
 FileDescriptor::FileDescriptor() : FileDescriptor(nullptr) {}
 
 void FileDescriptor::Close()
 {
-    if (fp != stdin)
+    if (fp && fp != stdin)
     {
         fclose(fp);
+        fp = nullptr;
     }
-}
-
-char FileDescriptor::GetChar()
-{
-    if (flag == SET)
-    {
-        flag = UNSET;
-        return buffer[char_number++];
-    }
-    char c = fgetc(fp);
-    if (c == '\n')
-    {
-        line_number++;
-        char_number = 0;
-    }
-    else
-    {
-        char_number++;
-    }
-    return c;
-}
-
-void FileDescriptor::UngetChar(char c)
-{
-    if (flag == SET)
-    {
-        flag2 = SET;
-    }
-    else
-    {
-        flag = SET;
-        buffer[char_number - 1] = c;
-        char_number--;
-        if (c == '\n')
-        {
-            line_number--;
-        }
-    }
-}
-
-void FileDescriptor::ReportError(char *msg)
-{
-    printf("%s\n", buffer);
-    for (int i = 0; i < char_number; i++)
-    {
-        printf(" ");
-    }
-    printf("^\n");
-    printf("Error: \"%s\" on line %d\n", msg, line_number);
 }
 
 char *FileDescriptor::GetFileName()
@@ -108,6 +72,25 @@ bool FileDescriptor::IsOpen()
 
 char *FileDescriptor::GetCurrLine()
 {
+    if (!fp || feof(fp))
+        return nullptr;
+
+    if (fgets(buffer, buf_size, fp) == nullptr)
+    {
+        return nullptr;
+    }
+
+    while (buffer[strlen(buffer) - 1] != '\n' && !feof(fp))
+    {
+        doubleBufferSize();
+        if (fgets(buffer + strlen(buffer), buf_size - strlen(buffer), fp) == nullptr)
+        {
+            return buffer;
+        }
+    }
+
+    line_number++;
+    char_number = 0;
     return buffer;
 }
 
@@ -119,4 +102,46 @@ int FileDescriptor::GetLineNum()
 int FileDescriptor::GetCharNum()
 {
     return char_number;
+}
+
+char FileDescriptor::GetChar()
+{
+    if (fp == nullptr || feof(fp))
+        return EOF;
+
+    char c = fgetc(fp);
+    if (c == '\n')
+    {
+        line_number++;
+        char_number = 0;
+    }
+    else
+    {
+        char_number++;
+    }
+
+    return c;
+}
+
+void FileDescriptor::ReportError(const char *msg)
+{
+    std::cerr << "Error: " << msg << " at line " << line_number << ", char " << char_number << std::endl;
+}
+
+void FileDescriptor::UngetChar(char c)
+{
+    if (flag == SET)
+        return;
+    if (c != EOF && ungetc(c, fp) != EOF)
+    {
+        if (c == '\n')
+        {
+            line_number--;
+        }
+        else
+        {
+            char_number--;
+        }
+        flag = SET;
+    }
 }

@@ -1,10 +1,52 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "fd.h"
 #include "scanner.h"
 
 /* To store tokens */
 TOKEN *token;
+FileDescriptor *fd;
+
+/* Function to check if an identifier is a keyword */
+int check_keyword(const char *str, TOKEN *token) {
+    if (strcasecmp(str, "program") == 0) { token->type = kw_program; return 1; }
+    if (strcasecmp(str, "var") == 0) { token->type = kw_var; return 1; }
+    if (strcasecmp(str, "constant") == 0) { token->type = kw_constant; return 1; }
+    if (strcasecmp(str, "integer") == 0) { token->type = kw_integer; return 1; }
+    if (strcasecmp(str, "boolean") == 0) { token->type = kw_boolean; return 1; }
+    if (strcasecmp(str, "string") == 0) { token->type = kw_string; return 1; }
+    if (strcasecmp(str, "float") == 0) { token->type = kw_float; return 1; }
+    if (strcasecmp(str, "true") == 0) { token->type = kw_true; return 1; }
+    if (strcasecmp(str, "false") == 0) { token->type = kw_false; return 1; }
+    if (strcasecmp(str, "if") == 0) { token->type = kw_if; return 1; }
+    if (strcasecmp(str, "fi") == 0) { token->type = kw_fi; return 1; }
+    if (strcasecmp(str, "then") == 0) { token->type = kw_then; return 1; }
+    if (strcasecmp(str, "else") == 0) { token->type = kw_else; return 1; }
+    if (strcasecmp(str, "while") == 0) { token->type = kw_while; return 1; }
+    if (strcasecmp(str, "do") == 0) { token->type = kw_do; return 1; }
+    if (strcasecmp(str, "od") == 0) { token->type = kw_od; return 1; }
+    if (strcasecmp(str, "and") == 0) { token->type = kw_and; return 1; }
+    if (strcasecmp(str, "or") == 0) { token->type = kw_or; return 1; }
+    if (strcasecmp(str, "read") == 0) { token->type = kw_read; return 1; }
+    if (strcasecmp(str, "write") == 0) { token->type = kw_write; return 1; }
+    if (strcasecmp(str, "for") == 0) { token->type = kw_for; return 1; }
+    if (strcasecmp(str, "from") == 0) { token->type = kw_from; return 1; }
+    if (strcasecmp(str, "to") == 0) { token->type = kw_to; return 1; }
+    if (strcasecmp(str, "by") == 0) { token->type = kw_by; return 1; }
+    if (strcasecmp(str, "function") == 0) { token->type = kw_function; return 1; }
+    if (strcasecmp(str, "procedure") == 0) { token->type = kw_procedure; return 1; }
+    if (strcasecmp(str, "return") == 0) { token->type = kw_return; return 1; }
+    if (strcasecmp(str, "not") == 0) { token->type = kw_not; return 1; }
+    if (strcasecmp(str, "begin") == 0) { token->type = kw_begin; return 1; }
+    if (strcasecmp(str, "end") == 0) { token->type = kw_end; return 1; }
+    return 0; // Not a keyword
+}
+
+void yyerror(const char *s) {
+    fd->ReportError((char *)s);
+}
 %}
 
 DIGIT       [0-9]
@@ -15,7 +57,7 @@ COMMENT     "##"[^\n]*
 
 %%
 
-{COMMENT}      ; /* Skip comments */
+{COMMENT}      { /* Skip comments */ }
 {ID}           {
                     token = new TOKEN();
                     if (check_keyword(yytext, token)) {
@@ -49,36 +91,6 @@ COMMENT     "##"[^\n]*
                     printf("A string: %s\n", token->str_ptr);
                     return token->type;
                 }
-"program"      { return kw_program; }
-"var"          { return kw_var; }
-"constant"     { return kw_constant; }
-"integer"      { return kw_integer; }
-"boolean"      { return kw_boolean; }
-"string"       { return kw_string; }
-"float"        { return kw_float; }
-"true"         { return kw_true; }
-"false"        { return kw_false; }
-"if"           { return kw_if; }
-"fi"           { return kw_fi; }
-"then"         { return kw_then; }
-"else"         { return kw_else; }
-"while"        { return kw_while; }
-"do"           { return kw_do; }
-"od"           { return kw_od; }
-"and"          { return kw_and; }
-"or"           { return kw_or; }
-"read"         { return kw_read; }
-"write"        { return kw_write; }
-"for"          { return kw_for; }
-"from"         { return kw_from; }
-"to"           { return kw_to; }
-"by"           { return kw_by; }
-"function"     { return kw_function; }
-"procedure"    { return kw_procedure; }
-"return"       { return kw_return; }
-"not"          { return kw_not; }
-"begin"        { return kw_begin; }
-"end"          { return kw_end; }
 
 "+"            { return lx_plus; }
 "-"            { return lx_minus; }
@@ -94,8 +106,8 @@ COMMENT     "##"[^\n]*
 ")"            { return lx_rparen; }
 "["            { return lx_lbracket; }
 "]"            { return lx_rbracket; }
-"{"            { return lx_lbracket; }
-"}"            { return lx_rbracket; }
+"{"            { return lx_lbrace; }
+"}"            { return lx_rbrace; }
 ":"            { return lx_colon; }
 "."            { return lx_dot; }
 ";"            { return lx_semicolon; }
@@ -104,7 +116,7 @@ COMMENT     "##"[^\n]*
 
 [ \t\n]+       ; /* Skip whitespace */
 
-.              { printf("Unrecognized character: %s\n", yytext); }
+.              { yyerror("Unrecognized character"); }
 
 %%
 
@@ -114,12 +126,22 @@ int yywrap() {
 
 int main(int argc, char **argv) {
     if (argc > 1) {
-        yyin = fopen(argv[1], "r");
-        if (!yyin) {
-            perror(argv[1]);
-            return 1;
-        }
+        fd = new FileDescriptor(argv[1]);
+    } else {
+        fd = new FileDescriptor();
     }
-    yylex();
+
+    if (!fd->IsOpen()) {
+        perror("Failed to open input");
+        return 1;
+    }
+
+    yyin = fdopen(fileno(fd->fp), "r");
+
+    while (yylex() != 0) {
+        // Continue lexing until EOF
+    }
+
+    delete fd;
     return 0;
 }

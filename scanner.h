@@ -1,17 +1,38 @@
-#ifndef __SCANNER__H
-#define __SCANNER__H
+#ifndef SCANNER_H
+#define SCANNER_H
 
+#include <string>
+#include <unordered_map>
 #include "fd.h"
 
-// Token types enumeration
+/* Token types */
 typedef enum
 {
-    /* Literals */
     lx_identifier,
+    lx_float,
     lx_integer,
     lx_string,
-    lx_float,
-    /* Keywords */
+    lx_plus,
+    lx_minus,
+    lx_star,
+    lx_slash,
+    lx_eq,
+    lx_neq,
+    lx_lt,
+    lx_le,
+    lx_gt,
+    lx_ge,
+    lx_lparen,
+    lx_rparen,
+    lx_lbracket,
+    lx_rbracket,
+    lx_lbrace,
+    lx_rbrace,
+    lx_colon,
+    lx_dot,
+    lx_semicolon,
+    lx_comma,
+    lx_colon_eq,
     kw_program,
     kw_var,
     kw_constant,
@@ -42,60 +63,36 @@ typedef enum
     kw_not,
     kw_begin,
     kw_end,
-    /* Operators */
-    lx_lparen,
-    lx_rparen,
-    lx_lbracket,
-    lx_rbracket,
-    lx_colon,
-    lx_dot,
-    lx_semicolon,
-    lx_comma,
-    lx_colon_eq,
-    lx_plus,
-    lx_minus,
-    lx_star,
-    lx_slash,
-    lx_eq,
-    lx_neq,
-    lx_lt,
-    lx_le,
-    lx_gt,
-    lx_ge,
-    lx_eof
-} LEXEME_TYPE;
+    END_OF_FILE,
+    UNKNOWN,
+    COMMENT,
+    INTEGER_LITERAL,
+    STRING_LITERAL,
+    OPERATOR,
+    KEYWORD,
+    IDENTIFIER
+} TokenType;
 
-// Definition of TOKEN structure
-struct TOKEN
+/* Token structure */
+typedef struct
 {
-    LEXEME_TYPE type;
-    int value;         // Used for integers
-    float float_value; // Used for floats
-    char *str_ptr;     // Points to strings or Identifiers
-};
+    TokenType type;
+    std::string str_ptr;
+    int value;
+    double float_value;
+} TOKEN;
 
-class SCANNER
+class Scanner
 {
 private:
-    FileDescriptor *Fd;
-
-    // define your functions...
-    void skip_comments();
-    bool check_keyword(const char *str, TOKEN *token);
-    TOKEN *get_id();
-    TOKEN *get_string();
-    TOKEN *get_int(); // Handles integers and floats
+    FileDescriptor *fd;
+    std::unordered_map<std::string, TokenType> keywords;
+    void initKeywords();
 
 public:
-    SCANNER();
-    SCANNER(FileDescriptor *fd) { Fd = fd; /* Initialize other members if needed */ }
-    TOKEN *Scan();
-    // Additional helper methods can be declared here
+    Scanner(FileDescriptor *fd);
+    TOKEN *scan();
+    TOKEN *getNextToken();
 };
 
-// The keyword list and type list should be in the .cpp file, not in this header file
-extern int keys; /* number of keywords */
-extern const char *keyword[];
-extern const LEXEME_TYPE key_type[];
-
-#endif // __SCANNER__H
+#endif /* SCANNER_H */
