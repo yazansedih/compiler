@@ -1,342 +1,165 @@
 #include "scanner.h"
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
 #include <cctype>
+#include <cstring>
+#include <iostream>
 
-int keys = 32; /* number of keywords */
-const char *keyword[] = {
-    "and", "begin", "boolean", "by", "constant", "do", "else", "end", "false", "fi",
-    "float", "for", "from", "function", "if", "integer", "not", "od", "or", "procedure",
-    "program", "read", "return", "string", "then", "to", "true", "var", "while", "write"};
-
-const LEXEME_TYPE key_type[] = {
-    kw_and, kw_begin, kw_boolean, kw_by, kw_constant, kw_do, kw_else, kw_end, kw_false, kw_fi,
-    kw_float, kw_for, kw_from, kw_function, kw_if, kw_integer, kw_not, kw_od, kw_or, kw_procedure,
-    kw_program, kw_read, kw_return, kw_string, kw_then, kw_to, kw_true, kw_var, kw_while, kw_write};
-
-SCANNER::SCANNER()
+Scanner::Scanner(FileDescriptor *fd) : fd(fd)
 {
-    Fd = nullptr;
+    initKeywords();
 }
 
-void SCANNER::skip_comments()
+void Scanner::initKeywords()
 {
-    char c;
-    while ((c = Fd->GetChar()) != EOF)
+    keywords["program"] = kw_program;
+    keywords["var"] = kw_var;
+    keywords["constant"] = kw_constant;
+    keywords["integer"] = kw_integer;
+    keywords["boolean"] = kw_boolean;
+    keywords["string"] = kw_string;
+    keywords["float"] = kw_float;
+    keywords["true"] = kw_true;
+    keywords["false"] = kw_false;
+    keywords["if"] = kw_if;
+    keywords["fi"] = kw_fi;
+    keywords["then"] = kw_then;
+    keywords["else"] = kw_else;
+    keywords["while"] = kw_while;
+    keywords["do"] = kw_do;
+    keywords["od"] = kw_od;
+    keywords["and"] = kw_and;
+    keywords["or"] = kw_or;
+    keywords["read"] = kw_read;
+    keywords["write"] = kw_write;
+    keywords["for"] = kw_for;
+    keywords["from"] = kw_from;
+    keywords["to"] = kw_to;
+    keywords["by"] = kw_by;
+    keywords["function"] = kw_function;
+    keywords["procedure"] = kw_procedure;
+    keywords["return"] = kw_return;
+    keywords["not"] = kw_not;
+    keywords["begin"] = kw_begin;
+    keywords["end"] = kw_end;
+}
+
+TOKEN *Scanner::scan()
+{
+    return getNextToken();
+}
+
+TOKEN *Scanner::getNextToken()
+{
+    char c = fd->GetChar();
+    while (isspace(c))
     {
-        if (c == '#' && Fd->GetChar() == '#')
+        c = fd->GetChar();
+    }
+
+    if (c == EOF)
+    {
+        return new TOKEN{END_OF_FILE, "", 0, 0.0};
+    }
+
+    if (isalpha(c) || c == '_')
+    {
+        std::string identifier(1, c);
+        c = fd->GetChar();
+        while (isalnum(c) || c == '_')
         {
-            while ((c = Fd->GetChar()) != EOF && c != '\n')
-            {
-            }
-            if (c == '\n')
-            {
-                Fd->UngetChar(c);
-            }
-            return;
+            identifier += c;
+            c = fd->GetChar();
+        }
+        fd->UngetChar(c);
+
+        if (keywords.find(identifier) != keywords.end())
+        {
+            return new TOKEN{keywords[identifier], identifier, 0, 0.0};
+        }
+        else
+        {
+            return new TOKEN{lx_identifier, identifier, 0, 0.0};
         }
     }
-}
 
-bool SCANNER::check_keyword(const char *str, TOKEN *token)
-{
-    for (int i = 0; i < keys; ++i)
+    if (isdigit(c))
     {
-        if (strcmp(str, keyword[i]) == 0)
+        std::string number(1, c);
+        c = fd->GetChar();
+        while (isdigit(c))
         {
-            token->type = key_type[i];
-            return true;
+            number += c;
+            c = fd->GetChar();
         }
-    }
-    return false;
-}
-
-TOKEN *SCANNER::get_id()
-{
-    TOKEN *token = new TOKEN();
-    char buffer[256];
-    int length = 0;
-
-    char c = Fd->GetChar();
-    while (isalnum(c) || c == '_')
-    {
-        buffer[length++] = c;
-        c = Fd->GetChar();
-    }
-    buffer[length] = '\0';
-    Fd->UngetChar(c);
-
-    if (check_keyword(buffer, token))
-    {
-        return token;
-    }
-
-    token->type = lx_identifier;
-    token->str_ptr = strdup(buffer);
-    return token;
-}
-
-TOKEN *SCANNER::get_string()
-{
-    TOKEN *token = new TOKEN();
-    char buffer[1024];
-    int length = 0;
-
-    char c;
-    while ((c = Fd->GetChar()) != '"' && c != EOF)
-    {
-        if (c == '\n')
-        {
-            ReportError("Unterminated string literal");
-            delete token;
-            return nullptr;
-        }
-        buffer[length++] = c;
-    }
-    buffer[length] = '\0';
-
-    token->type = lx_string;
-    token->str_ptr = strdup(buffer);
-    return token;
-}
-
-TOKEN *SCANNER::get_int()
-{
-    TOKEN *token = new TOKEN();
-    char buffer[256];
-    int length = 0;
-    bool is_float = false;
-
-    char c = Fd->GetChar();
-    while (isdigit(c) || c == '.')
-    {
         if (c == '.')
         {
-            is_float = true;
-        }
-        buffer[length++] = c;
-        c = Fd->GetChar();
-    }
-    buffer[length] = '\0';
-    Fd->UngetChar(c);
-
-    if (is_float)
-    {
-        token->type = lx_float;
-        token->float_value = atof(buffer);
-    }
-    else
-    {
-        token->type = lx_integer;
-        token->value = atoi(buffer);
-    }
-    return token;
-}
-
-// function to scan tokens from the input file.
-TOKEN *SCANNER::Scan()
-{
-    char c;
-    while ((c = Fd->GetChar()) != EOF)
-    {
-        if (isspace(c))
-        {
-            continue;
-        }
-        if (c == '#')
-        {
-            char next = Fd->GetChar();
-            if (next == '#')
+            number += c;
+            c = fd->GetChar();
+            while (isdigit(c))
             {
-                skip_comments();
-                continue;
+                number += c;
+                c = fd->GetChar();
             }
-            else
-            {
-                Fd->UngetChar(next);
-                continue;
-            }
+            fd->UngetChar(c);
+            return new TOKEN{lx_float, number, 0, std::stod(number)};
         }
-        if (isalpha(c) || c == '_')
-        {
-            Fd->UngetChar(c);
-            return get_id();
-        }
-        if (isdigit(c) || c == '.')
-        {
-            Fd->UngetChar(c);
-            return get_int();
-        }
-        if (c == '"')
-        {
-            return get_string();
-        }
-        switch (c)
-        {
-        case '+':
-            return new TOKEN{lx_plus};
-        case '-':
-            return new TOKEN{lx_minus};
-        case '*':
-            return new TOKEN{lx_star};
-        case '/':
-            return new TOKEN{lx_slash};
-        case '=':
-            return new TOKEN{lx_eq};
-        case '!':
-            if (Fd->GetChar() == '=')
-                return new TOKEN{lx_neq};
-            break;
-        case '<':
-            if (Fd->GetChar() == '=')
-                return new TOKEN{lx_le};
-            return new TOKEN{lx_lt};
-        case '>':
-            if (Fd->GetChar() == '=')
-                return new TOKEN{lx_ge};
-            return new TOKEN{lx_gt};
-        case ':':
-            if (Fd->GetChar() == '=')
-                return new TOKEN{lx_colon_eq};
-            return new TOKEN{lx_colon};
-        case '.':
-            return new TOKEN{lx_dot};
-        case ';':
-            return new TOKEN{lx_semicolon};
-        case ',':
-            return new TOKEN{lx_comma};
-        case '(':
-            return new TOKEN{lx_lparen};
-        case ')':
-            return new TOKEN{lx_rparen};
-        case '[':
-            return new TOKEN{lx_lbracket};
-        case ']':
-            return new TOKEN{lx_rbracket};
-        case '{':
-            return new TOKEN{lx_lbracket};
-        case '}':
-            return new TOKEN{lx_rbracket};
-        default:
-            ReportError("Unrecognized character");
-            return new TOKEN{lx_eof};
-        }
+        fd->UngetChar(c);
+        return new TOKEN{lx_integer, number, std::stoi(number), 0.0};
     }
-    return new TOKEN{lx_eof};
-}
 
-void SCANNER::ReportError(const char *msg)
-{
-    printf("Error: \"%s\" on line %d of the input file\n", msg, Fd->GetLineNum());
-}
-
-int main(int argc, char **argv)
-{
-    FileDescriptor *fd;
-    if (argc > 1)
+    if (c == '"')
     {
-        fd = new FileDescriptor(argv[1]);
-    }
-    else
-    {
-        fd = new FileDescriptor();
-    }
-
-    SCANNER scanner(fd);
-    TOKEN *token;
-    while ((token = scanner.Scan()) && token->type != lx_eof)
-    {
-        switch (token->type)
+        std::string str;
+        c = fd->GetChar();
+        while (c != '"' && c != EOF)
         {
-        case lx_identifier:
-            printf("Identifier: %s\n", token->str_ptr);
-            free(token->str_ptr);
-            break;
-        case lx_integer:
-            printf("Integer: %d\n", token->value);
-            break;
-        case lx_float:
-            printf("Float: %f\n", token->float_value);
-            break;
-        case lx_string:
-            printf("String: %s\n", token->str_ptr);
-            free(token->str_ptr);
-            break;
-        case lx_plus:
-            printf("Operator: +\n");
-            break;
-        case lx_minus:
-            printf("Operator: -\n");
-            break;
-        case lx_star:
-            printf("Operator: *\n");
-            break;
-        case lx_slash:
-            printf("Operator: /\n");
-            break;
-        case lx_eq:
-            printf("Operator: =\n");
-            break;
-        case lx_neq:
-            printf("Operator: !=\n");
-            break;
-        case lx_lt:
-            printf("Operator: <\n");
-            break;
-        case lx_le:
-            printf("Operator: <=\n");
-            break;
-        case lx_gt:
-            printf("Operator: >\n");
-            break;
-        case lx_ge:
-            printf("Operator: >=\n");
-            break;
-        case lx_colon:
-            printf("Operator: :\n");
-            break;
-        case lx_dot:
-            printf("Operator: .\n");
-            break;
-        case lx_semicolon:
-            printf("Operator: ;\n");
-            break;
-        case lx_comma:
-            printf("Operator: ,\n");
-            break;
-        case lx_colon_eq:
-            printf("Operator: :=\n");
-            break;
-        case lx_lparen:
-            printf("Operator: (\n");
-            break;
-        case lx_rparen:
-            printf("Operator: )\n");
-            break;
-        case lx_lbracket:
-            printf("Operator: [\n");
-            break;
-        case lx_rbracket:
-            printf("Operator: ]\n");
-            break;
-        case lx_eof:
-            printf("End of File\n");
-            break;
-        default:
-            if (token->type >= kw_program && token->type <= kw_write)
-            {
-                printf("Keyword: %s\n", keyword[token->type - kw_program]);
-            }
-            else
-            {
-                printf("Unknown token type: %d\n", token->type);
-            }
-            break;
+            str += c;
+            c = fd->GetChar();
         }
-        delete token;
+        if (c != '"')
+        {
+            fd->ReportError((char *)"Unterminated string literal");
+            return new TOKEN{UNKNOWN, "", 0, 0.0};
+        }
+        return new TOKEN{lx_string, str, 0, 0.0};
     }
 
-    delete fd;
-    return 0;
+    if (c == '#' && fd->GetChar() == '#')
+    {
+        std::string comment;
+        c = fd->GetChar();
+        while (c != '\n' && c != EOF)
+        {
+            comment += c;
+            c = fd->GetChar();
+        }
+        return new TOKEN{COMMENT, comment, 0, 0.0};
+    }
+
+    std::string op(1, c);
+    char next_char = fd->GetChar();
+    op += next_char;
+
+    static const std::string operators[] = {":=", "!=", "<=", ">="};
+    for (const std::string &oper : operators)
+    {
+        if (oper == op)
+        {
+            return new TOKEN{OPERATOR, op, 0, 0.0};
+        }
+    }
+
+    fd->UngetChar(next_char);
+    op.pop_back(); // remove next_char from op
+
+    static const std::string single_char_operators[] = {"(", ")", ":", "+", "-", "*", "/", "=", "<", ">", ".", ";", "[", "]", ",", "{", "}"};
+    for (const std::string &oper : single_char_operators)
+    {
+        if (oper == op)
+        {
+            return new TOKEN{OPERATOR, op, 0, 0.0};
+        }
+    }
+
+    fd->ReportError((char *)"Unknown token");
+    return new TOKEN{UNKNOWN, op, 0, 0.0};
 }
