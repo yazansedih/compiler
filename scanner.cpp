@@ -5,42 +5,37 @@
 
 Scanner::Scanner(FileDescriptor *fd) : fd(fd)
 {
-    initKeywords();
+    // initKeywords();
 }
 
-void Scanner::initKeywords()
-{
-    keywords["program"] = kw_program;
-    keywords["var"] = kw_var;
-    keywords["constant"] = kw_constant;
-    keywords["integer"] = kw_integer;
-    keywords["boolean"] = kw_boolean;
-    keywords["string"] = kw_string;
-    keywords["float"] = kw_float;
-    keywords["true"] = kw_true;
-    keywords["false"] = kw_false;
-    keywords["if"] = kw_if;
-    keywords["fi"] = kw_fi;
-    keywords["then"] = kw_then;
-    keywords["else"] = kw_else;
-    keywords["while"] = kw_while;
-    keywords["do"] = kw_do;
-    keywords["od"] = kw_od;
-    keywords["and"] = kw_and;
-    keywords["or"] = kw_or;
-    keywords["read"] = kw_read;
-    keywords["write"] = kw_write;
-    keywords["for"] = kw_for;
-    keywords["from"] = kw_from;
-    keywords["to"] = kw_to;
-    keywords["by"] = kw_by;
-    keywords["function"] = kw_function;
-    keywords["procedure"] = kw_procedure;
-    keywords["return"] = kw_return;
-    keywords["not"] = kw_not;
-    keywords["begin"] = kw_begin;
-    keywords["end"] = kw_end;
-}
+const char *keyword[] = {
+    "and", "begin", "boolean", "by", "constant",
+    "do", "else", "end", "false", "fi", "float", "for", "from",
+    "function", "if", "integer", "not", "od", "or", "procedure",
+    "program", "read", "return", "string", "then", "to", "true",
+    "var", "while", "write"};
+
+LEXEME_TYPE key_type[] = {
+    kw_and, kw_begin, kw_boolean, kw_by, kw_constant,
+    kw_do, kw_else, kw_end, kw_false, kw_fi, kw_float,
+    kw_for, kw_from, kw_function, kw_if, kw_integer, kw_not,
+    kw_od, kw_or, kw_procedure, kw_program, kw_read, kw_return,
+    kw_string, kw_then, kw_to, kw_true, kw_var, kw_while, kw_write};
+
+const char *operator_list[] = {
+    "(", ")", "[", "]",
+    ":", ".", ";", ",", ":=",
+    "+", "-", "*", "/",
+    "=", "!=", "<", "<=", ">", ">=", ""};
+
+LEXEME_TYPE operator_type[] = {
+    lx_lparen, lx_rparen, lx_lbracket, lx_rbracket,
+    lx_colon, lx_dot, lx_semicolon, lx_comma, lx_colon_eq,
+    lx_plus, lx_minus, lx_star, lx_slash,
+    lx_eq, lx_neq, lx_lt, lx_le, lx_gt, lx_ge, lx_eof};
+
+int keys = 30;
+int operators = 20;
 
 TOKEN *Scanner::scan()
 {
@@ -117,22 +112,31 @@ TOKEN *Scanner::getNextToken()
         }
         if (c != '"')
         {
-            fd->ReportError((char *)"Unterminated string literal");
+            fd->ReportError("Unterminated string literal");
             return new TOKEN{UNKNOWN, "", 0, 0.0};
         }
         return new TOKEN{lx_string, str, 0, 0.0};
     }
 
-    if (c == '#' && fd->GetChar() == '#')
+    if (c == '#')
     {
-        std::string comment;
         c = fd->GetChar();
-        while (c != '\n' && c != EOF)
+        if (c == '#')
         {
-            comment += c;
+            std::string comment;
             c = fd->GetChar();
+            while (c != '\n' && c != EOF)
+            {
+                comment += c;
+                c = fd->GetChar();
+            }
+            return new TOKEN{COMMENT, comment, 0, 0.0};
         }
-        return new TOKEN{COMMENT, comment, 0, 0.0};
+        else
+        {
+            fd->ReportError("Invalid comment format");
+            return new TOKEN{UNKNOWN, "", 0, 0.0};
+        }
     }
 
     std::string op(1, c);
@@ -160,6 +164,6 @@ TOKEN *Scanner::getNextToken()
         }
     }
 
-    fd->ReportError((char *)"Unknown token");
+    fd->ReportError("Unknown token");
     return new TOKEN{UNKNOWN, op, 0, 0.0};
 }

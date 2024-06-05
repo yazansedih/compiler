@@ -1,4 +1,4 @@
-Area1234 = 17 ;
+Area1234=17 ;
 123  , - , + [   ] 
 z1 := ( 34*xy + func(x) - 64 ) ;
 ## following are all keywords
