@@ -5,37 +5,42 @@
 
 Scanner::Scanner(FileDescriptor *fd) : fd(fd)
 {
-    // initKeywords();
+    initKeywords();
 }
 
-const char *keyword[] = {
-    "and", "begin", "boolean", "by", "constant",
-    "do", "else", "end", "false", "fi", "float", "for", "from",
-    "function", "if", "integer", "not", "od", "or", "procedure",
-    "program", "read", "return", "string", "then", "to", "true",
-    "var", "while", "write"};
-
-LEXEME_TYPE key_type[] = {
-    kw_and, kw_begin, kw_boolean, kw_by, kw_constant,
-    kw_do, kw_else, kw_end, kw_false, kw_fi, kw_float,
-    kw_for, kw_from, kw_function, kw_if, kw_integer, kw_not,
-    kw_od, kw_or, kw_procedure, kw_program, kw_read, kw_return,
-    kw_string, kw_then, kw_to, kw_true, kw_var, kw_while, kw_write};
-
-const char *operator_list[] = {
-    "(", ")", "[", "]",
-    ":", ".", ";", ",", ":=",
-    "+", "-", "*", "/",
-    "=", "!=", "<", "<=", ">", ">=", ""};
-
-LEXEME_TYPE operator_type[] = {
-    lx_lparen, lx_rparen, lx_lbracket, lx_rbracket,
-    lx_colon, lx_dot, lx_semicolon, lx_comma, lx_colon_eq,
-    lx_plus, lx_minus, lx_star, lx_slash,
-    lx_eq, lx_neq, lx_lt, lx_le, lx_gt, lx_ge, lx_eof};
-
-int keys = 30;
-int operators = 20;
+void Scanner::initKeywords()
+{
+    keywords["program"] = kw_program;
+    keywords["var"] = kw_var;
+    keywords["constant"] = kw_constant;
+    keywords["integer"] = kw_integer;
+    keywords["boolean"] = kw_boolean;
+    keywords["string"] = kw_string;
+    keywords["float"] = kw_float;
+    keywords["true"] = kw_true;
+    keywords["false"] = kw_false;
+    keywords["if"] = kw_if;
+    keywords["fi"] = kw_fi;
+    keywords["then"] = kw_then;
+    keywords["else"] = kw_else;
+    keywords["while"] = kw_while;
+    keywords["do"] = kw_do;
+    keywords["od"] = kw_od;
+    keywords["and"] = kw_and;
+    keywords["or"] = kw_or;
+    keywords["read"] = kw_read;
+    keywords["write"] = kw_write;
+    keywords["for"] = kw_for;
+    keywords["from"] = kw_from;
+    keywords["to"] = kw_to;
+    keywords["by"] = kw_by;
+    keywords["function"] = kw_function;
+    keywords["procedure"] = kw_procedure;
+    keywords["return"] = kw_return;
+    keywords["not"] = kw_not;
+    keywords["begin"] = kw_begin;
+    keywords["end"] = kw_end;
+}
 
 TOKEN *Scanner::scan()
 {
@@ -45,6 +50,8 @@ TOKEN *Scanner::scan()
 TOKEN *Scanner::getNextToken()
 {
     char c = fd->GetChar();
+    std::cout << "Current character: " << c << std::endl;
+
     while (isspace(c))
     {
         c = fd->GetChar();
@@ -64,7 +71,12 @@ TOKEN *Scanner::getNextToken()
             identifier += c;
             c = fd->GetChar();
         }
-        fd->UngetChar(c);
+
+        c = fd->GetChar();
+        if (!isspace(c)) // Check if the next character is not a space
+        {
+            fd->UngetChar(c); // Go back one character in the token
+        }
 
         if (keywords.find(identifier) != keywords.end())
         {
@@ -112,31 +124,22 @@ TOKEN *Scanner::getNextToken()
         }
         if (c != '"')
         {
-            fd->ReportError("Unterminated string literal");
+            fd->ReportError((char *)"Unterminated string literal");
             return new TOKEN{UNKNOWN, "", 0, 0.0};
         }
         return new TOKEN{lx_string, str, 0, 0.0};
     }
 
-    if (c == '#')
+    if (c == '#' && fd->GetChar() == '#')
     {
+        std::string comment;
         c = fd->GetChar();
-        if (c == '#')
+        while (c != '\n' && c != EOF)
         {
-            std::string comment;
+            comment += c;
             c = fd->GetChar();
-            while (c != '\n' && c != EOF)
-            {
-                comment += c;
-                c = fd->GetChar();
-            }
-            return new TOKEN{COMMENT, comment, 0, 0.0};
         }
-        else
-        {
-            fd->ReportError("Invalid comment format");
-            return new TOKEN{UNKNOWN, "", 0, 0.0};
-        }
+        return new TOKEN{COMMENT, comment, 0, 0.0};
     }
 
     std::string op(1, c);
@@ -164,6 +167,135 @@ TOKEN *Scanner::getNextToken()
         }
     }
 
-    fd->ReportError("Unknown token");
+    fd->ReportError((char *)"Unknown token");
     return new TOKEN{UNKNOWN, op, 0, 0.0};
+}
+
+std::string Scanner::tokenTypeToString(TokenType type)
+{
+    switch (type)
+    {
+    case lx_identifier:
+        return "Identifier";
+    case lx_float:
+        return "Float";
+    case lx_integer:
+        return "Integer";
+    case lx_string:
+        return "String";
+    case lx_plus:
+        return "Plus";
+    case lx_minus:
+        return "Minus";
+    case lx_star:
+        return "Star";
+    case lx_slash:
+        return "Slash";
+    case lx_eq:
+        return "Equals";
+    case lx_neq:
+        return "Not Equals";
+    case lx_lt:
+        return "Less Than";
+    case lx_le:
+        return "Less Equals";
+    case lx_gt:
+        return "Greater Than";
+    case lx_ge:
+        return "Greater Equals";
+    case lx_lparen:
+        return "Left Parenthesis";
+    case lx_rparen:
+        return "Right Parenthesis";
+    case lx_lbracket:
+        return "Left Bracket";
+    case lx_rbracket:
+        return "Right Bracket";
+    case lx_colon:
+        return "Colon";
+    case lx_dot:
+        return "Dot";
+    case lx_semicolon:
+        return "Semicolon";
+    case lx_comma:
+        return "Comma";
+    case lx_colon_eq:
+        return "Colon Equals";
+    case kw_program:
+        return "Keyword Program";
+    case kw_var:
+        return "Keyword Var";
+    case kw_constant:
+        return "Keyword Constant";
+    case kw_integer:
+        return "Keyword Integer";
+    case kw_boolean:
+        return "Keyword Boolean";
+    case kw_string:
+        return "Keyword String";
+    case kw_float:
+        return "Keyword Float";
+    case kw_true:
+        return "Keyword True";
+    case kw_false:
+        return "Keyword False";
+    case kw_if:
+        return "Keyword If";
+    case kw_fi:
+        return "Keyword Fi";
+    case kw_then:
+        return "Keyword Then";
+    case kw_else:
+        return "Keyword Else";
+    case kw_while:
+        return "Keyword While";
+    case kw_do:
+        return "Keyword Do";
+    case kw_od:
+        return "Keyword Od";
+    case kw_and:
+        return "Keyword And";
+    case kw_or:
+        return "Keyword Or";
+    case kw_read:
+        return "Keyword Read";
+    case kw_write:
+        return "Keyword Write";
+    case kw_for:
+        return "Keyword For";
+    case kw_from:
+        return "Keyword From";
+    case kw_to:
+        return "Keyword To";
+    case kw_by:
+        return "Keyword By";
+    case kw_function:
+        return "Keyword Function";
+    case kw_procedure:
+        return "Keyword Procedure";
+    case kw_return:
+        return "Keyword Return";
+    case kw_not:
+        return "Keyword Not";
+    case kw_begin:
+        return "Keyword Begin";
+    case kw_end:
+        return "Keyword End";
+    case END_OF_FILE:
+        return "End Of File";
+    case UNKNOWN:
+        return "Unknown";
+    case COMMENT:
+        return "Comment";
+    case INTEGER_LITERAL:
+        return "Integer Literal";
+    case STRING_LITERAL:
+        return "String Literal";
+    case OPERATOR:
+        return "Operator";
+    case KEYWORD:
+        return "Keyword";
+    default:
+        return "Undefined Token Type";
+    }
 }
