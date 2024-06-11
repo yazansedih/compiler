@@ -123,11 +123,6 @@ char FileDescriptor::GetChar()
     return c;
 }
 
-void FileDescriptor::ReportError(const char *msg)
-{
-    std::cerr << "Error: " << msg << " at line " << line_number << ", char " << char_number << std::endl;
-}
-
 void FileDescriptor::UngetChar(char c)
 {
     if (flag == SET)
@@ -144,4 +139,9 @@ void FileDescriptor::UngetChar(char c)
         }
         flag = SET;
     }
+}
+
+void FileDescriptor::ReportError(const char *msg)
+{
+    std::cerr << "Error: " << msg << " at line " << line_number << ", char " << char_number << std::endl;
 }

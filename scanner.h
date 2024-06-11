@@ -93,6 +93,7 @@ public:
     Scanner(FileDescriptor *fd);
     TOKEN *scan();
     TOKEN *getNextToken();
+    std::string tokenTypeToString(TokenType type);
 };
 
 #endif /* SCANNER_H */

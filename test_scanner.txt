@@ -1,6 +1,6 @@
 Area1234=17 ;
 123  , - , + [   ] 
-z1 := ( 34*xy + func(x) - 64 ) ;
+z1 := ( 34 * xy + func(x) - 64 ) ;
 ## following are all keywords
 var while write
 and begin boolean by constant
@@ -16,7 +16,7 @@ begin
  z := y + yy != 56
 end
 ## following are illegal tokens
-34xyz
+34 xyz
 ? $ %
 
 ## following should be identifiers not keywords
