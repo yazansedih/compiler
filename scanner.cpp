@@ -50,7 +50,6 @@ TOKEN *Scanner::scan()
 TOKEN *Scanner::getNextToken()
 {
     char c = fd->GetChar();
-    std::cout << "Current character: " << c << std::endl;
 
     while (isspace(c))
     {
@@ -72,7 +71,7 @@ TOKEN *Scanner::getNextToken()
             c = fd->GetChar();
         }
 
-        c = fd->GetChar();
+        // std::cout << "Current character: " << c << std::endl;
         if (!isspace(c)) // Check if the next character is not a space
         {
             fd->UngetChar(c); // Go back one character in the token
@@ -97,6 +96,7 @@ TOKEN *Scanner::getNextToken()
             number += c;
             c = fd->GetChar();
         }
+
         if (c == '.')
         {
             number += c;
@@ -106,10 +106,13 @@ TOKEN *Scanner::getNextToken()
                 number += c;
                 c = fd->GetChar();
             }
+
             fd->UngetChar(c);
             return new TOKEN{lx_float, number, 0, std::stod(number)};
         }
+
         fd->UngetChar(c);
+
         return new TOKEN{lx_integer, number, std::stoi(number), 0.0};
     }
 
@@ -142,8 +145,18 @@ TOKEN *Scanner::getNextToken()
         return new TOKEN{COMMENT, comment, 0, 0.0};
     }
 
+    static const char single_char_operators[] = {'(', ')', '+', '-', '*', '/', '=', '.', ';', '[', ']', ',', '{', '}'};
+    for (const char &oper : single_char_operators)
+    {
+        if (oper == c)
+        {
+            return new TOKEN{OPERATOR, std::string(1, c), 0, 0.0};
+        }
+    }
+
     std::string op(1, c);
     char next_char = fd->GetChar();
+
     op += next_char;
 
     static const std::string operators[] = {":=", "!=", "<=", ">="};
@@ -155,15 +168,12 @@ TOKEN *Scanner::getNextToken()
         }
     }
 
-    fd->UngetChar(next_char);
-    op.pop_back(); // remove next_char from op
-
-    static const std::string single_char_operators[] = {"(", ")", ":", "+", "-", "*", "/", "=", "<", ">", ".", ";", "[", "]", ",", "{", "}"};
-    for (const std::string &oper : single_char_operators)
+    static const char single_char_operators2[] = {'(', ')', ':', '+', '-', '*', '/', '=', '<', '>', '.', ';', '[', ']', ',', '{', '}'};
+    for (const char &oper : single_char_operators2)
     {
-        if (oper == op)
+        if (oper == c)
         {
-            return new TOKEN{OPERATOR, op, 0, 0.0};
+            return new TOKEN{OPERATOR, std::string(1, c), 0, 0.0};
         }
     }
 
