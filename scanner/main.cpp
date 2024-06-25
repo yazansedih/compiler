@@ -1,34 +1,23 @@
+#include <stdlib.h>
+#include "stable.h"
+#include <ctime>
 #include <iostream>
-#include "fd.h"		 // Assuming this header defines FileDescriptor
-#include "scanner.h" // Assuming this header defines SCANNER and TOKEN
-
-using namespace std;
+#include "parser.h"
+#include "ast.h"
 
 int main()
 {
-	FileDescriptor fd("test_scanner.txt");
-	cout << "Tokens:" << endl
-		 << endl;
-	SCANNER scanner(&fd);
-	TOKEN *token;
-
-	while ((token = scanner.Scan())->type != lx_eof)
-	{
-		if (token->str_ptr != nullptr)
-		{
-			cout << "Token Type: " << token->type << ", Value: " << token->str_ptr << endl;
-			delete[] token->str_ptr; // Free allocated memory for string tokens
-		}
-		else if (token->float_value != 0.0)
-		{
-			cout << "Token Type: " << token->type << ", Value: " << token->float_value << endl;
-		}
-		else
-		{
-			cout << "Token Type: " << token->type << ", Value: " << token->value << endl;
-		}
-		delete token; // Free allocated memory for the token
-	}
-
-	return 0;
+    FileDescriptor *fd = new FileDescriptor("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\t");
+    FILE *fp;
+    fp = fopen("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\out.txt", "w");
+    STable *table = new STable();
+    Parser *p = new Parser(fd, table);
+    ast_list *code = p->parseProgram();
+    while (code != nullptr)
+    {
+        print_ast_node(fp, code->head);
+        code = code->tail;
+    }
+    delete[] code;
+    return 0;
 }

@@ -1,15 +1,15 @@
 #include <stdlib.h>
-#include "stable.h"
+#include "./symbolTable/stable.h"
 #include <ctime>
 #include <iostream>
-#include "parser.h"
-#include "ast.h"
+#include "./parser/parser.h"
+#include "./parser/ast.h"
 
 int main()
 {
-    FileDescriptor *fd = new FileDescriptor("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\t");
+    FileDescriptor *fd = new FileDescriptor("./code.txt");
     FILE *fp;
-    fp = fopen("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\out.txt", "w");
+    fp = fopen("./out.txt", "w");
     STable *table = new STable();
     Parser *p = new Parser(fd, table);
     ast_list *code = p->parseProgram();

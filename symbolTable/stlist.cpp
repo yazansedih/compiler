@@ -13,16 +13,16 @@ STList::STList()
  * @param name : Given name to find
  * @return : If name is found found return NULL otherwise reaturn a pointer to the Node
  */
-STEntry* STList::FindEntry(char *name)
+STEntry *STList::FindEntry(char *name)
 {
     STEntry *ste = Head;
     while (ste != NULL)
-    {   
-        if( strcmp(name,ste->Name) == 0) return ste;
+    {
+        if (strcmp(name, ste->Name) == 0)
+            return ste;
         ste = ste->Next;
     }
     return NULL;
-
 }
 /**
  * @brief STList::AddEntry : Call FindEntry, if name is alread in table return false, otherwise add it to the list
@@ -33,22 +33,17 @@ STEntry* STList::FindEntry(char *name)
  */
 bool STList::AddEntry(char *name, STE_TYPE type)
 {
-  STEntry *ste = FindEntry(name);
-  bool added = false;
-  if(ste)
-  {
-      printf("Entry Already exist, nothing Added\n");
-  }
-  else
-  {
-      ste = new STEntry(name, type) ;
-      ste->Next = Head;
-      Head = ste;
-      added = true;
-
-      Counter++;
-  }
-  return added;
+    STEntry *ste = FindEntry(name);
+    bool added = false;
+    if (!ste)
+    {
+        ste = new STEntry(name, type);
+        ste->Next = Head;
+        Head = ste;
+        added = true;
+        Counter++;
+    }
+    return added;
 }
 /**
  * @brief STList::PrintAll : Prints All nodes in the list, use the print in the STEntry.
@@ -62,8 +57,7 @@ void STList::PrintAll(FILE *fp)
         ste->print(fp);
         ste = ste->Next;
     }
-    fprintf(fp,"\n");
-
+    fprintf(fp, "\n");
 }
 /**
  * @brief STList::Count returns Counter which is Number of Elements
@@ -85,11 +79,10 @@ void STList::Clear()
         Head = Head->Next;
         delete ste;
     }
-    Counter =0;
+    Counter = 0;
 }
 
 STList::~STList()
 {
     Clear();
 }
-
