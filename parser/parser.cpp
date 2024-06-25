@@ -1,8 +1,8 @@
 #include <string>
 #include <iostream>
-#include "parser.h"
-#include "ast.cpp"
-#include "scanner.h"
+#include "./parser.h"
+#include "./ast.cpp"
+#include "../scanner/scanner.h"
 
 Parser::Parser(FileDescriptor *fdt, STable *symboltable)
 {

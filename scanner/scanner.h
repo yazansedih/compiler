@@ -1,7 +1,7 @@
 #ifndef __SCANNER__H
 #define __SCANNER__H
 
-#include "fd.h"
+#include "./fd.h"
 
 // Token types enumeration
 typedef enum

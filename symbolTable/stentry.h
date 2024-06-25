@@ -18,7 +18,7 @@ typedef enum
     STE_BOOLEAN,
 } STE_TYPE;
 
-static char *STE_TYPE_STR[TYPE_SIZE] = {"None", "int", "char*", "float", "double", "char", "const"}; // It is not a good idea to put this here
+static const  char *STE_TYPE_STR[TYPE_SIZE] = {"None", "int", "char*", "float", "double", "char", "const"}; // It is not a good idea to put this here
 static char str[128];
 class STEntry
 {

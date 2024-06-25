@@ -1,5 +1,5 @@
 #include <string>
-#include "stable.h"
+#include "./stable.h"
 #include "functional"
 #include <stdio.h>
 #include <string.h>

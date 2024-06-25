@@ -1,6 +1,6 @@
 #ifndef STABLE_H
 #define STABLE_H
-#include "stlist.h"
+#include "./stlist.h"
 #define DEFAULT_SIZE 19
 class STable
 {

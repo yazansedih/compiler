@@ -4,9 +4,9 @@ argument is the type of the node (one of AST_type). The rest of the
 arguments are the fields of that type of node, in order. */
 
 #include <stdio.h>
-#include "./scanner/fd.h"
-#include "./symbolTable/stable.h"
-#include "ast.h"
+#include "../scanner/fd.h"
+#include "../symbolTable/stable.h"
+#include "./ast.h"
 #include <stdarg.h>
 /* Internal routines: */
 static void nl_indent(FILE *, int);

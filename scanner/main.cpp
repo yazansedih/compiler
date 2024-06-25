@@ -1,9 +1,9 @@
 #include <stdlib.h>
-#include "stable.h"
+#include "../symbolTable/stable.h"
 #include <ctime>
 #include <iostream>
-#include "parser.h"
-#include "ast.h"
+#include "../parser/parser.h"
+#include "../parser/ast.h"
 
 int main()
 {

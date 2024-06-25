@@ -1,6 +1,6 @@
 #ifndef STLIST_H
 #define STLIST_H
-#include "stentry.h"
+#include "./stentry.h"
 
 class STList
 {

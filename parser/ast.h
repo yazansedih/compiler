@@ -1,7 +1,7 @@
 #ifndef __AST__H
 #define __AST__H
 // ast.h
-#include "stable.h"
+#include "../symbolTable/stable.h"
 /* Definitions of list datatypes */
 /* List of AST nodes */
 
