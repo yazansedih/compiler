@@ -1,0 +1,10 @@
+int var1 0
+float var2 0
+char var3 0
+int var4 0
+float var5 0
+char var6 0
+int var7 0
+float var8 0
+char var9 0
+int x12 0;
