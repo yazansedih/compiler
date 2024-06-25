@@ -1,0 +1,22 @@
+#include "fd.h"
+
+int main()
+{
+    const char fileName[] = "test_scanner.txt"; // Use const char* for file name
+    FileDescriptor fd(fileName);
+    if (!fd.isOpen())
+    {
+        printf("Failed to open file: %s\n", fileName);
+        return 1;
+    }
+
+    char c;
+    while ((c = fd.getChar()) != EOF)
+    {
+        // Process each character
+        printf("%c", c);
+    }
+
+    fd.close(); // Close the file when done
+    return 0;
+}
