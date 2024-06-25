@@ -1,10 +1,10 @@
-#ifndef FD_H
-#define FD_H
-
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
+
+#ifndef FD_H
+#define FD_H
 
 #define SET 1
 #define UNSET 0
@@ -20,7 +20,6 @@ private:
     int buf_size;
     char *buffer;
     char *file;
-    int flag2;
 
     void doubleBufferSize();
 

@@ -71,10 +71,9 @@ TOKEN *Scanner::getNextToken()
             c = fd->GetChar();
         }
 
-        // std::cout << "Current character: " << c << std::endl;
-        if (!isspace(c)) // Check if the next character is not a space
+        if (!isspace(c))
         {
-            fd->UngetChar(c); // Go back one character in the token
+            fd->UngetChar(c);
         }
 
         if (keywords.find(identifier) != keywords.end())
@@ -106,13 +105,11 @@ TOKEN *Scanner::getNextToken()
                 number += c;
                 c = fd->GetChar();
             }
-
             fd->UngetChar(c);
             return new TOKEN{lx_float, number, 0, std::stod(number)};
         }
 
         fd->UngetChar(c);
-
         return new TOKEN{lx_integer, number, std::stoi(number), 0.0};
     }
 
@@ -127,7 +124,7 @@ TOKEN *Scanner::getNextToken()
         }
         if (c != '"')
         {
-            fd->ReportError((char *)"Unterminated string literal");
+            fd->ReportError("Unterminated string literal");
             return new TOKEN{UNKNOWN, "", 0, 0.0};
         }
         return new TOKEN{lx_string, str, 0, 0.0};
@@ -156,7 +153,6 @@ TOKEN *Scanner::getNextToken()
 
     std::string op(1, c);
     char next_char = fd->GetChar();
-
     op += next_char;
 
     static const std::string operators[] = {":=", "!=", "<=", ">="};
@@ -168,6 +164,8 @@ TOKEN *Scanner::getNextToken()
         }
     }
 
+    fd->UngetChar(next_char);
+
     static const char single_char_operators2[] = {'(', ')', ':', '+', '-', '*', '/', '=', '<', '>', '.', ';', '[', ']', ',', '{', '}'};
     for (const char &oper : single_char_operators2)
     {
@@ -177,7 +175,7 @@ TOKEN *Scanner::getNextToken()
         }
     }
 
-    fd->ReportError((char *)"Unknown token");
+    fd->ReportError("Unknown token");
     return new TOKEN{UNKNOWN, op, 0, 0.0};
 }
 
