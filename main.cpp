@@ -1,46 +1,23 @@
-#include "fd.h"
-#include "scanner.h"
-#include <cstdio>
+#include <stdlib.h>
+#include "stable.h"
+#include <ctime>
 #include <iostream>
-
-using namespace std;
+#include "parser.h"
+#include "ast.h"
 
 int main()
 {
-    const char fileName[] = "test_scanner.txt";
-    FileDescriptor fd(fileName);
-
-    if (!fd.isOpen())
+    FileDescriptor *fd = new FileDescriptor("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\t");
+    FILE *fp;
+    fp = fopen("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\out.txt", "w");
+    STable *table = new STable();
+    Parser *p = new Parser(fd, table);
+    ast_list *code = p->parseProgram();
+    while (code != nullptr)
     {
-        printf("Failed to open file: %s\n", fileName);
-        return 1;
+        print_ast_node(fp, code->head);
+        code = code->tail;
     }
-
-    SCANNER scanner(&fd); // Pass FileDescriptor instance to SCANNER
-
-    TOKEN *token;
-    while ((token = scanner.Scan())->type != lx_eof)
-    {
-        switch (token->type)
-        {
-        case lx_identifier:
-            printf("Identifier: %s\n", token->str_ptr);
-            break;
-        case lx_integer:
-            printf("Integer: %d\n", token->value);
-            break;
-        case lx_string:
-            printf("String: %s\n", token->str_ptr);
-            break;
-        case lx_float:
-            printf("Float: %f\n", token->float_value);
-            break;
-        default:
-            printf("Token type: %s\n", TOKEN_NAMES[token->type]);
-            break;
-        }
-    }
-
-    fd.close();
+    delete[] code;
     return 0;
 }
