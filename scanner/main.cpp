@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     }
     else
     {
-        std::cerr << "Usage: " << argv[0] << "test.txt" << std::endl;
+        std::cerr << "Usage: " << argv[0] << "scannerTest.txt" << std::endl;
         return 1;
     }
 
