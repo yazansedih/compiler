@@ -1,7 +1,10 @@
+cpp
+Copy code
 %{
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <string>
 #include "fd.h"
 #include "scanner.h"
 
@@ -87,8 +90,8 @@ COMMENT     "##"[^\n]*
                     token = new TOKEN();
                     token->type = lx_string;
                     token->str_ptr = strdup(yytext + 1); // Remove quotes
-                    token->str_ptr[strlen(token->str_ptr) - 1] = '\0'; // Remove closing quote
-                    printf("A string: %s\n", token->str_ptr);
+                    token->str_ptr[strlen(token->str_ptr.c_str()) - 1] = '\0'; // Remove closing quote
+                    printf("A string: %s\n", token->str_ptr.c_str());
                     return token->type;
                 }
 
@@ -136,7 +139,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    yyin = fdopen(fileno(fd->fp), "r");
+    yyin = fdopen(fileno(fd->getFilePointer()), "r");
 
     while (yylex() != 0) {
         // Continue lexing until EOF

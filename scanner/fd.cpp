@@ -1,5 +1,10 @@
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
 #include "fd.h"
 
+// Double the buffer size to accommodate more characters if necessary
 void FileDescriptor::doubleBufferSize()
 {
     buf_size *= 2;
@@ -11,6 +16,7 @@ void FileDescriptor::doubleBufferSize()
     }
 }
 
+// Constructor initializing with a file name
 FileDescriptor::FileDescriptor(char *FileName) : line_number(0), char_number(0), flag(UNSET), buf_size(BUFFER_SIZE)
 {
     buffer = (char *)malloc(buf_size);
@@ -39,6 +45,7 @@ FileDescriptor::FileDescriptor(char *FileName) : line_number(0), char_number(0),
     }
 }
 
+// Destructor to free resources
 FileDescriptor::~FileDescriptor()
 {
     if (fp && fp != stdin)
@@ -49,8 +56,10 @@ FileDescriptor::~FileDescriptor()
     free(file);
 }
 
+// Default constructor initializing with stdin
 FileDescriptor::FileDescriptor() : FileDescriptor(nullptr) {}
 
+// Close the file if it's open
 void FileDescriptor::Close()
 {
     if (fp && fp != stdin)
@@ -60,16 +69,19 @@ void FileDescriptor::Close()
     }
 }
 
+// Get the file name
 char *FileDescriptor::GetFileName()
 {
     return file;
 }
 
+// Check if the file is open
 bool FileDescriptor::IsOpen()
 {
     return fp != nullptr;
 }
 
+// Get the current line from the file
 char *FileDescriptor::GetCurrLine()
 {
     if (!fp || feof(fp))
@@ -94,16 +106,19 @@ char *FileDescriptor::GetCurrLine()
     return buffer;
 }
 
+// Get the current line number
 int FileDescriptor::GetLineNum()
 {
     return line_number;
 }
 
+// Get the current character number in the line
 int FileDescriptor::GetCharNum()
 {
     return char_number;
 }
 
+// Get a character from the file
 char FileDescriptor::GetChar()
 {
     if (fp == nullptr || feof(fp))
@@ -123,6 +138,7 @@ char FileDescriptor::GetChar()
     return c;
 }
 
+// Unget a character back into the file stream
 void FileDescriptor::UngetChar(char c)
 {
     if (flag == SET)
@@ -141,6 +157,7 @@ void FileDescriptor::UngetChar(char c)
     }
 }
 
+// Report an error with current line and character position
 void FileDescriptor::ReportError(const char *msg)
 {
     std::cerr << "Error: " << msg << " at line " << line_number << ", char " << char_number << std::endl;
