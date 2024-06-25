@@ -1,0 +1,62 @@
+program example
+var x, y, z: integer;
+x := 10;
+y := 20.5;
+z := x + y;
+write(x, y, z);
+## This is a comment
+
+
+
+
+switch (ch)
+        {
+        case '(':
+            token->type = lx_lparen;
+            break;
+        case ')':
+            token->type = lx_rparen;
+            break;
+        case '[':
+            token->type = lx_lbracket;
+            break;
+        case ']':
+            token->type = lx_rbracket;
+            break;
+        case '{':
+            token->type = lx_lparen;
+            break;
+        case '}':
+            token->type = lx_rparen;
+            break;
+        case '.':
+            token->type = lx_dot;
+            break;
+        case ';':
+            token->type = lx_semicolon;
+            break;
+        case ',':
+            token->type = lx_comma;
+            break;
+        case '+':
+            token->type = lx_plus;
+            break;
+        case '-':
+            token->type = lx_minus;
+            break;
+        case '*':
+            token->type = lx_star;
+            break;
+        case '/':
+            token->type = lx_slash;
+            break;
+        case '=':
+            token->type = lx_eq;
+            break;
+        default:
+        {
+            const char *error = "Unrecognized character\0";
+            Fd->ungetChar(ch);
+            Fd->reportError(const_cast<char *>(error)); // const_cast is safe here since reportError expects char*
+            exit(EXIT_FAILURE);
+        }
