@@ -1,347 +1,460 @@
-#include <iostream>
+#include "scanner.h"
+#include <cstdlib>
 #include <cstring>
 #include <cctype>
-#include "fd.h"      // Assuming this header defines FileDescriptor
-#include "scanner.h" // Assuming this header defines TOKEN, lx_eof, lx_identifier, etc.
+#include <iostream>
 
 using namespace std;
 
-class SCANNER
+SCANNER::SCANNER()
 {
-private:
-    FileDescriptor *Fd;
-    int keywords;
-    int operators;
+    Fd = nullptr;
+}
 
-    // Helper function to skip comments
-    void skip_comments()
+SCANNER::SCANNER(FileDescriptor *fd)
+{
+    Fd = fd;
+}
+
+TOKEN *SCANNER::get_int()
+{
+    char ch;
+    char *str = new char[Fd->getBufferSize()];
+    int index = 0;
+
+    bool is_float = false;
+    bool errorFlag = false;
+
+    const char *error_message = "Identifier cannot start with a number";
+
+    ch = Fd->getChar();
+    if (ch == '-')
     {
-        char ch;
-        bool in_comment = false;
-        while ((ch = Fd->readChar()) != EOF)
+        str[index++] = ch;
+        if (!isdigit(Fd->getChar()))
         {
-            if (!in_comment && ch == '#')
+            Fd->ungetChar(ch);
+            TOKEN *tok = new TOKEN;
+            tok->str_ptr = new char[strlen(error_message) + 1]; // Allocate memory for str_ptr
+            strcpy(tok->str_ptr, error_message);                // Copy error_message to str_ptr
+            tok->type = lx_minus;
+            delete[] str;
+            return tok;
+        }
+        else
+            Fd->ungetChar(ch);
+    }
+    else
+    {
+        Fd->ungetChar(ch);
+    }
+
+    while ((ch = Fd->getChar()) != EOF)
+    {
+        if (isdigit(ch))
+        {
+            str[index++] = ch;
+        }
+        else if (ch == '.')
+        {
+            is_float = true;
+            str[index++] = ch;
+        }
+        else if (isalpha(ch))
+        {
+            // Skip the entire invalid variable name
+            while ((ch = Fd->getChar()) != EOF && isalnum(ch))
             {
-                char next_char = Fd->peek();
-                if (next_char == '#')
-                {
-                    // Skip until "##" is encountered
-                    while ((ch = Fd->readChar()) != EOF && ch != '\n')
-                    {
-                        if (ch == '#' && Fd->peek() == '#')
-                        {
-                            Fd->readChar(); // Consume the second '#'
-                            cout << "Comment with double ## has been skipped." << endl;
-                            return; // Exit after skipping one line
-                        }
-                    }
-                }
-                else
-                {
-                    // Error: single '#' found
-                    Fd->ReportError("Single '#' found in input");
-                    return;
-                }
+                // Keep reading until we encounter a non-alphanumeric character
             }
-            else if (in_comment && ch == '\n')
+
+            // Unget the non-alphanumeric character that caused the loop to break
+            Fd->ungetChar(ch);
+
+            Fd->reportError(const_cast<char *>(error_message)); // Reporting the error
+            errorFlag = true;
+            break;
+        }
+        else if (ch == ';' || ch == ' ' || ch == '\n' || ch == '\t' || ch == '\r')
+        {
+            Fd->ungetChar(ch);
+            break;
+        }
+        else
+        {
+            Fd->ungetChar(ch);
+            break;
+        }
+    }
+
+    str[index] = '\0';
+    TOKEN *tok = new TOKEN;
+    if (errorFlag)
+    {
+        tok->type = lx_error;
+        tok->str_ptr = new char[strlen(error_message) + 1]; // Allocate memory for str_ptr
+        strcpy(tok->str_ptr, error_message);                // Copy error_message to str_ptr
+        delete[] str;
+        return tok;
+    }
+
+    if (is_float)
+    {
+        if (str[index - 1] == '.')
+        {
+            Fd->reportError(const_cast<char *>("Bad floating point number")); // Reporting the error
+            tok->type = lx_error;
+            tok->str_ptr = nullptr;
+            delete[] str;
+            return tok;
+        }
+        tok->type = lx_float;
+        tok->float_value = atof(str);
+    }
+    else
+    {
+        tok->type = lx_integer;
+        tok->value = atoi(str);
+    }
+
+    delete[] str;
+    return tok;
+}
+
+void SCANNER::skip_comments()
+{
+    TOKEN *token = new TOKEN;
+    char ch;
+    string comment = "##";
+
+    // Collect characters until "##" is encountered or end of line
+    while ((ch = Fd->getChar()) != EOF && ch != '\n')
+    {
+        comment += ch;
+        if (ch == '#')
+        {
+            char nextChar = Fd->getChar();
+            if (nextChar == '#')
             {
-                in_comment = false;
+                comment += nextChar;
+                Fd->reportError(("Unterminated comment: " + comment).c_str());
+                return;
             }
         }
     }
 
-    // Helper function to check if a string is a keyword
-    TOKEN *check_keyword(const char *str)
+    if (ch == '\n')
     {
-        if (str == nullptr)
+        Fd->reportError(("Unterminated comment: " + comment).c_str());
+        // token->type = lx_comment;
+        // token->str_ptr = const_cast<char *>(comment.c_str());
+    }
+}
+
+bool SCANNER::check_keyword(const char *str)
+{
+    int low = 0;
+    int high = keys - 1;
+    while (low <= high)
+    {
+        int mid = (low + high) / 2;
+        int cmp = strcmp(keyword[mid], str);
+        if (cmp == 0)
+            return true;
+        if (cmp < 0)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+    return false;
+}
+
+TOKEN *SCANNER::get_id()
+{
+    char ch;
+    char *str = new char[Fd->getBufferSize()];
+    int index = 0;
+    bool errorFlag = false;
+
+    while ((ch = Fd->getChar()) != EOF)
+    {
+        if (isalnum(ch) || ch == '_')
         {
-            return nullptr;
+            str[index++] = ch;
+        }
+        else if (ch == ';' || ch == ' ' || ch == '\n' || ch == '\t' || ch == '\r' ||
+                 ch == '*' || ch == '/' || ch == '+' || ch == '-' || ch == ')' ||
+                 ch == '(' || ch == ':' || ch == ',' || ch == '[' || ch == ']' || ch == '=')
+        {
+            Fd->ungetChar(ch);
+            break;
+        }
+        else
+        {
+            std::cerr << "Illegal character encountered: " << ch << std::endl;
+            Fd->reportError("Illegal character");
+            errorFlag = true;
+            break;
+        }
+    }
+
+    str[index] = '\0';
+    TOKEN *tok = new TOKEN;
+
+    if (errorFlag)
+    {
+        tok->type = lx_error;
+        tok->str_ptr = nullptr;
+        delete[] str;
+        return tok;
+    }
+
+    if (check_keyword(str))
+    {
+        int keyword_index = -1;
+        for (int i = 0; i < keys; i++)
+        {
+            if (strcmp(keyword[i], str) == 0)
+            {
+                keyword_index = i;
+                break;
+            }
         }
 
-        const char *keyword[] = {"if", "else", "while", "for", "int", "float", "double", "char", "void", "return", "break", "continue", "switch", "case", "default", "do", "auto", "const", "enum", "extern", "long", "register", "signed", "static", "struct", "typedef", "union", "unsigned", "volatile", "sizeof"};
-        TOKEN_TYPE key_type[] = {lx_if, lx_else, lx_while, lx_for, lx_int, lx_float, lx_double, lx_char, lx_void, lx_return, lx_break, lx_continue, lx_switch, lx_case, lx_default, lx_do, lx_auto, lx_const, lx_enum, lx_extern, lx_long, lx_register, lx_signed, lx_static, lx_struct, lx_typedef, lx_union, lx_unsigned, lx_volatile, lx_sizeof};
-        for (int i = 0; i < keywords; ++i)
+        tok->type = key_type[keyword_index];
+    }
+    else
+    {
+        tok->type = lx_identifier;
+        tok->str_ptr = strdup(str); // Use strdup to allocate memory for duplicated string
+    }
+
+    delete[] str;
+    return tok;
+}
+
+TOKEN *SCANNER::get_string()
+{
+    char ch;
+    char *str = new char[Fd->getBufferSize()];
+    int index = 0;
+    bool escaped = false;
+
+    while ((ch = Fd->getChar()) != EOF)
+    {
+        if (ch == '"')
         {
-            if (strcmp(str, keyword[i]) == 0)
+            if (!escaped)
+                break;
+            else
             {
-                TOKEN *newToken = new TOKEN();
-                newToken->type = key_type[i];
-                size_t length = strlen(str) + 1; // Include space for null terminator
-                newToken->str_ptr = new char[length];
-                if (strcpy_s(newToken->str_ptr, length, str) != 0)
-                {
-                    cerr << "Error copying string." << endl;
-                    delete newToken;
-                    return nullptr;
-                }
-                cout << "The Token Type is Keyword." << endl;
-                return newToken;
+                str[index++] = ch;
+                escaped = false;
             }
         }
-        return nullptr;
-    }
-
-    // Helper function to get an identifier token
-    TOKEN *get_id(const char *first_char)
-    {
-        TOKEN *newToken = new TOKEN();
-        newToken->type = lx_identifier;
-        size_t length = strlen(first_char) + 1; // Include space for null terminator
-        newToken->str_ptr = new char[length];
-        if (strcpy_s(newToken->str_ptr, length, first_char) != 0)
+        else if (ch == '\\')
         {
-            cerr << "Error copying string." << endl;
-            delete newToken;
-            return nullptr;
-        }
-        cout << "The Token Type is Identifier." << endl;
-        return newToken;
-    }
-
-    // Helper function to get an operator token
-    TOKEN *get_op(const char *op)
-    {
-        const char *operator_list[] = {"(", ")", "+", "-", "*", "/", "=", ".", ";", "[", "]", ",", "{", "}", ":=", "!=", "<=", ">="};
-        TOKEN_TYPE operator_type[] = {lx_left_paren, lx_right_paren, lx_plus, lx_minus, lx_times, lx_divide, lx_assign, lx_dot, lx_semicolon, lx_left_bracket, lx_right_bracket, lx_comma, lx_left_brace, lx_right_brace, lx_assign, lx_not_equal, lx_less_equal, lx_greater_equal};
-
-        for (int i = 0; i < operators; ++i)
-        {
-            if (strcmp(op, operator_list[i]) == 0)
+            if (escaped)
             {
-                TOKEN *newToken = new TOKEN();
-                newToken->type = operator_type[i];
-                size_t length = strlen(op) + 1; // Include space for null terminator
-                newToken->str_ptr = new char[length];
-                if (strcpy_s(newToken->str_ptr, length, op) != 0)
-                {
-                    cerr << "Error copying string." << endl;
-                    delete newToken;
-                    return nullptr;
-                }
-                cout << "The Token Type is Operator." << endl;
-                return newToken;
-            }
-        }
-        return nullptr;
-    }
-
-    // Helper function to get an integer token
-    TOKEN *get_int(const char *first_char)
-    {
-        TOKEN *newToken = new TOKEN();
-        newToken->type = lx_integer;
-        newToken->value = atoi(first_char); // convert string to int
-        cout << "The Token Type is Integer." << endl;
-        return newToken;
-    }
-
-    // Helper function to get a floating-point token
-    TOKEN *get_float(const char *first_char)
-    {
-        TOKEN *newToken = new TOKEN();
-        newToken->type = lx_float;
-        newToken->float_value = atof(first_char); // convert string to float
-        cout << "The Token Type is Float." << endl;
-        return newToken;
-    }
-
-    // Helper function to get a string token
-    TOKEN *get_string(const char *str)
-    {
-        TOKEN *newToken = new TOKEN();
-        newToken->type = lx_string;
-        size_t length = strlen(str) + 1; // Include space for null terminator
-        newToken->str_ptr = new char[length];
-        if (strcpy_s(newToken->str_ptr, length, str) != 0)
-        {
-            cerr << "Error copying string." << endl;
-            delete newToken;
-            return nullptr;
-        }
-        cout << "The Token Type is String." << endl;
-        return newToken;
-    }
-
-public:
-    SCANNER()
-    {
-        Fd = nullptr;
-        keywords = 30;  // Number of keywords
-        operators = 18; // Number of operators
-    }
-
-    SCANNER(FileDescriptor *fd)
-    {
-        Fd = fd;
-        keywords = 30;  // Number of keywords
-        operators = 18; // Number of operators
-    }
-
-    TOKEN *Scan()
-    {
-        if (Fd == nullptr)
-        {
-            cout << "Error: File descriptor is null." << endl;
-            return nullptr;
-        }
-
-        char c;
-        int line_number = 1;
-
-        while ((c = Fd->readChar()) != EOF)
-        {
-            if (c == '\n')
-            {
-                line_number++;
-            }
-
-            if (c == '#')
-            {
-                char next_char = Fd->peek();
-                if (next_char == '#')
-                {
-                    while ((c = Fd->readChar()) != '\n' && c != EOF)
-                    {
-                        if (c == '#' && Fd->peek() == '#')
-                        {
-                            Fd->readChar(); // Consume the second '#'
-                            cout << "Comment with double ## has been skipped." << endl;
-                            break;
-                        }
-                    }
-                    line_number++;
-                }
-                else
-                {
-                    while ((c = Fd->readChar()) != '\n' && c != EOF)
-                        ;
-                    line_number++;
-                }
-            }
-            else if (c == '\"')
-            {
-                string str = "";
-                while ((c = Fd->readChar()) != '\"')
-                {
-                    if (c == EOF || c == '\n')
-                    {
-                        Fd->ReportError("Unexpected EOF or newline in string");
-                        return nullptr;
-                    }
-                    str += c;
-                }
-                return get_string(str.c_str());
-            }
-            else if (isdigit(c) || (c == '-' && isdigit(Fd->peek())))
-            {
-                bool errorFlag = false;
-                string num_string = "";
-                num_string += c;
-                while (isdigit(c = Fd->readChar()) || c == '.')
-                {
-                    if (isalpha(Fd->peek()))
-                    {
-                        while ((c = Fd->readChar()) != '\n')
-                            ;
-                        errorFlag = true;
-                        break;
-                    }
-                    if (c == '.')
-                    {
-                        num_string += c;
-                        while (isdigit(c = Fd->readChar()))
-                        {
-                            num_string += c;
-                        }
-                        Fd->ungett();
-                        return get_float(num_string.c_str());
-                    }
-                    num_string += c;
-                }
-                if (!errorFlag)
-                {
-                    Fd->ungett();
-                    return get_int(num_string.c_str());
-                }
-                Fd->ReportError("Error: Illegal token encountered");
-            }
-            else if (isalpha(c) || c == '_')
-            {
-                string word = "";
-                word += c;
-                while (isalnum(c = Fd->readChar()) || c == '_')
-                {
-                    word += c;
-                }
-                Fd->ungett();
-                TOKEN *keyword_token = check_keyword(word.c_str());
-                if (keyword_token != nullptr)
-                {
-                    return keyword_token;
-                }
-                else
-                {
-                    return get_id(word.c_str());
-                }
-            }
-            else if (c == ':')
-            {
-                char next_char = Fd->peek();
-                if (next_char == '=')
-                {
-                    Fd->readChar();
-                    return get_op(":=");
-                }
-                else
-                {
-                    Fd->ReportError("Error: Illegal character encountered");
-                    continue;
-                }
-            }
-            else if (c == '!')
-            {
-                char next_char = Fd->peek();
-                if (next_char == '=')
-                {
-                    Fd->readChar();
-                    return get_op("!=");
-                }
-                else
-                {
-                    Fd->ReportError("Error: Illegal character encountered");
-                    continue;
-                }
-            }
-            else if (strchr("<>=+-*/;(),[]{}", c) != NULL)
-            {
-                string symbol = "";
-                symbol += c;
-                return get_op(symbol.c_str());
-            }
-            else if (isspace(c))
-            {
-                while (isspace(c = Fd->readChar()))
-                {
-                    if (c == '\n')
-                    {
-                        line_number++;
-                    }
-                }
-                Fd->ungett();
+                str[index++] = ch;
+                escaped = false;
             }
             else
             {
-                string illegal_token = "";
-                illegal_token += c;
-                while (!isspace(c = Fd->readChar()) && c != EOF && c != '\n')
-                {
-                    illegal_token += c;
-                }
-                Fd->ReportError("Error: Illegal token encountered");
+                escaped = true;
+            }
+        }
+        else
+        {
+            str[index++] = ch;
+            escaped = false;
+        }
+    }
+
+    str[index] = '\0';
+    TOKEN *tok = new TOKEN;
+    tok->type = lx_string;
+    tok->str_ptr = strdup(str); // Use strdup to allocate memory for duplicated string
+
+    delete[] str;
+    return tok;
+}
+
+TOKEN *SCANNER::Scan()
+{
+    char ch;
+    TOKEN *token = new TOKEN;
+    token->str_ptr = nullptr;
+
+    while ((ch = Fd->getChar()) != EOF)
+    {
+        if (isspace(ch))
+        {
+            continue;
+        }
+
+        if (ch == '#')
+        {
+            char next_char = Fd->getChar();
+            if (next_char == '#')
+            {
+                skip_comments();
+                continue;
+            }
+            else
+            {
+                Fd->ungetChar(next_char);
+                Fd->reportError("Single '#' found in input (expected '##')");
+                token->type = lx_error;
+                return token;
+            }
+        }
+
+        if (isdigit(ch) || ch == '-')
+        {
+            Fd->ungetChar(ch);
+            token = get_int();
+            return token;
+        }
+
+        if (ch == '"')
+        {
+            token = get_string();
+            return token;
+        }
+
+        if (isalpha(ch) || ch == '_')
+        {
+            Fd->ungetChar(ch);
+            token = get_id();
+            return token;
+        }
+
+        if (ch == ':')
+        {
+            if ((ch = Fd->getChar()) == '=')
+            {
+                token->type = lx_colon_eq;
+                return token;
+            }
+            else
+            {
+                token->type = lx_colon;
+                Fd->ungetChar(ch);
+                return token;
+            }
+        }
+
+        if (ch == '!')
+        {
+            if ((ch = Fd->getChar()) == '=')
+            {
+                token->type = lx_neq;
+                return token;
+            }
+            else
+            {
+                Fd->ungetChar(ch);
                 continue;
             }
         }
 
-        return new TOKEN{lx_eof, nullptr, 0, 0.0};
+        if (ch == '<')
+        {
+            if ((ch = Fd->getChar()) == '=')
+            {
+                token->type = lx_le;
+                return token;
+            }
+            else
+            {
+                token->type = lx_lt;
+                Fd->ungetChar(ch);
+                return token;
+            }
+        }
+
+        if (ch == '>')
+        {
+            if ((ch = Fd->getChar()) == '=')
+            {
+                token->type = lx_ge;
+                return token;
+            }
+            else
+            {
+                token->type = lx_gt;
+                Fd->ungetChar(ch);
+                return token;
+            }
+        }
+
+        switch (ch)
+        {
+        case '(':
+            token->type = lx_lparen;
+            return token;
+        case ')':
+            token->type = lx_rparen;
+            return token;
+        case '[':
+            token->type = lx_lbracket;
+            return token;
+        case ']':
+            token->type = lx_rbracket;
+            return token;
+        case '{':
+            token->type = lx_lbrace;
+            return token;
+        case '}':
+            token->type = lx_rbrace;
+            return token;
+        case '.':
+            token->type = lx_dot;
+            return token;
+        case ';':
+            token->type = lx_semicolon;
+            return token;
+        case ',':
+            token->type = lx_comma;
+            return token;
+        case '+':
+            token->type = lx_plus;
+            return token;
+        case '-':
+            token->type = lx_minus;
+            return token;
+        case '*':
+            token->type = lx_star;
+            return token;
+        case '/':
+            token->type = lx_slash;
+            return token;
+        case '=':
+            token->type = lx_eq;
+            return token;
+        case '?':
+            token->type = lx_error;
+            return token;
+        case '$':
+            token->type = lx_error;
+            return token;
+        case '%':
+            token->type = lx_error;
+            return token;
+        default:
+            std::cerr << "Unrecognized character encountered: " << ch << std::endl;
+            Fd->reportError("Unrecognized character");
+            exit(EXIT_FAILURE);
+        }
     }
-};
+
+    if (ch == EOF)
+    {
+        token->type = lx_eof;
+        token->value = 0;
+        token->float_value = 0.0;
+    }
+
+    return token;
+}

@@ -1,203 +1,127 @@
-#ifndef SCANNER_H
-#define SCANNER_H
+#ifndef __SCANNER__H
+#define __SCANNER__H
 
-#include <string>
-#include <unordered_map>
-#include "fd.h" // Assuming this header defines FileDescriptor
+#include "fd.h"
 
 // Token types enumeration
 typedef enum
 {
-	lx_identifier,
-	lx_float,
-	lx_integer,
-	lx_string,
-	lx_plus,
-	lx_minus,
-	lx_star,
-	lx_slash,
-	lx_eq,
-	lx_neq,
-	lx_lt,
-	lx_le,
-	lx_gt,
-	lx_ge,
-	lx_lparen,
-	lx_rparen,
-	lx_lbracket,
-	lx_rbracket,
-	lx_lbrace,
-	lx_rbrace,
-	lx_colon,
-	lx_dot,
-	lx_semicolon,
-	lx_comma,
-	lx_colon_eq,
-	kw_program,
-	kw_var,
-	kw_constant,
-	kw_integer,
-	kw_boolean,
-	kw_string,
-	kw_float,
-	kw_true,
-	kw_false,
-	kw_if,
-	kw_fi,
-	kw_then,
-	kw_else,
-	kw_while,
-	kw_do,
-	kw_od,
-	kw_and,
-	kw_or,
-	kw_read,
-	kw_write,
-	kw_for,
-	kw_from,
-	kw_to,
-	kw_by,
-	kw_function,
-	kw_procedure,
-	kw_return,
-	kw_not,
-	kw_begin,
-	kw_end,
-	END_OF_FILE,
-	UNKNOWN,
-	COMMENT,
-	INTEGER_LITERAL,
-	STRING_LITERAL,
-	OPERATOR,
-	KEYWORD,
-	IDENTIFIER
-} TokenType;
+    /* Literals */
+    lx_identifier,
+    lx_integer,
+    lx_string,
+    lx_float,
+    /* Keywords */
+    kw_program,
+    kw_var,
+    kw_constant,
+    kw_integer,
+    kw_boolean,
+    kw_string,
+    kw_float,
+    kw_true,
+    kw_false,
+    kw_if,
+    kw_fi,
+    kw_then,
+    kw_else,
+    kw_while,
+    kw_do,
+    kw_od,
+    kw_and,
+    kw_or,
+    kw_read,
+    kw_write,
+    kw_for,
+    kw_from,
+    kw_to,
+    kw_by,
+    kw_function,
+    kw_procedure,
+    kw_return,
+    kw_not,
+    kw_begin,
+    kw_end,
 
-// Token structure
-typedef struct
+    lx_lparen,
+    lx_rparen,
+    lx_lbracket,
+    lx_rbracket,
+    lx_colon,
+    lx_dot,
+    lx_semicolon,
+    lx_comma,
+    lx_colon_eq,
+    lx_plus,
+    lx_minus,
+    lx_star,
+    lx_slash,
+    lx_eq,
+    lx_neq,
+    lx_lt,
+    lx_le,
+    lx_gt,
+    lx_ge,
+    lx_lbrace,
+    lx_rbrace,
+    lx_eof,
+    lx_error,
+    lx_comment,
+} LEXEM_TYPE;
+
+// Definition of TOKEN
+struct TOKEN
 {
-	TokenType type;
-	std::string str_ptr;
-	int value;
-	double float_value;
-} TOKEN;
+    LEXEM_TYPE type;
+    int value; // can be used instead of str_ptr for IDs and strings
+    float float_value;
+    char *str_ptr; // points to strings or identifiers, can use value
+                   // instead but with type casting
+};
 
-class Scanner
+class SCANNER
 {
 private:
-	FileDescriptor *fd;
-	std::unordered_map<std::string, TokenType> keywords;
-
-	// Helper function to skip comments
-	void skip_comments();
-
-	// Helper function to check if a string is a keyword
-	TOKEN *check_keyword(const char *str);
-
-	// Helper function to get an identifier token
-	TOKEN *get_id(const char *first_char);
-
-	// Helper function to get an operator token
-	TOKEN *get_op(const char *op);
-
-	// Helper function to get an integer token
-	TOKEN *get_int(const char *first_char);
-
-	// Helper function to get a floating-point token
-	TOKEN *get_float(const char *first_char);
-
-	// Helper function to get a string token
-	TOKEN *get_string(const char *str);
+    void skip_comments();
+    TOKEN *get_id();
+    TOKEN *get_string();
+    TOKEN *get_int();
+    TOKEN *get_float();
 
 public:
-	Scanner(FileDescriptor *fd);
-	TOKEN *scan();
-	std::string tokenTypeToString(TokenType type);
+    FileDescriptor *Fd;
+    SCANNER();
+    SCANNER(FileDescriptor *fd);
+    TOKEN *Scan();
+    bool check_keyword(const char *str);
 };
 
-int keywordss = 24; /* number of keywords */
-const char *keywordd[] = {
-	"program", "var", "constant", "integer", "bool", "string",
-	"float", "true", "false", "if", "fi", "then", "else", "while",
-	"do", "od", "and", "or", "read", "write", "for", "from", "to",
-	"by", nullptr};
+static int keys = 30; /* number of keywords */
+static const char *keyword[] = {
+    "and", "begin", "boolean", "by", "constant",
+    "do", "else", "end", "false", "fi", "float", "for", "from",
+    "function", "if", "integer", "not", "od", "or", "procedure",
+    "program", "read", "return", "string", "then", "to", "true",
+    "var", "while", "write"};
 
-LEXEME_TYPE key_type[] = {
-	kw_program,
-	kw_var,
-	kw_constant,
-	kw_integer,
-	kw_boolean,
-	kw_string,
-	kw_float,
-	kw_true,
-	kw_false,
-	kw_if,
-	kw_fi,
-	kw_then,
-	kw_else,
-	kw_while,
-	kw_do,
-	kw_od,
-	kw_and,
-	kw_or,
-	kw_read,
-	kw_write,
-	kw_for,
-	kw_from,
-	kw_to,
-	kw_by,
-};
+static const char *TOKEN_NAMES[] = {
+    "lx_identifier", "lx_integer", "lx_string", "lx_float", "kw_program",
+    "kw_var", "kw_constant", "kw_integer", "kw_boolean", "kw_string",
+    "kw_float", "kw_true", "kw_false", "kw_if", "kw_fi", "kw_then",
+    "kw_else", "kw_while", "kw_do", "kw_od", "kw_and", "kw_or", "kw_read",
+    "kw_write", "kw_for", "kw_from", "kw_to", "kw_by", "kw_function",
+    "kw_procedure", "kw_return", "kw_not", "kw_begin", "kw_end",
+    "lx_Iparen", "lx_rparen", "lx_lbracket", "lx_rbracket",
+    "Ix_colon", "lx_dot", "lx_semicolon", "lx_comma",
+    "Ix_colon_eq", "lx_plus", "lx_minus", "lx_star",
+    "lx_slash", "lx_eq", "lx_neq", "lx_lt", "lx_le",
+    "lx_gt", "lx_ge", "lx_lbrace", "lx_rbrace", "lx_eof", "lx_error", "lx_comment"};
 
-int operators = 22;
-const char *operator_list[] = {
-	"(",
-	")",
-	":",
-	":=",
-	"+",
-	"-",
-	"*",
-	"/",
-	"=",
-	"!=",
-	"<",
-	"<=",
-	">",
-	">=",
-	".",
-	";",
-	"[",
-	"]",
-	",",
-	"",
-	"{",
-	"}",
-};
+static LEXEM_TYPE key_type[] = {
+    kw_and, kw_begin, kw_boolean, kw_by, kw_constant,
+    kw_do, kw_else, kw_end, kw_false, kw_fi, kw_float,
+    kw_for, kw_from, kw_function, kw_if, kw_integer, kw_not,
+    kw_od, kw_or, kw_procedure, kw_program, kw_read, kw_return,
+    kw_string, kw_then, kw_to, kw_true, kw_var, kw_while, kw_write};
 
-LEXEME_TYPE operator_type[] = {
-	lx_Iparen,
-	lx_rparen,
-	Ix_colon,
-	x_colon_eq,
-	lx_plus,
-	lx_minus,
-	lx_star,
-	lx_slash,
-	lx_eq,
-	lx_neq,
-	lx_lt,
-	lx_le,
-	lx_gt,
-	lx_ge,
-	lx_dot,
-	lx_semicolon,
-	lx_lbracket,
-	lx_rbracket,
-	lx_comma,
-	lx_eof,
-	lx_lcbracket,
-	lx_rcbracket,
-};
-
-#endif /* SCANNER_H */
+#endif

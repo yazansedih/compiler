@@ -1,7 +1,0 @@
-program example
-var x, y, z: integer;
-x := 10;
-y := 20.5;
-z := x + y;
-write(x, y, z);
-## This is a comment
