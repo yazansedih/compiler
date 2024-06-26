@@ -1,6 +1,6 @@
 #ifndef COMPPARSER_PARSER_H
 #define COMPPARSER_PARSER_H
-#include "../scanner\scanner.h"
+#include "../scanner/scanner.h"
 #include "../symbolTable/stable.h"
 #include "./ast.h"
 
