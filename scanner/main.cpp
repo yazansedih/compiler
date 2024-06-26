@@ -1,3 +1,4 @@
+/*
 #include <stdlib.h>
 #include "../symbolTable/stable.h"
 #include <ctime>
@@ -7,9 +8,9 @@
 
 int main()
 {
-    FileDescriptor *fd = new FileDescriptor("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\t");
+    FileDescriptor *fd = new FileDescriptor("t");
     FILE *fp;
-    fp = fopen("C:\\Users\\mohammadaker\\CLionProjects\\FinalComp\\out.txt", "w");
+    fp = fopen("out.txt", "w");
     STable *table = new STable();
     Parser *p = new Parser(fd, table);
     ast_list *code = p->parseProgram();
@@ -21,3 +22,4 @@ int main()
     delete[] code;
     return 0;
 }
+*/

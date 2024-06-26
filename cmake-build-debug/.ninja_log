@@ -1,0 +1,10 @@
+# ninja log v6
+13	280	7411083590063584	CMakeFiles/compiler.dir/scanner/fd.cpp.obj	15c66ad8f16a8f62
+5	646	7411083589983570	CMakeFiles/compiler.dir/main.cpp.obj	51f2f686a09aeb0a
+57	667	7411083590509071	CMakeFiles/compiler.dir/symbolTable/stlist.cpp.obj	eeaf17ebc5f6ebec
+28	710	7411083590213611	CMakeFiles/compiler.dir/scanner/scanner.cpp.obj	fcd867648fed3f9f
+20	741	7411083590143572	CMakeFiles/compiler.dir/parser/parser.cpp.obj	b5b000e584331be7
+48	845	7411083590413699	CMakeFiles/compiler.dir/symbolTable/stable.cpp.obj	7f62caf6d6ad9dd6
+845	1003	7411083598383511	compiler.exe	dcb53966e0dbc040
+12	436	7411084299096142	CMakeFiles/compiler.dir/main.cpp.obj	51f2f686a09aeb0a
+437	558	7411084303336053	compiler.exe	dcb53966e0dbc040

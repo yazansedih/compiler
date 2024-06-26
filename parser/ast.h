@@ -2,6 +2,7 @@
 #define __AST__H
 // ast.h
 #include "../symbolTable/stable.h"
+#include "../scanner/fd.h"
 /* Definitions of list datatypes */
 /* List of AST nodes */
 

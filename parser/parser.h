@@ -1,8 +1,12 @@
+//
+// Created by mohammadaker on 8/15/2023.
+//
+
 #ifndef COMPPARSER_PARSER_H
 #define COMPPARSER_PARSER_H
 #include "../scanner/scanner.h"
 #include "../symbolTable/stable.h"
-#include "./ast.h"
+#include "ast.h"
 
 class Parser
 {

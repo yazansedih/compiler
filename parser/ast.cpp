@@ -6,7 +6,7 @@ arguments are the fields of that type of node, in order. */
 #include <stdio.h>
 #include "../scanner/fd.h"
 #include "../symbolTable/stable.h"
-#include "./ast.h"
+#include "ast.h"
 #include <stdarg.h>
 /* Internal routines: */
 static void nl_indent(FILE *, int);
