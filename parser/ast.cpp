@@ -175,6 +175,10 @@ AST *make_ast_node(int numberOfParm, AST_type type, ...)
 		fatal_error("Unknown type of AST node in make_ast_node'n");
 		break;
 	}
+
+    FILE *fp;
+    fp = fopen("C:/Users/baraa/OneDrive/Documents/GitHub/compiler/out.txt", "a");
+	print_ast_node(fp, n);
 	return (n);
 }
 //////////////////////////////////////////////////////////////////////

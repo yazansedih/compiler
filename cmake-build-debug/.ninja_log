@@ -10,3 +10,13 @@
 437	558	7411084303336053	compiler.exe	dcb53966e0dbc040
 9	397	7411088975529626	CMakeFiles/compiler.dir/main.cpp.obj	51f2f686a09aeb0a
 398	532	7411088979421890	compiler.exe	dcb53966e0dbc040
+37	786	7413558834240292	CMakeFiles/compiler.dir/main.cpp.obj	51f2f686a09aeb0a
+58	857	7413558834433005	CMakeFiles/compiler.dir/parser/parser.cpp.obj	b5b000e584331be7
+860	1058	7413558842454210	compiler.exe	dcb53966e0dbc040
+17	490	7413561548960736	CMakeFiles/compiler.dir/parser/parser.cpp.obj	b5b000e584331be7
+495	646	7413561553749289	compiler.exe	dcb53966e0dbc040
+10	597	7413563550014974	CMakeFiles/compiler.dir/parser/parser.cpp.obj	b5b000e584331be7
+603	727	7413563555950660	compiler.exe	dcb53966e0dbc040
+9	517	7413570092445690	CMakeFiles/compiler.dir/main.cpp.obj	51f2f686a09aeb0a
+16	585	7413570092515063	CMakeFiles/compiler.dir/parser/parser.cpp.obj	b5b000e584331be7
+589	729	7413570098242998	compiler.exe	dcb53966e0dbc040

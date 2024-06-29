@@ -15,12 +15,11 @@ int main()
     fp = fopen("C:/Users/baraa/OneDrive/Documents/GitHub/compiler/out.txt", "w");
     STable *table = new STable();
     Parser *p = new Parser(fd, table);
-    ast_list *code = p->parseProgram();
+    AST *code = p->parseProgram();
     while (code != nullptr)
     {
         cout << "Done" << endl;
-        print_ast_node(fp, code->head);
-        code = code->tail;
+        print_ast_node(fp, code);
     }
     delete[] code;
     return 0;

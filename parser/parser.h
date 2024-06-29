@@ -1,6 +1,3 @@
-//
-// Created by mohammadaker on 8/15/2023.
-//
 
 #ifndef COMPPARSER_PARSER_H
 #define COMPPARSER_PARSER_H
@@ -18,7 +15,7 @@ private:
     ast_list *code;
 
     void consume(LEXEM_TYPE expectedType);
-    ast_list *parseDeclList();
+    AST *parseDeclList();
     AST *parseDecl();
     ast_list *parseDeclListTail();
     ste_list *parseFormalsPrime();
@@ -54,7 +51,7 @@ private:
 
 public:
     Parser(FileDescriptor *fdt, STable *symboltable);
-    ast_list *parseProgram();
+    AST *parseProgram();
 };
 
 #endif // COMPPARSER_PARSER_H
