@@ -31,19 +31,21 @@ STEntry *STList::FindEntry(char *name)
  * @param type : Type of variable
  * @return : True if the node is added and False if the Entry Already exists in the Table
  */
-bool STList::AddEntry(char *name, STE_TYPE type)
+STEntry *STList::AddEntry(char *name, STE_TYPE type)
 {
     STEntry *ste = FindEntry(name);
-    bool added = false;
-    if (!ste)
+    if (ste)
+    {
+        return ste;
+    }
+    else
     {
         ste = new STEntry(name, type);
         ste->Next = Head;
         Head = ste;
-        added = true;
         Counter++;
     }
-    return added;
+    return ste;
 }
 /**
  * @brief STList::PrintAll : Prints All nodes in the list, use the print in the STEntry.

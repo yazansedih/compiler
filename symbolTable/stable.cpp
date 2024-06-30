@@ -1,5 +1,6 @@
 #include <string>
 #include "./stable.h"
+#include "./stlist.h"
 #include "functional"
 #include <stdio.h>
 #include <string.h>
@@ -175,4 +176,32 @@ void STable::FindAndPrintEntry(char *name, FILE *fp)
         fprintf(fp, "\nfound\n");
     else
         fprintf(fp, "\nnot found\n");
+}
+
+char *ToLowerCase(char *str)
+{
+    for (int i = 0; i < strlen(str); i++)
+    {
+        str[i] -= 32;
+    }
+    return str;
+}
+
+STEntry *STable::GetSymbol(char *str)
+{
+    unsigned long index = ElfHash(str);
+    STEntry *ste = slots[index]->FindEntry(str);
+    if (ste)
+        return ste;
+    else
+        return NULL;
+}
+
+STEntry *STable::PutSymbol(char *str, STE_TYPE type)
+{
+    if (this->foldCase)
+        str = ToLowerCase(str);
+    unsigned long index = ElfHash(str);
+    STEntry *Added = slots[index]->AddEntry(str, type);
+    return Added;
 }

@@ -1,6 +1,8 @@
 #ifndef STABLE_H
 #define STABLE_H
 #include "./stlist.h"
+#include <vector>
+
 #define DEFAULT_SIZE 19
 class STable
 {
@@ -15,6 +17,7 @@ private:
     int max_search_dist = -1; // Maximum entries searched
 public:
     unsigned long Size;
+    std::vector<STList *> slots; // Pointer to hash table array of entries
 
     STable *next;
     STable();
@@ -23,6 +26,9 @@ public:
     void Reset(unsigned long size);
     STable *enter_scope(STable *s); /*Inform the symbol table that the parser is entering a new scope */
     STable *exit_scope(STable *s);  /*Inform the symbol table that the parser is leaving a scope.*/
+    STEntry *GetSymbol(char *str);
+
+    STEntry *PutSymbol(char *str, STE_TYPE type);
     bool AddEntry(char *name, STE_TYPE type);
     STEntry *FindInScope(char *name); // finds and prints the Entry if it exist
     STEntry *FindEntry(char *name);

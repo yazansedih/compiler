@@ -48,166 +48,166 @@ not found
 
 ===== Table (0) =======
 T[0]: 0 ste:	
-T[1]: 1 ste:	(ABXY72US,int) 
-T[2]: 3 ste:	(DNJOWULL,double) (B25KHELB,char) (VQCY9L0G,float) 
+T[1]: 0 ste:	
+T[2]: 1 ste:	(Q5MTCGRK,float) 
 T[3]: 0 ste:	
-T[4]: 0 ste:	
-T[5]: 1 ste:	(ISQ7D6G4,None) 
-T[6]: 1 ste:	(NFF3SEFA,double) 
-T[7]: 1 ste:	(I2EBHF30,double) 
-T[8]: 0 ste:	
-T[9]: 1 ste:	(BK2TT667,None) 
-T[10]: 1 ste:	(KJM8HT14,int) 
-T[11]: 2 ste:	(FM2CFSQ7,None) (L9CCLW5Q,None) 
+T[4]: 2 ste:	(YGSD0D71,int) (RHPQDDT4,None) 
+T[5]: 0 ste:	
+T[6]: 0 ste:	
+T[7]: 1 ste:	(IHMUCJ3B,char*) 
+T[8]: 1 ste:	(KBKP7U3G,char*) 
+T[9]: 0 ste:	
+T[10]: 1 ste:	(CYIKT2O9,int) 
+T[11]: 0 ste:	
 T[12]: 0 ste:	
 T[13]: 0 ste:	
-T[14]: 1 ste:	(DLMUJFW7,char*) 
-T[15]: 1 ste:	(LFZURZHX,float) 
+T[14]: 3 ste:	(GLCW2660,double) (XH3RZZZT,char*) (JDUZFIB3,double) 
+T[15]: 0 ste:	
 T[16]: 0 ste:	
 T[17]: 0 ste:	
-T[18]: 1 ste:	(GTV3YXFC,float) 
-T[19]: 0 ste:	
+T[18]: 1 ste:	(I1RW1R2C,None) 
+T[19]: 1 ste:	(I74RVVMG,int) 
 T[20]: 0 ste:	
 T[21]: 0 ste:	
-T[22]: 1 ste:	(I1OY5QBU,char*) 
-T[23]: 2 ste:	(I5GPVPJU,char*) (K6G7DM70,None) 
-T[24]: 0 ste:	
-T[25]: 1 ste:	(MIMQE1WI,None) 
-T[26]: 3 ste:	(M8L56EC4,char*) (D1GOKWS9,double) (QXC1BZ9U,None) 
-T[27]: 2 ste:	(GQ3PEQ9A,None) (OVG6CABI,char*) 
-T[28]: 0 ste:	
-T[29]: 2 ste:	(FLT659UH,int) (EF0EZC2H,char) 
-T[30]: 2 ste:	(C30XEDY3,int) (TWKWXMUL,char*) 
-T[31]: 3 ste:	(P9EL8QQ3,int) (PF0WBTPP,None) (KYS4CIMB,None) 
-T[32]: 0 ste:	
-T[33]: 1 ste:	(KR8KZ5GQ,char) 
+T[22]: 0 ste:	
+T[23]: 2 ste:	(T1NRK87L,int) (E1DVSQ44,char) 
+T[24]: 2 ste:	(DN1Q4F1S,char) (UXOPXEVS,float) 
+T[25]: 1 ste:	(O5H1F9AZ,None) 
+T[26]: 2 ste:	(ROJEBGZH,None) (H8WJNBPJ,None) 
+T[27]: 2 ste:	(TA04677I,float) (UZMT9XJH,None) 
+T[28]: 1 ste:	(M1IL6M5I,char) 
+T[29]: 1 ste:	(MZYY24YP,char) 
+T[30]: 1 ste:	(QTCIYJPS,double) 
+T[31]: 1 ste:	(BUOME1T5,double) 
+T[32]: 1 ste:	(ZUQRNVJK,int) 
+T[33]: 2 ste:	(T4RE3UBL,double) (Z71DA5VZ,char*) 
 T[34]: 0 ste:	
 T[35]: 0 ste:	
-T[36]: 0 ste:	
-T[37]: 0 ste:	
+T[36]: 1 ste:	(VUKIHF8Y,int) 
+T[37]: 1 ste:	(AYNI7TSQ,double) 
 T[38]: 0 ste:	
-T[39]: 0 ste:	
-T[40]: 1 ste:	(QVETM9UW,double) 
-T[41]: 3 ste:	(QHMTPJZK,char*) (WHET3IY5,double) (NNT7B0F6,int) 
-T[42]: 1 ste:	(ZXI6H8OO,None) 
-T[43]: 0 ste:	
+T[39]: 1 ste:	(J3L5SEVK,float) 
+T[40]: 3 ste:	(P1HGW9XG,double) (QFC6BYHX,float) (CQ9BACYA,char) 
+T[41]: 0 ste:	
+T[42]: 2 ste:	(GORDR9AL,char) (ZGGKE7MF,None) 
+T[43]: 2 ste:	(KFA8PWY7,double) (QU7BYJCT,char*) 
 T[44]: 0 ste:	
-T[45]: 2 ste:	(ZK3NEEG3,double) (NJ7I8WYF,double) 
-T[46]: 1 ste:	(KXAF5KRO,None) 
-T[47]: 2 ste:	(IJCU553L,None) (Q9LXWBDO,None) 
-T[48]: 2 ste:	(WEMX8B25,int) (BIQOA1D3,None) 
-T[49]: 1 ste:	(HVMOMYHB,double) 
-T[50]: 3 ste:	(BBAMY90P,None) (FSU23H8A,None) (MHW53Z9E,int) 
-T[51]: 1 ste:	(H4VAZ6Q4,None) 
-T[52]: 1 ste:	(KSODBQFE,None) 
-T[53]: 0 ste:	
-T[54]: 1 ste:	(KW9KDQ22,None) 
-T[55]: 1 ste:	(U4HG802C,None) 
-T[56]: 2 ste:	(GTI6FNXT,None) (FNROOSFM,None) 
-T[57]: 4 ste:	(GVBEQ5JB,char) (CGHCAU7F,None) (MHJBUCX4,None) (FX8HKNX0,None) 
-T[58]: 2 ste:	(HUF6GH5P,char) (Z4MSWT6N,None) 
-T[59]: 1 ste:	(N7UCRGOA,char) 
-T[60]: 1 ste:	(MDOELT25,char) 
-T[61]: 1 ste:	(ZSYYLD4K,double) 
+T[45]: 0 ste:	
+T[46]: 3 ste:	(RWPYZTIZ,int) (HKUR5BA5,None) (NZGEGP2X,double) 
+T[47]: 0 ste:	
+T[48]: 1 ste:	(BVJ48HFL,None) 
+T[49]: 1 ste:	(F0NB2EGY,None) 
+T[50]: 0 ste:	
+T[51]: 2 ste:	(FBSUY5JJ,None) (V05L1552,None) 
+T[52]: 0 ste:	
+T[53]: 3 ste:	(YLPGRD02,float) (YLO7HL24,None) (NFL0YZ2Z,int) 
+T[54]: 2 ste:	(H9G7MY1B,float) (UWCZ3IRB,None) 
+T[55]: 1 ste:	(IFO0EBFJ,char) 
+T[56]: 1 ste:	(OBCSIOVE,float) 
+T[57]: 0 ste:	
+T[58]: 1 ste:	(STNUEIA8,char*) 
+T[59]: 1 ste:	(CLYQH0JP,int) 
+T[60]: 3 ste:	(BVWHKJWE,double) (ER60ACV1,double) (ALM2JIBZ,char*) 
+T[61]: 1 ste:	(OUCX6RAU,None) 
 T[62]: 0 ste:	
-T[63]: 0 ste:	
-T[64]: 2 ste:	(KNLLD42D,float) (VDQQ8I6E,char) 
-T[65]: 3 ste:	(FZZ3UBAO,int) (WOX5B8NI,char*) (AQ17YGFK,char*) 
-T[66]: 0 ste:	
-T[67]: 1 ste:	(IFJ3XOUD,float) 
-T[68]: 1 ste:	(FNHTRH9I,None) 
-T[69]: 1 ste:	(OGUV8G19,None) 
-T[70]: 1 ste:	(G76UKIX2,char*) 
-T[71]: 1 ste:	(BT9LWFB3,double) 
+T[63]: 1 ste:	(AN8D197T,None) 
+T[64]: 0 ste:	
+T[65]: 0 ste:	
+T[66]: 1 ste:	(KCXFHK66,char*) 
+T[67]: 3 ste:	(X6P89GDK,None) (YJTI3B5K,float) (O3PREEQJ,double) 
+T[68]: 0 ste:	
+T[69]: 1 ste:	(H9XF8MJT,char*) 
+T[70]: 1 ste:	(H4RIN9SC,None) 
+T[71]: 3 ste:	(YSAKC67L,char*) (J5E1K55U,None) (CF6NP8UZ,char) 
 T[72]: 0 ste:	
-T[73]: 2 ste:	(CRZ6D7PZ,double) (AC3DAUH0,char*) 
-T[74]: 0 ste:	
-T[75]: 1 ste:	(LL3VQIZ6,char) 
-T[76]: 0 ste:	
-T[77]: 1 ste:	(PX63MA8J,None) 
+T[73]: 1 ste:	(SKN4ESI8,float) 
+T[74]: 1 ste:	(MS2HCODI,None) 
+T[75]: 3 ste:	(TNRWRQJH,char*) (B9AQINWU,int) (C0R5Y5TR,char) 
+T[76]: 1 ste:	(HZQMDRCK,char*) 
+T[77]: 2 ste:	(DSC9HXGT,char) (Q2BZHBZ7,char*) 
 T[78]: 0 ste:	
-T[79]: 3 ste:	(VO6OLAFB,double) (T287K9H3,None) (DE13JEEC,char*) 
-T[80]: 1 ste:	(QWRQKBCI,char) 
-T[81]: 1 ste:	(CIO4LHCE,float) 
-T[82]: 3 ste:	(HURPT178,double) (IRZXL8GJ,double) (EYEZPS1L,char*) 
-T[83]: 1 ste:	(UPFCV4HF,char*) 
+T[79]: 1 ste:	(YHAX12RL,char*) 
+T[80]: 0 ste:	
+T[81]: 0 ste:	
+T[82]: 3 ste:	(I4H8XN5D,double) (W8XNSCM3,double) (P41EONJR,None) 
+T[83]: 1 ste:	(CBO43AAQ,None) 
 T[84]: 0 ste:	
-T[85]: 1 ste:	(W6CTUJ29,char) 
-T[86]: 2 ste:	(FZGMPL0S,None) (XAEZ53R7,float) 
+T[85]: 2 ste:	(CZBPKJGZ,char) (J8S7BN3A,float) 
+T[86]: 3 ste:	(NYR3G8G1,int) (BBZJLPX8,double) (GU02B6JO,None) 
 T[87]: 0 ste:	
-T[88]: 1 ste:	(JKMBVCPR,None) 
+T[88]: 0 ste:	
 T[89]: 0 ste:	
-T[90]: 0 ste:	
+T[90]: 3 ste:	(CF3U2T98,char*) (V1ZWWV92,None) (GXJI3YGJ,char) 
 T[91]: 0 ste:	
-T[92]: 0 ste:	
-T[93]: 0 ste:	
-T[94]: 3 ste:	(CF142H8I,None) (N2DTBGKG,None) (ONAUNNM7,float) 
-T[95]: 1 ste:	(GGRAF9TM,char) 
-T[96]: 2 ste:	(JI1KK0ZA,double) (FHCS4MLS,double) 
-T[97]: 3 ste:	(VPZFFMF8,char) (RVHROJHG,None) (LPGSZHCI,None) 
-T[98]: 2 ste:	(E91EAFQV,int) (IJE2DXPD,float) 
-T[99]: 0 ste:	
-T[100]: 0 ste:	
+T[92]: 1 ste:	(A15BJBJU,double) 
+T[93]: 1 ste:	(R6YYV1SE,char) 
+T[94]: 3 ste:	(EQ48DLZ8,float) (G64FF950,None) (TY23AGI3,None) 
+T[95]: 3 ste:	(HFWNJL6S,int) (C1Z57MS1,float) (K9BO1RRU,float) 
+T[96]: 0 ste:	
+T[97]: 0 ste:	
+T[98]: 1 ste:	(MMNPORMR,char*) 
+T[99]: 2 ste:	(HS6XEO9Q,char) (MABLBH5K,int) 
+T[100]: 1 ste:	(A6SFSEY4,double) 
 
 Number of entries in table: 101
 Number of probes into table: 100
-Number of probes that immediately found entry: 62
-Maximum entries searched: 4
+Number of probes that immediately found entry: 61
+Maximum entries searched: 3
 
 ===== Table (1) =======
-T[0]: 3 ste:	(D8GLNAUV,float) (KREPG9HE,float) (XOJ8G4R6,char) 
-T[1]: 2 ste:	(GCC1DWKJ,None) (ZYUZEFMS,float) 
-T[2]: 7 ste:	(G7HUQ5CZ,char) (CWJK70PN,int) (NMC9MTIK,char) (BML8NGKA,char) (N83II881,float) (HMA1NBJM,double) (RX8I6A71,None) 
-T[3]: 6 ste:	(JXAYX4UR,float) (L7KJCL6Y,double) (BYRZF0AC,int) (VH70UP7D,char*) (A8PKUIF0,char) (H4VRLW9M,float) 
-T[4]: 2 ste:	(MH0P873W,char) (W4HLL5FN,None) 
-T[5]: 3 ste:	(ZPEF1UFS,double) (UAEDHYQ1,char*) (FKVEL3NM,double) 
-T[6]: 3 ste:	(LHDFOIP7,None) (JFX28JCL,double) (K3PK7L7W,char) 
-T[7]: 3 ste:	(JZGZ1HJT,double) (VQW8SLTX,char) (AMM4S60U,float) 
-T[8]: 1 ste:	(X1TY7H5B,None) 
-T[9]: 5 ste:	(VUHDHWMK,char) (IOB33V26,char*) (LTBKBOUH,char) (XP4E9HJV,None) (RRCXVUBB,double) 
-T[10]: 2 ste:	(TOB13W3E,None) (SOO2AHLG,None) 
-T[11]: 7 ste:	(WMRP0BE0,None) (PVQH5S9G,char) (PG931IPC,None) (HIF0HBS0,char) (M6XPBR83,float) (VGU6TLF8,float) (HQWYDI0F,float) 
-T[12]: 0 ste:	
-T[13]: 4 ste:	(GEJKAAAU,None) (QURAH1JB,int) (YF7H6IEP,float) (PK10CGS7,None) 
-T[14]: 3 ste:	(DOKMCRT2,char*) (KSRD2QOM,None) (LJ7TZRSH,int) 
-T[15]: 8 ste:	(F27QQHP9,double) (CZIHK5C0,double) (WYIK1OGR,int) (E7GQX3FC,char*) (H18CBA7G,double) (G380I96Q,char*) (S9M674PU,int) (AVU87I4M,float) 
-T[16]: 3 ste:	(XPA7O52W,double) (WY8BT2BX,int) (D7EIF435,float) 
-T[17]: 5 ste:	(HKO2JAXE,None) (YUPG4H3J,None) (KWEWJY5F,float) (O7UOZ32J,float) (G9NVWSM5,char*) 
-T[18]: 1 ste:	(QLTQI6CZ,int) 
-T[19]: 3 ste:	(F6PXL1J1,None) (MZ4GOYG6,double) (MKXAOGGW,None) 
-T[20]: 5 ste:	(ENX2Y47H,char*) (OIABJFRG,float) (BTBVOB9K,char*) (UKWVONFZ,char) (UC8IWT8B,double) 
-T[21]: 7 ste:	(WRE5GKUQ,float) (SI04BMW0,double) (MZBH2QMD,char*) (JL2870W6,char*) (N2VK5QE2,float) (LFVIZUGL,double) (OKZXMEZF,double) 
-T[22]: 0 ste:	
-T[23]: 5 ste:	(UOW93NX0,int) (IX84TDQ8,char) (SHDO5MMU,float) (N6GZJ564,int) (KEESNX8B,None) 
-T[24]: 2 ste:	(RZDRWFWD,float) (IU4NPKR1,double) 
-T[25]: 4 ste:	(GXCH7DY5,float) (AXII72PJ,double) (L5WCIN5L,char*) (JEE7K15I,char*) 
-T[26]: 5 ste:	(OGMJ48O8,float) (XZ9FIUS1,float) (M5P2KBQ4,float) (YCS8AJJV,char) (OZ1Y3P9U,char*) 
-T[27]: 1 ste:	(DDW7OPKI,None) 
-T[28]: 0 ste:	
+T[0]: 5 ste:	(PYSJU7GI,char*) (DF9SXI86,None) (U236HNYI,None) (ODS7I18C,int) (NV91QEML,float) 
+T[1]: 2 ste:	(NSLOMVKR,None) (YVNJ0T9B,None) 
+T[2]: 4 ste:	(N92QYBWX,int) (XJN2ENH3,double) (FF83DEW7,char*) (NR9YHI9F,char) 
+T[3]: 5 ste:	(CPRA75MP,int) (RWKHLWGW,char) (AZPV5P5V,float) (PBUL4TO3,float) (UVKSLBSO,double) 
+T[4]: 3 ste:	(W4HW94LA,None) (O38KALF7,char) (VJPGFMUB,int) 
+T[5]: 1 ste:	(S6A4Q558,float) 
+T[6]: 4 ste:	(E2MZVIMM,char*) (N93MXB68,int) (V7LLGXYT,None) (AF33I5XH,char*) 
+T[7]: 3 ste:	(FZPGRSAV,char*) (BYYO3W8X,char) (ANUS59FL,float) 
+T[8]: 1 ste:	(LCX6KT11,char*) 
+T[9]: 2 ste:	(V0ITXYSM,char) (UYVZOYA2,double) 
+T[10]: 1 ste:	(E9PN6KBA,char) 
+T[11]: 2 ste:	(CREJRT0W,double) (VC803G20,char) 
+T[12]: 3 ste:	(P3RI7X6V,None) (KW9IL2PE,int) (KN8OSJ9B,None) 
+T[13]: 3 ste:	(B1WQITTH,char) (Q00FTT8N,char*) (XXC0BXX8,char*) 
+T[14]: 3 ste:	(KAO5PZOF,char) (KBNH11U9,float) (GERYMI90,None) 
+T[15]: 8 ste:	(XJSB71OD,char) (XTREFZU6,None) (FVRKEARW,double) (TWPME7W2,None) (KSNXOOM3,None) (MTM4FDW5,None) (E4CGENCG,double) (BNBL0GAK,int) 
+T[16]: 5 ste:	(X58FBL6U,int) (CSCWUPJ4,char) (V38GZQ0K,float) (XR1P8K9W,None) (TWEIOBAE,char) 
+T[17]: 3 ste:	(YEMGT7HG,double) (CFGB6E09,char*) (TT26YRE3,char*) 
+T[18]: 8 ste:	(RIISP3GA,int) (KQ0LD4WE,None) (FT4T7F02,char) (BZ9JPUUD,char*) (HELBOLFR,char*) (KY69IPCN,double) (NLE8DTYA,None) (HMWLG08T,double) 
+T[19]: 1 ste:	(HW183V5Z,None) 
+T[20]: 5 ste:	(TH4RUBZI,char*) (IJNKAZSM,None) (W4FIYDSK,int) (X57KN476,None) (NL6CFJ58,double) 
+T[21]: 7 ste:	(YQOO97UG,double) (NEZWX7CM,int) (DCL621BK,None) (EWYJ9ZQT,None) (PGAVO47X,char*) (O31JEKIQ,char) (IQKIARYB,None) 
+T[22]: 4 ste:	(NLLRP8SH,char) (BWKPLIAC,None) (BC8I7O84,char*) (KN4T6K7G,None) 
+T[23]: 1 ste:	(HM9L5Y1G,float) 
+T[24]: 5 ste:	(H9VDVY1Q,None) (JYIJTZ4M,char*) (WZ5JV2C5,char*) (WK4RBXER,char) (PMIZD4ED,char*) 
+T[25]: 4 ste:	(GDG6MMV7,char) (B305QKF8,None) (QPWHBZK8,None) (MM58064G,float) 
+T[26]: 2 ste:	(AITI2V2D,char) (HMG347CE,None) 
+T[27]: 3 ste:	(KK85A4SP,char) (ENW0XRC1,int) (SZZ9W2EE,None) 
+T[28]: 2 ste:	(WBKFJW24,int) (OHNJIW82,char*) 
 
 Number of entries in table: 29
 Number of probes into table: 100
-Number of probes that immediately found entry: 26
+Number of probes that immediately found entry: 29
 Maximum entries searched: 8
 
 ===== Table (2) =======
-T[0]: 6 ste:	(SMBGCWJ4,None) (BWOD2S9S,int) (JEYWH1RD,char*) (LD1826LB,char) (YZ2TWLQS,int) (VDVFHRYE,float) 
-T[1]: 4 ste:	(IUXM8QKE,double) (A4078IO2,char) (EZIECNQE,double) (ACZUVH14,int) 
-T[2]: 13 ste:	(D5CO137V,int) (T33QRMEN,None) (QTCP3C1B,float) (NGQKOMVB,int) (VJGUK585,None) (G6RN1TQL,None) (B6SB4LDS,float) (MOYNKXEZ,None) (HHWT1NJY,char*) (MD5ALXN3,char) (GRP7G1S3,char*) (RUVA7IGP,double) (NKZ9N6Z0,None) 
-T[3]: 4 ste:	(SQ4D0XEC,float) (R5AXYLRC,float) (XE3IY2XE,float) (HMGAHUHW,char*) 
-T[4]: 8 ste:	(KRYAU81E,char) (LI5GLKOP,char) (MKDYZM1E,double) (B2EBD0WV,double) (RIOAW5NJ,None) (WRDXER9X,None) (HDQ3J5XS,char) (EML2V5XV,char*) 
-T[5]: 9 ste:	(COJ3UUMU,None) (BHNXVUE8,double) (LP0N5SXL,char*) (P51C6H4L,char) (T4MT1RQM,None) (WU82DH4B,float) (ZIK5QGZZ,int) (UX1TU3RV,None) (K4KXN7ML,None) 
-T[6]: 6 ste:	(M52S2MKM,double) (YTK4LQF8,float) (HVCKO4UG,double) (PN4BGOUY,char*) (NHSVE4CI,None) (MTRKPSP9,None) 
-T[7]: 5 ste:	(Q992X4KV,None) (M17NYDJ5,char*) (FBS4YDE0,float) (KGCTC2JV,None) (KKDE7807,double) 
-T[8]: 7 ste:	(PM19EH6H,None) (DT0F92BP,char*) (XO8DEFXG,None) (AI3JJPIR,char*) (ZTPA2IKA,float) (XWJAOB3Q,None) (RS4EI7UR,None) 
-T[9]: 3 ste:	(OTLQ4V91,None) (Q0R8457Z,char*) (V835H0IE,float) 
-T[10]: 2 ste:	(Y3L9N8WH,int) (TS58YGA0,char) 
-T[11]: 10 ste:	(AQA5Q7UI,char) (F43WIPFE,int) (UHS7M4VL,char*) (SVHUA9TW,float) (HF2555KY,char*) (JYQDSPSJ,None) (QF8N6S1P,int) (JPCGA48P,None) (HPL9EIFO,None) (EBBL1491,int) 
-T[12]: 7 ste:	(BEP7Y5SQ,None) (AVHOTHMQ,None) (HTCXZVO6,char*) (DURQRM8N,double) (G6CRAGG4,int) (Y57MX49B,float) (NTG81159,float) 
-T[13]: 3 ste:	(W23WNYLZ,None) (OOT1PUEF,float) (TO865MX9,None) 
-T[14]: 3 ste:	(ELQ58A9M,char) (EGXOB1IV,float) (BI57VSUI,char*) 
-T[15]: 3 ste:	(ZM59MQ12,None) (TX4ZJ8F6,char*) (JOQN2F47,None) 
-T[16]: 7 ste:	(ACJMJINK,char) (CY5UQ6GY,int) (A0XO513M,float) (TW4G718B,double) (IP8QGOYA,None) (DBVAWQ6P,None) (Y8Z29BCN,char*) 
+T[0]: 1 ste:	(OV2B0HYW,int) 
+T[1]: 10 ste:	(IGC15JE2,None) (US8VTDPW,double) (B2IE53W1,char*) (MLUA0O5B,None) (RGKCP63R,float) (H9AQ1C5F,char*) (PLL6SWDK,None) (TV77OEQR,double) (O6NXUJYS,int) (F6I36F3G,int) 
+T[2]: 5 ste:	(C4EVXCQE,None) (OLZ40VAN,int) (K37T45SJ,None) (SCOFA0KO,char) (NZPLUUNJ,double) 
+T[3]: 6 ste:	(C94NYFJ0,double) (OU57LCBP,float) (Z3RD7BKM,char*) (X3CGP3G8,float) (KQRSWWYH,char) (INIZOH8N,float) 
+T[4]: 6 ste:	(ZKY4M7DL,char*) (WA3QNJH6,None) (STIMWUTT,char) (ZF16RMZL,int) (SXKJQR4U,int) (NNAV2IRK,None) 
+T[5]: 13 ste:	(KYHU7XIK,None) (JH97RYCM,double) (LJMDKBBV,float) (X1D27LSM,double) (WKYPP9NN,int) (YMADBNJQ,int) (O2SEXGY4,float) (QRKLKGGJ,None) (YO05Q6NW,double) (RBFOJBDH,double) (QRRSE6HE,int) (NIA4YM64,char*) (PATEL2AI,None) 
+T[6]: 5 ste:	(VKXZXN6X,float) (XT7YSS3K,int) (AQDQNM5X,int) (A2QS99XF,None) (WFXU1D2K,double) 
+T[7]: 5 ste:	(LUVRS9IA,int) (RIKWTWBW,char) (XIM2FDFQ,char*) (N8WO4BV2,double) (BXGYD3DX,char*) 
+T[8]: 2 ste:	(OFN0FC6L,double) (O0STTXRR,None) 
+T[9]: 9 ste:	(SS3SL9YC,None) (CZOQZMEN,None) (LZMB2HS1,char) (MDFGC8G3,int) (B1HDYA7A,None) (N3GIGLKM,char*) (WOHIA77C,int) (APBDC46T,None) (RPO009EI,char*) 
+T[10]: 5 ste:	(B7ZX9MM7,None) (K6GC40CD,int) (ES17T6QP,float) (KMNDW647,float) (ZCNBAWCU,None) 
+T[11]: 10 ste:	(FH891AIT,char*) (QZ65IQI1,int) (YSUE2STJ,None) (DYTF9PPB,None) (PQGEGJP9,double) (P3CU720U,char) (C3BY4PYR,int) (VGKONKML,float) (XFVANLCO,char*) (MS2ODA14,None) 
+T[12]: 4 ste:	(UDK69LSM,double) (CDKMOS0K,int) (TRIPA6KC,float) (HEOWUPPO,int) 
+T[13]: 7 ste:	(HMB1OBM6,int) (A1W3VT9W,double) (LVR5WY6R,int) (X2P1OUSN,float) (RP7TZJL1,None) (K3DJZ1YX,None) (ROBGUBAS,float) 
+T[14]: 2 ste:	(CVR90LUG,double) (S6OGL62O,char) 
+T[15]: 4 ste:	(C6JQA159,char*) (TOAA9B34,float) (WD3T44HI,float) (UZHK6LL0,None) 
+T[16]: 6 ste:	(BI99YW3L,int) (JLSMJ0OB,None) (LLL6A81J,char) (E5WE43NR,int) (IOJ2D8OJ,char*) (D68YK3KI,char*) 
 
 Number of entries in table: 17
 Number of probes into table: 100
@@ -215,435 +215,435 @@ Number of probes that immediately found entry: 17
 Maximum entries searched: 13
 
 ===== Table (3) =======
-T[0]: 5 ste:	(BY04G2RG,None) (YYZ9DIIW,char*) (ANJGQFMY,None) (TKKZ6L8Z,None) (PREQXBLV,double) 
-T[1]: 6 ste:	(WKTD81L5,None) (T8EQTW81,float) (FFW0G1L4,float) (VL94TDWP,None) (JUGATRUI,int) (PZTES8M2,None) 
-T[2]: 2 ste:	(S7804GOV,char) (S846YNWP,float) 
-T[3]: 2 ste:	(CLBIZABP,double) (NSIOTGY2,None) 
-T[4]: 4 ste:	(R8K9QKD4,double) (VLEL41RE,None) (P2T293T9,char) (LQ3VH54W,None) 
-T[5]: 6 ste:	(Y4UL3HGQ,char) (IOPTYCWC,None) (U12WR393,char*) (UYYVPW6Y,float) (GIG3ZQIV,double) (Z7LBNAEQ,char*) 
-T[6]: 3 ste:	(TQDUYFQA,int) (LIS87GJ4,int) (EIKDQ3CL,char*) 
-T[7]: 0 ste:	
-T[8]: 6 ste:	(XZF9XJYZ,float) (BS79N5BA,None) (GJQOO0WG,None) (PEIZU7PR,double) (TXZWH0UO,char*) (I07KFMSP,int) 
-T[9]: 7 ste:	(AVCW9XTT,None) (E49UQQ4C,char*) (HCHYHYFS,double) (OBU3LN4M,double) (GXAFMFK6,double) (IZV3Z3B7,None) (VCTBXS5Q,None) 
-T[10]: 3 ste:	(V6JKGJ8F,char*) (H8BN8NGF,None) (YS7D782I,int) 
-T[11]: 5 ste:	(MUNJ5880,float) (XJIPNOYU,char*) (GA0NNB3C,char) (VDNK43FJ,None) (JXQSGLEK,double) 
-T[12]: 9 ste:	(K4X465MU,char*) (IXJP9S1W,float) (Z7Q0LN3F,char*) (KZKPTA6X,int) (ELDIWX8J,double) (Q5LCIMZ2,char) (SYB56IUG,char*) (YEIPBSRE,None) (YA5LI0H6,float) 
-T[13]: 8 ste:	(BUZLWUVH,float) (E2D2WVY3,int) (WZ7MLXO9,None) (XVSINQFE,float) (PYVCYQGZ,char) (WQCESOVY,int) (DF2300PN,char) (BZWJFCS0,None) 
-T[14]: 4 ste:	(K32WYC0F,None) (FCPV1N6H,char) (O8XO3B1T,char*) (IUVYVVH4,char*) 
-T[15]: 2 ste:	(IRKHLDNN,int) (B6RA1LEE,None) 
-T[16]: 3 ste:	(CT2BLR51,char) (EPO9EXLJ,char*) (QZI7YTL5,char) 
-T[17]: 2 ste:	(XEUEVV78,char) (Y3JI2YN4,float) 
-T[18]: 5 ste:	(L56OSCRM,float) (AN63OH6R,char*) (RZ4XX65O,None) (C8CI5FRN,float) (K6SL3FWP,int) 
-T[19]: 4 ste:	(XV4E5HHJ,char*) (ZN1DV9JW,None) (EK1O4KEY,float) (SJENCIJV,char*) 
-T[20]: 6 ste:	(K71M0FK4,None) (INRM49HM,double) (HSTLHFAR,None) (FZHPZVDY,char) (E26SFY5E,None) (EQXWVHO6,None) 
-T[21]: 2 ste:	(JQNIOM3O,float) (DV0EZ5AO,char*) 
-T[22]: 6 ste:	(DZ3KZ7L5,None) (W1POPFYG,float) (WBGUOSLS,char*) (XM7U4M28,char*) (R4HHEZLA,float) (Z1A596YJ,char) 
+T[0]: 5 ste:	(XKR2DAVD,char*) (HR654OW0,char) (SBMIJTAE,double) (Y6E6NUW6,char) (TBJKRPXG,double) 
+T[1]: 6 ste:	(C43OONQN,float) (R4BPME9M,float) (LCCH76NO,double) (EX8YNCJ6,char) (BQUQK8V2,char) (SYTPCTMR,int) 
+T[2]: 4 ste:	(MQH7R43V,char) (WOR9P300,None) (M7I4NWEW,char) (HMTE96OO,char) 
+T[3]: 4 ste:	(BVE3L6KI,char) (BGB1JKBG,char*) (MMNAFP8A,double) (MQJ8IP72,int) 
+T[4]: 5 ste:	(H490A2J6,float) (ZHKUT1S3,char*) (C72OUCIQ,None) (GIR658E7,int) (IQWENAGV,float) 
+T[5]: 3 ste:	(XARPW3BJ,char*) (U728W1UG,char) (FDRVWNXB,double) 
+T[6]: 3 ste:	(AKJU91LT,char) (TY0G66K2,None) (ITTTEF1O,char*) 
+T[7]: 5 ste:	(H8M03XC9,None) (DX70PVSO,double) (SIN736V0,double) (VHH6JAHT,None) (YGD5JFIT,None) 
+T[8]: 4 ste:	(DK5EAI6L,int) (PQ10R607,char) (GJM6G04E,char) (S346TKWD,char*) 
+T[9]: 2 ste:	(HJZZEXA1,double) (RUFE002A,float) 
+T[10]: 10 ste:	(M6BFBH6F,char) (Z44Y7501,double) (TNAHXUWR,double) (EUG3XZFL,double) (L619H6H3,char) (UIVEMJ7D,None) (O8YWL2FB,float) (HS3HL8W7,int) (JIDXHAX8,char) (FQ8XT3XQ,int) 
+T[11]: 1 ste:	(R00AZEZ6,char) 
+T[12]: 2 ste:	(YA02HGH5,char) (B2MAG53X,char*) 
+T[13]: 6 ste:	(U2MZ75I8,char*) (FUX5G9IV,None) (KQDTQ4J0,char) (DM3AIU88,float) (GQYQ1P33,char*) (US38Z27V,None) 
+T[14]: 4 ste:	(SE98CRIJ,char) (QF20MXWM,None) (BKKYGDL6,None) (UXU7VOHT,int) 
+T[15]: 4 ste:	(DVO0HY2S,None) (TYGRO0HN,char*) (FDRPKP54,int) (UF9Z9TI3,float) 
+T[16]: 4 ste:	(EO7TWU3D,None) (DX6YQN69,char) (ZB86LAZO,int) (SVGG0JUM,double) 
+T[17]: 3 ste:	(EFT5KMMA,char) (A5ZKMQY9,int) (ESGAP1PC,int) 
+T[18]: 8 ste:	(KXYUYCKC,char) (KX9J799Q,char*) (OQ2KF9GD,char) (AK40XHQL,int) (TQ2TEWZV,char) (TRLCXBHM,int) (CM0YTUT5,float) (PL2RLKT0,float) 
+T[19]: 3 ste:	(JFTQ91CV,None) (PY034QKF,char) (OINVKZFB,double) 
+T[20]: 4 ste:	(LCRT7CMC,None) (QVOJWD64,char*) (SFH5LABM,float) (FU0ZFG2V,char*) 
+T[21]: 6 ste:	(V7IFPKWY,None) (FSMYFG6N,int) (N1UC6PZB,float) (C5RD91VD,float) (VYUUFJQ5,char*) (OZI54ZV1,int) 
+T[22]: 4 ste:	(I39OADGW,char) (KK8I2PZT,char*) (WOWJDEK4,None) (JREX6N40,char*) 
 
 Number of entries in table: 23
 Number of probes into table: 100
-Number of probes that immediately found entry: 22
-Maximum entries searched: 9
+Number of probes that immediately found entry: 23
+Maximum entries searched: 10
 
 ===== Table (4) =======
-T[0]: 2 ste:	(E31SZLCZ,double) (XC0WHWOP,float) 
-T[1]: 3 ste:	(H17G54QA,int) (NUB76Y2T,int) (UW53M2IC,char*) 
-T[2]: 5 ste:	(QXW05EPT,double) (MM8U272N,double) (GH7OY93A,double) (MBVO4KSZ,float) (RZ3NE4QC,None) 
-T[3]: 4 ste:	(A5LSJ6FF,char*) (KWHY9SB1,int) (A6IW5ROK,int) (QH0TZZ0Z,float) 
-T[4]: 0 ste:	
-T[5]: 2 ste:	(MLCC52KG,double) (B2KTVFQJ,float) 
-T[6]: 2 ste:	(XN6FK9WL,float) (DZWNOD0Y,None) 
-T[7]: 2 ste:	(WBSV6JO4,char*) (T072295B,None) 
-T[8]: 5 ste:	(W41RTHOI,None) (KMWWNABJ,None) (SCV9FWPH,int) (NBK6MC2I,int) (ZP2G67YS,float) 
-T[9]: 1 ste:	(RTF1JJQ6,int) 
-T[10]: 0 ste:	
-T[11]: 5 ste:	(X8UMD2XE,float) (M7AIV6V3,char*) (ICFM847R,double) (L3BQTCV9,char*) (RYWLZ8GZ,float) 
-T[12]: 4 ste:	(LOGHJPFY,char) (U9YOGVL6,float) (TY9ARE5N,double) (FN4YV9UA,double) 
-T[13]: 4 ste:	(JWH53IP5,None) (VXV7VKEM,int) (PBJ7I7KF,float) (YX8JBWZH,double) 
-T[14]: 5 ste:	(IFWN1BG8,None) (IVXPN37I,char) (D9RBY5U2,float) (IGW7Q96W,double) (YGG3HDTQ,None) 
-T[15]: 2 ste:	(JO4T87AW,None) (Z5XWX0CV,char) 
-T[16]: 2 ste:	(BR5J4EUM,char) (PM954A6S,int) 
-T[17]: 3 ste:	(WGLQLCW2,None) (MSA4WO3C,char*) (XZ7PXSO2,char*) 
-T[18]: 2 ste:	(UPO3JT0B,double) (Q1XZQNSB,int) 
-T[19]: 1 ste:	(NS04MO7R,char*) 
-T[20]: 4 ste:	(W0XZZ994,None) (BH8560B6,double) (I7O7OO9A,None) (G06KO0UL,None) 
-T[21]: 4 ste:	(XF5IEAG8,char) (Q41T2M3T,char*) (T9FVEFD1,char*) (ZI8EYWBS,float) 
-T[22]: 1 ste:	(TX0WE7EM,double) 
-T[23]: 1 ste:	(DA54S00Y,None) 
-T[24]: 3 ste:	(ELY3P9V5,None) (GJ9SVKK5,float) (RARNNNO8,char*) 
-T[25]: 2 ste:	(LY5Q1JH5,None) (YD9GRCAS,double) 
-T[26]: 6 ste:	(QOBES8US,char) (NJXNB175,double) (UTIUV14Y,None) (GLWKKPWJ,char*) (IH6MBO16,None) (YIMHRZ50,None) 
-T[27]: 4 ste:	(NWYMWE18,char*) (UFM3QOOA,char*) (QGEFKHZR,int) (CUSK1LJN,int) 
-T[28]: 2 ste:	(S70GDQVY,float) (HS18WCVM,char*) 
-T[29]: 1 ste:	(A35R1BKU,None) 
-T[30]: 3 ste:	(BO102R96,None) (QFJHHJZ7,double) (Y5RH26PD,char) 
-T[31]: 4 ste:	(K6DWRT03,None) (ZA0U5P5J,char) (N0IYLVA6,None) (BGC1K8BS,char) 
-T[32]: 3 ste:	(L9H7ECCK,float) (PP812Z0D,char) (LACMF866,double) 
-T[33]: 0 ste:	
-T[34]: 2 ste:	(SXQ9D91C,None) (JNTCK9CK,char*) 
-T[35]: 3 ste:	(OX4MYPAP,int) (PCF9DNFN,double) (ETDVOSX3,int) 
-T[36]: 3 ste:	(UXMX801R,char*) (QMPXSSWT,double) (PJTYXR36,double) 
+T[0]: 2 ste:	(AJY15P8V,float) (XSCKI5Z2,float) 
+T[1]: 4 ste:	(QL772IPH,char*) (KIEJQE7U,int) (UBZ17IA4,float) (K5BRW2XJ,char) 
+T[2]: 2 ste:	(V9SB4IEB,double) (DGZP2IQH,None) 
+T[3]: 3 ste:	(J6SKVYG1,char) (QSKB9T78,double) (JY41SHQC,double) 
+T[4]: 5 ste:	(TRR2XONE,char*) (YUVFM9LL,int) (YS22KEQR,None) (ZY5YGWYZ,float) (A7DNIUD9,char) 
+T[5]: 4 ste:	(C080PB43,char*) (V6VMYO0D,None) (H5AHR7K0,None) (NFQKNDCP,char) 
+T[6]: 3 ste:	(IBCN5YIY,char*) (BRT2VGVE,double) (Q3BSMKKO,char) 
+T[7]: 3 ste:	(EM2IX8GW,float) (N2DVIUVU,int) (YV608NB9,None) 
+T[8]: 3 ste:	(F5ELPTVX,double) (EOU45WIX,int) (CQ959T12,int) 
+T[9]: 1 ste:	(XNV06GC5,None) 
+T[10]: 4 ste:	(W2RMHFBK,float) (E7ET6NYG,char) (ZOHZXRSF,float) (ARTGLQE8,None) 
+T[11]: 0 ste:	
+T[12]: 2 ste:	(LPI6S58V,char) (EP5SRUBH,None) 
+T[13]: 2 ste:	(Q65DU92V,None) (DKRV48RC,float) 
+T[14]: 4 ste:	(A8WGZC7P,None) (UN8U2MWD,None) (LO07EKA8,None) (DM9IKWMV,float) 
+T[15]: 3 ste:	(HFDXM25R,int) (JUMM5C6T,None) (K7X5AHQ2,None) 
+T[16]: 0 ste:	
+T[17]: 3 ste:	(Y6KO0V0L,int) (LONU7AJX,char*) (DN5L5V3C,float) 
+T[18]: 1 ste:	(PABF88IU,char) 
+T[19]: 2 ste:	(L2U3J4Z0,None) (YTND6N4O,None) 
+T[20]: 4 ste:	(JMVA4BBA,int) (D54A7NE5,None) (NCYRK7ZX,float) (XWH701JI,char) 
+T[21]: 3 ste:	(WBY24TDH,None) (WEJKRJDO,None) (RYRWUXKP,None) 
+T[22]: 4 ste:	(O8JTWPHV,double) (RTA2779T,int) (WXG4RR94,int) (OD5XUZN6,char*) 
+T[23]: 3 ste:	(B2XM4IO3,double) (K42W4TSN,None) (I4N6WY84,int) 
+T[24]: 2 ste:	(LKBNIYAU,None) (ZNDATT1B,float) 
+T[25]: 4 ste:	(YMHTGYTJ,char*) (M5BCSTMK,float) (T7FJFQT3,char*) (CW3V3JHK,None) 
+T[26]: 2 ste:	(Z2PJAB8V,char*) (RHU1MZJZ,None) 
+T[27]: 2 ste:	(TKZJPRYZ,None) (H8LIZ2B8,double) 
+T[28]: 1 ste:	(XR0MRV2N,None) 
+T[29]: 1 ste:	(R7PS2F4T,None) 
+T[30]: 2 ste:	(H14R149F,float) (NC0AY5LO,None) 
+T[31]: 3 ste:	(CFBTG130,char) (AINRG01O,char*) (M5GZC3Z5,None) 
+T[32]: 5 ste:	(VDDASVCJ,None) (YUTA14Q1,double) (T1F8D562,None) (QG5VEEDX,char) (XRVWY9EY,None) 
+T[33]: 6 ste:	(X6SOV5M1,None) (US83W8EY,char) (YYVZDB7N,double) (C0J1NNU0,char) (GHNHDQ70,char*) (HHFCA7PH,double) 
+T[34]: 3 ste:	(QW8HPPO7,char) (KC7BZY1Q,float) (Q5FAABRC,None) 
+T[35]: 3 ste:	(UGP18EUE,float) (SQ4KNBSV,float) (HK8TNIW6,None) 
+T[36]: 1 ste:	(MY9P1NYP,float) 
 
 Number of entries in table: 37
 Number of probes into table: 100
-Number of probes that immediately found entry: 34
+Number of probes that immediately found entry: 35
 Maximum entries searched: 6
 
 ===== Table (5) =======
-T[0]: 3 ste:	(FURX4M5O,None) (V0K4WXDI,None) (EBVVTM28,char) 
-T[1]: 4 ste:	(HW8HPRL3,float) (UOU4OE9G,None) (YN0PFTMX,int) (VVTGJ48C,double) 
-T[2]: 5 ste:	(SU8NK6RU,float) (W2Z23TXR,char) (V90WU8B4,char*) (LOZAIUHR,None) (G7W7HOPF,float) 
-T[3]: 4 ste:	(UY2BEUZJ,char*) (A97PVOJE,None) (VMWJSTC2,int) (JLIU9XWK,int) 
-T[4]: 9 ste:	(PP0LS8FF,char*) (MVXY5XP2,char) (R7REM83L,char) (YA6B61XE,char) (PNWQTTV3,double) (EGGL569Z,int) (P867G5RF,char) (PB7KAE9U,char*) (QHAV4YW2,None) 
-T[5]: 8 ste:	(BJX3KQFU,None) (BD1YVMDH,None) (TMZPJBGO,None) (SMAY21J6,None) (OGUNV42F,double) (C2AQHUCF,double) (CSO5LVPK,int) (NAVSD8XG,char) 
-T[6]: 2 ste:	(MY2ZZG39,None) (G41TSBMU,float) 
-T[7]: 5 ste:	(CTWKQW2H,float) (ELIVHEJ7,None) (PRE6F0PV,int) (GCZWNA34,None) (HH6KVPHR,float) 
-T[8]: 4 ste:	(CPL6O3VN,int) (HQ4TAVHO,char) (YU8OXX2T,char*) (ORYQ2RAW,int) 
-T[9]: 4 ste:	(M3N4FN4Y,char*) (I4ZR69QF,None) (F3KUAPCY,None) (CM0P3CWD,char) 
-T[10]: 5 ste:	(NTPGEPSE,None) (CHXPUSUK,char*) (J2EO8TQS,None) (CJTGIRWC,None) (I0QRZI4E,None) 
-T[11]: 5 ste:	(SFTYPGDH,float) (WF2YX5J8,char*) (RILOTFBU,float) (FJY9Z0VW,None) (MAD9LMG3,float) 
-T[12]: 6 ste:	(J5NKQ0RP,char) (QSSJLG8G,None) (P9B5OLH5,None) (N53VOAHJ,None) (JB3ZD88J,char*) (O7T68MQW,None) 
-T[13]: 3 ste:	(HICEYHHX,None) (J9MZN9LZ,None) (IPTW168R,float) 
-T[14]: 6 ste:	(YVOVULXI,None) (HC4PQNN5,None) (RFZMIAYM,char*) (TOL3PO8Y,char) (OLTAUXJC,None) (TQIAHZRT,char*) 
-T[15]: 6 ste:	(Y477M2RY,float) (RF01S3F7,None) (GM8BKFDR,char) (IR5XPQ4X,char*) (VRNGEO74,None) (NF3U3OTD,char*) 
-T[16]: 6 ste:	(MRORA403,None) (FPYCF36N,double) (W907J201,int) (FQV5NZHN,int) (UVC0IW2Z,int) (FQO6DBPJ,char) 
-T[17]: 2 ste:	(RHB9D4PA,double) (POETLALD,char*) 
-T[18]: 5 ste:	(QQVZ21DZ,double) (Z6DJ39YB,char) (GS6LZK83,char*) (CO2NXP22,double) (ARUBT5DR,char) 
-T[19]: 2 ste:	(I4DJDR1R,None) (MDAQJZ6M,double) 
-T[20]: 5 ste:	(DK38E5A1,char) (VOQDG0V9,char) (ISUL0N4Y,double) (WC17EJM6,double) (LVM1OCBY,None) 
-T[21]: 3 ste:	(LHQG7VBO,double) (WCJUR4YH,None) (KME9XIVW,None) 
-T[22]: 6 ste:	(HNGKEK39,int) (V4NY4UDC,int) (VLB43H69,char) (ALZVYTY7,char) (CD2US9NV,None) (MFAWCH6M,None) 
-T[23]: 5 ste:	(KYGRIIDO,double) (FLB5KKA6,None) (E5D7EXCW,double) (AJUAKE9O,double) (JNB96E3G,None) 
-T[24]: 7 ste:	(J9455SCT,None) (Q7A1SR8P,float) (TYEF54OH,char) (ILCUD9NY,double) (DSK2WPJD,None) (GAXM61VL,double) (KU8Z85BC,None) 
-T[25]: 9 ste:	(K1MUWF29,double) (UAGXGYLP,char) (NEBEXH8N,char) (ALKHS6GC,None) (Z8JN4XK6,double) (UDC0JEEO,float) (QZ5PTMGP,float) (CVGM2UBQ,double) (PYC7JTFS,float) 
-T[26]: 6 ste:	(VC5DS1O0,double) (U7SHG4JR,float) (GP2HMVVG,double) (MZ2S573R,None) (ZED6T6FM,None) (JDIT7WME,char*) 
-T[27]: 3 ste:	(UQ816Y4W,char) (FY1Q4TYU,float) (LZWA2KUU,int) 
-T[28]: 7 ste:	(XZDGGOK4,None) (GV1YW3UI,None) (W9B1F4Z4,char) (CZT9XVXB,int) (NICQWEJU,char) (CCR90MIE,None) (GVOB2KY1,None) 
-T[29]: 3 ste:	(WOXKMD07,int) (LUKGBGR6,char*) (RYC84B9L,float) 
-T[30]: 2 ste:	(NNO2J71B,float) (NMZKLZPV,None) 
+T[0]: 5 ste:	(K6D8K50R,float) (C600EK7J,char*) (A64LVY06,char) (WR8XMJ3B,float) (IQXRVJWM,None) 
+T[1]: 9 ste:	(GDNEEOFJ,float) (MILQMOSB,char*) (EHSVHS0F,float) (XGWQNJV6,None) (G7AQ6M4E,None) (GCQVTCLY,int) (U65P7GEU,int) (XVE55Q88,None) (D1PG544C,double) 
+T[2]: 4 ste:	(I3CJ3YMY,None) (SWJU2TI5,int) (U60S9OE9,None) (ZGMX36HF,None) 
+T[3]: 7 ste:	(J2QRU6GS,float) (C6BW0UYT,int) (J9KY37LJ,None) (M38LA0XT,None) (YLHMSBZW,char) (FTHL3SGO,char*) (BHSI7R4W,None) 
+T[4]: 2 ste:	(D9LEWGI1,float) (F8E3RIXO,double) 
+T[5]: 6 ste:	(NIUIV80C,char*) (LHCVGEQX,int) (QPL3MBYM,float) (BKBMXLJB,float) (LSSUNRFU,char) (E9ADXLL0,float) 
+T[6]: 1 ste:	(QYQFGIA0,double) 
+T[7]: 3 ste:	(R2TL6A39,char*) (GOWECGXM,int) (M0UCTSHI,int) 
+T[8]: 8 ste:	(MNDWDIID,char*) (VQGXAD2U,double) (H8MRV9OI,None) (O38OG5RX,char) (OAXP8RWX,double) (PVNHKQTG,None) (DOPHV2V3,None) (F82MATJQ,char) 
+T[9]: 9 ste:	(T4XC79AM,float) (P8228TXQ,None) (CWCJPJJY,None) (ZOZE5YF5,float) (X9IQUJNO,float) (ZJDTKR1H,double) (F77PQD1O,float) (PQMTIJVN,None) (NUFZ8JI0,None) 
+T[10]: 4 ste:	(O81CT57R,int) (WIB8TEB5,None) (RXITBB81,char) (SJH0CEFD,None) 
+T[11]: 5 ste:	(IML47PPN,int) (IRKNGBPQ,None) (JU5IGIFU,int) (HP62EAK4,char*) (R5HFLE98,char*) 
+T[12]: 3 ste:	(EDPJXOY3,char) (E49OYA8Y,float) (MB9L5A66,char) 
+T[13]: 4 ste:	(AA9W1QXB,char) (L5J8TTPP,float) (D8LL1RPF,double) (W4D2WF8C,None) 
+T[14]: 6 ste:	(QU23NZP3,char) (HGKYEPAY,None) (QUNJM9FC,double) (KNDI3M31,None) (E0GVW796,char) (T6UVH4ZP,float) 
+T[15]: 7 ste:	(F9Q7K51G,None) (ML3SB8HW,char) (KMEK9B20,float) (Y7UIMHZD,None) (V9YFDLPP,double) (RUFZGD6J,int) (ZW6ZOIEJ,double) 
+T[16]: 6 ste:	(P5NOXYB0,char) (SDQXJXBP,int) (B3KL3RFF,char*) (MHGNZTHA,None) (ML0XDXGV,char) (POO7N2G0,float) 
+T[17]: 5 ste:	(CZ7U9QL4,float) (SLPNV87K,double) (QIRG2R4X,int) (MDD38N2F,int) (THXFFQEL,None) 
+T[18]: 8 ste:	(EEI5VFQC,None) (VVIRSU6W,None) (QMB1W11N,char*) (PSRAXQH1,double) (K0YOBRDA,None) (SBZ6CS0R,None) (S7H327D4,float) (CET32MGO,char*) 
+T[19]: 6 ste:	(YMD1IAY2,double) (T794IFW6,None) (NVS3IYSO,char*) (B59YUPX0,int) (BF5C2DSM,double) (R7ZLTR9R,int) 
+T[20]: 4 ste:	(JCUO9AL4,double) (ON1A7P0W,None) (FZZOC4KL,double) (LC9DW2TB,int) 
+T[21]: 0 ste:	
+T[22]: 3 ste:	(SNYXK1DZ,None) (I1KREO0R,None) (AJ3WBCZP,double) 
+T[23]: 3 ste:	(LVP7EIXC,int) (VOPBYK0H,None) (LKPRA28Q,None) 
+T[24]: 5 ste:	(WHGIGP4B,char) (DEIZFBXG,char) (YAWDW9NY,float) (QLW429IN,char) (IJRGLUMB,None) 
+T[25]: 5 ste:	(GAX5V5L6,float) (V55EW8VY,None) (S0RBOLW2,None) (DGJT8WNW,char*) (FOR9SFXF,char*) 
+T[26]: 5 ste:	(TO6MNGM6,char*) (G14QC3WH,float) (NXSLS5Y0,int) (T7FM6RBI,float) (X2PMDKKL,char) 
+T[27]: 2 ste:	(F30H0JI8,int) (DLCFIKPG,int) 
+T[28]: 6 ste:	(GOHTFQ7X,char) (VPHMDJO4,float) (NNIIWOTS,float) (LSUD4M8L,int) (TEWSPDFI,None) (K085DB6I,None) 
+T[29]: 2 ste:	(KTECARIH,int) (TKBAX2MZ,double) 
+T[30]: 7 ste:	(FQGRED6W,None) (QY6IBV8X,double) (S8PK9UZJ,float) (XZGMTWZD,None) (F5KS0KR3,int) (S1N3YAKH,double) (VDRP8V2O,None) 
 
 Number of entries in table: 31
 Number of probes into table: 150
-Number of probes that immediately found entry: 31
+Number of probes that immediately found entry: 30
 Maximum entries searched: 9
 
 ===== Table (6) =======
-T[0]: 3 ste:	(J6WRUS6F,int) (GBHB4EKO,char*) (MT3HY0AA,None) 
-T[1]: 5 ste:	(ZN2BY9O5,None) (LH3OTFWW,char) (TMKKUAEK,None) (FLTW0CWY,None) (SUCWDPZ5,char) 
-T[2]: 3 ste:	(D8YOF7L6,int) (W1ZDSBMR,int) (GICR2IZK,None) 
-T[3]: 5 ste:	(ITHHURZP,char) (DLKPHHKB,None) (M3R047ZD,char) (B6UTQVOZ,float) (B3DMJASA,float) 
-T[4]: 4 ste:	(FUOO4C6B,double) (B0BUDRTZ,None) (E7BQMQFO,None) (VNAC5EJG,double) 
-T[5]: 1 ste:	(MSCC808K,float) 
-T[6]: 3 ste:	(KVO52WQM,None) (YDKKXE22,double) (K1XTUST6,int) 
-T[7]: 3 ste:	(WXF4FNHP,char) (LI5U0ZL2,char*) (XNPXXS9N,None) 
-T[8]: 4 ste:	(RRCOE7I2,None) (JBEE8ON5,char*) (TLHBF0PR,double) (KI5GF46W,char) 
-T[9]: 3 ste:	(CC79FY1Z,double) (G5AAGJFG,float) (SR6OAZ4S,None) 
-T[10]: 3 ste:	(PF6A4HB3,None) (PFIME0AC,char*) (EJ5S9L69,char*) 
-T[11]: 2 ste:	(WYLIWJP3,char*) (CN9KT2HG,None) 
-T[12]: 1 ste:	(CRIKDUM5,double) 
-T[13]: 5 ste:	(G4MC8SEW,float) (Q7GTDRGH,None) (KJF31RYA,double) (F0AG53BA,None) (L2ZEXOHG,char*) 
-T[14]: 5 ste:	(G20VW2HB,double) (GS8YVB7Q,char*) (YD4JNG9S,None) (YUG6JKO9,None) (O7YIX8NW,char) 
-T[15]: 6 ste:	(BMWBN4L3,None) (JBNKWED4,char) (G5WDL4QZ,float) (XDG7OCBU,None) (JNV1TRHM,char) (P39OQEWW,float) 
-T[16]: 5 ste:	(IG5RFGOO,char*) (MJKV0402,float) (AESAONK3,float) (YQHDNFOA,float) (KIUPY8RD,None) 
-T[17]: 4 ste:	(H873NSUF,float) (BKLMU4OS,char) (CP8F3UNU,float) (PGTS0OT0,int) 
-T[18]: 2 ste:	(JQVI793F,double) (GRVDRY9S,char*) 
-T[19]: 3 ste:	(A8JFLQ03,double) (H78BCG9J,float) (NXSXK1ET,None) 
-T[20]: 1 ste:	(CCWCNIS8,None) 
-T[21]: 2 ste:	(DF2HZC15,None) (JYG41JBW,char*) 
-T[22]: 1 ste:	(DAYD08BA,char) 
-T[23]: 3 ste:	(KTR4H4C7,char) (T33BAAG7,char) (YF4TS8QD,None) 
-T[24]: 1 ste:	(V01W1WVF,None) 
-T[25]: 7 ste:	(GFTNBBIX,char*) (UXBR8JBB,char) (CRPF5QAX,double) (FU1UABWH,float) (E2OZLS3H,char) (U32S0BBD,int) (VAYUNHFM,double) 
-T[26]: 4 ste:	(GHRUVQF0,None) (UT9V2VBV,float) (NZFJE8CF,char*) (MZ9FEPH0,None) 
-T[27]: 2 ste:	(OCPKZZZA,double) (SDMSG710,int) 
-T[28]: 3 ste:	(ADRVW71F,None) (OQTJJG73,float) (CM0J2J1T,float) 
-T[29]: 1 ste:	(NKWGVVX6,double) 
-T[30]: 2 ste:	(E7WFQ2F4,None) (Y7EAO0QW,char) 
-T[31]: 2 ste:	(NSKJMP0C,char*) (QCCL5HA7,char) 
-T[32]: 1 ste:	(KSUX4K4L,char) 
-T[33]: 2 ste:	(Q3V0C4RB,int) (C4L5MLSE,double) 
-T[34]: 4 ste:	(P82NA31N,double) (ZR704F2R,double) (UN1GTDE4,char) (BEWCMDZX,float) 
-T[35]: 3 ste:	(J64HDAEP,int) (V4RIYXIE,char*) (IL7ZSWGG,int) 
-T[36]: 4 ste:	(H2MR3ZQQ,int) (RKIE6BQ2,None) (YOREVS9C,double) (CRHYS9LW,None) 
-T[37]: 6 ste:	(N5028R1Q,int) (WJIHM6SD,char) (SVBNC61P,double) (CM1ZISXB,int) (XRRA34WX,float) (XSDQGFM4,None) 
-T[38]: 2 ste:	(I3BNILZX,char) (LPNUCZWA,double) 
+T[0]: 7 ste:	(KJKU04U0,double) (KJ1KGAKL,None) (V68YR3EI,char*) (K5PEZHMD,int) (Y9Z7YTHM,char*) (DZHAN41U,None) (JSW3JF0H,char) 
+T[1]: 2 ste:	(U5MHZKI3,None) (NOH89PY3,None) 
+T[2]: 3 ste:	(VIQSZOHO,float) (O4KIY4FC,None) (ZJDNT98J,None) 
+T[3]: 2 ste:	(NRC8GYVK,None) (U0ZI22L3,float) 
+T[4]: 5 ste:	(EF83UERB,char) (QON36O6C,None) (AQNPTINX,None) (GX0UEPRR,None) (PI8KJ68E,float) 
+T[5]: 1 ste:	(K2SSBG6I,None) 
+T[6]: 2 ste:	(BXMIZBCY,int) (VECMI52P,char*) 
+T[7]: 1 ste:	(ROEW60TB,None) 
+T[8]: 6 ste:	(P3HZV8RK,None) (F7KC2X1L,char*) (T2DERMEG,None) (VZNMR87B,char) (OJ5N9YWG,char) (C05R5ILI,int) 
+T[9]: 1 ste:	(PC3PX5X5,char*) 
+T[10]: 1 ste:	(I7402MT5,None) 
+T[11]: 5 ste:	(MK8GILH0,double) (RPYDREJ3,double) (RU4V0R4Q,None) (ZB9KK4OD,None) (S4PEA321,int) 
+T[12]: 1 ste:	(YR78FO64,char) 
+T[13]: 4 ste:	(II3NAY1T,char) (HMEPKZWG,char*) (GC9BZHJ7,char) (UT62A47C,int) 
+T[14]: 4 ste:	(JIMKTT28,None) (K8MJUKGZ,double) (MAJ6NI8H,int) (U14T3IOR,char) 
+T[15]: 4 ste:	(U2PAZD8V,None) (GZENECAQ,None) (Q1Q8YPAN,char) (ZQ7ULNYJ,None) 
+T[16]: 3 ste:	(KO5ZF9FB,char) (SKKKF8L4,char*) (G7XNUGVZ,None) 
+T[17]: 2 ste:	(NHUOQMHJ,None) (HL2M5E6I,double) 
+T[18]: 2 ste:	(IKC78PYE,double) (C784JBFY,int) 
+T[19]: 5 ste:	(U5NW964K,double) (T4N06QE4,double) (CK17KYB7,char*) (SB0ZXNOL,None) (WGTFM224,double) 
+T[20]: 5 ste:	(V0QU2NTE,double) (N2SK767O,None) (LIDXIRYY,int) (JQVWZC5J,None) (RGM3ZYYT,char*) 
+T[21]: 6 ste:	(JJ6UAJXS,char) (JCX2YA4S,double) (JIM1V3CV,None) (HVRQ09WN,int) (CB68VU1B,char*) (UT3TLZ0W,char) 
+T[22]: 4 ste:	(T930PACS,float) (QEC0OPJV,int) (SVTQKXD0,float) (IL2N2ZC5,float) 
+T[23]: 6 ste:	(NSDHZDV8,None) (L8T434DP,None) (JVATKUX4,char*) (TUFNKEXR,None) (X85TEEYE,None) (E6ODA17H,None) 
+T[24]: 3 ste:	(UVDFIKEO,None) (JCKKSSCK,None) (BYUZXKI6,float) 
+T[25]: 2 ste:	(FBBEM3SX,None) (LMN5J3PF,char) 
+T[26]: 3 ste:	(RS2E8C8N,float) (H4NZ0R08,char*) (P1OBCJ09,char) 
+T[27]: 4 ste:	(S7HTC987,None) (VRI35G3S,float) (MMM97MH2,char) (GR4BON58,None) 
+T[28]: 2 ste:	(JK75VDPO,double) (ZMHCN146,None) 
+T[29]: 4 ste:	(GVAFQJ83,double) (KAW4JYB7,float) (H10UC9FF,float) (YNQMJ7EF,float) 
+T[30]: 6 ste:	(O885VB63,double) (EQCDY5J3,double) (IPL2DC3T,None) (ABPPLN01,None) (KSH5D5RD,None) (X3POZL1H,float) 
+T[31]: 4 ste:	(JR2FRISI,float) (T10681MY,char) (BVRI0SUT,char) (TAVGY82Y,double) 
+T[32]: 2 ste:	(XZ9ODUCX,int) (GK53O2BD,double) 
+T[33]: 1 ste:	(LSUDCT96,int) 
+T[34]: 4 ste:	(RDA4SEEL,float) (H50J1HV1,char) (O1RZEFIN,char*) (WIOIKBR1,double) 
+T[35]: 2 ste:	(NXYO773H,None) (N8LNH5I5,None) 
+T[36]: 2 ste:	(GSQ59I91,char) (BNH2TMZ9,None) 
+T[37]: 4 ste:	(IWY8P3B7,None) (VX0B1XGS,char) (G2FYURFG,char*) (IBQEZY3M,double) 
+T[38]: 0 ste:	
 T[39]: 0 ste:	
-T[40]: 2 ste:	(KA39MC2E,double) (XQ8YVM78,double) 
-T[41]: 3 ste:	(JB5SU2Y5,None) (YPACS3QG,float) (XUFRR9XB,int) 
-T[42]: 1 ste:	(EOHVNBA5,char) 
-T[43]: 6 ste:	(XPR4EGNU,char) (JNLORU6S,char) (ANY8F5X6,None) (ZBOTAAUQ,int) (UF3ZC5T1,None) (VROOQUMP,None) 
-T[44]: 4 ste:	(O0QC8B9H,int) (V3QJTF7H,None) (CZPPNO3J,int) (RSXKI59L,char*) 
-T[45]: 2 ste:	(RNRYSU12,None) (FSGMFQSW,int) 
-T[46]: 3 ste:	(K780N2G5,None) (BCVRX04V,None) (SNSUTGOB,None) 
-T[47]: 2 ste:	(I3R0EYQ5,char*) (WWK5NYP9,int) 
-T[48]: 2 ste:	(J1HH892Y,double) (VBE8BZOY,char) 
-T[49]: 3 ste:	(NOANPECA,None) (QZRVRS3B,char) (E02Z4MHM,None) 
-T[50]: 2 ste:	(TF22QON5,int) (L2V0B7D5,int) 
-T[51]: 3 ste:	(S00S1P6V,None) (GOU0QIVG,float) (GWPZE6CF,char) 
-T[52]: 6 ste:	(OXR2ILTO,double) (G7LU1DB0,None) (U6CR5KPB,char) (XULXX5KE,None) (Y7XGBHMO,None) (FGL242PC,char) 
-T[53]: 2 ste:	(Z89OG8XS,char) (BU3RA3QB,char*) 
-T[54]: 2 ste:	(NAEBGU4E,char*) (I7UF6YCY,char*) 
-T[55]: 1 ste:	(QSZH97QM,char*) 
-T[56]: 3 ste:	(B7KOANZ4,float) (QA9A6018,None) (NY783YXU,None) 
-T[57]: 5 ste:	(NCP0JVE5,None) (MAQ9QUR0,char*) (FT2YSD16,double) (YXJIBCMY,char*) (BEZMDB8K,int) 
-T[58]: 3 ste:	(H6JXL26X,double) (GGED63VV,None) (HHDO8R7K,None) 
-T[59]: 1 ste:	(X1CH522X,int) 
-T[60]: 4 ste:	(P4B0ZOPX,char) (AMKCFBC5,double) (MY2HA2MV,char*) (BUEACRYY,float) 
-T[61]: 2 ste:	(PSUGWNFN,char) (K0XL49UP,int) 
-T[62]: 3 ste:	(UAFMP4EC,float) (TVTH3UYL,double) (X1R5VE0X,int) 
-T[63]: 4 ste:	(TAWA1GDD,None) (KKKO5HNW,int) (VK5P7BS1,None) (ZY2FLO6W,int) 
-T[64]: 1 ste:	(NWVQ55ON,char*) 
-T[65]: 3 ste:	(T6NT22K4,char) (AZWCF48E,char) (ATQEJDWR,None) 
-T[66]: 2 ste:	(E3JCKPTT,float) (DXDKT6HB,char*) 
-T[67]: 2 ste:	(J7EI9FAH,char*) (RJNRD57E,char*) 
-T[68]: 4 ste:	(GVLWQ5X7,char*) (L8OPT5F5,int) (DAFYYJ7B,None) (X60NDDCT,float) 
-T[69]: 1 ste:	(ZCTTEEEA,None) 
-T[70]: 3 ste:	(N043VCP8,None) (V1LF0NNM,char) (UCENXX3U,double) 
-T[71]: 3 ste:	(T6H5L0DG,char) (SSFTGQUK,double) (L1CU7OK3,double) 
-T[72]: 8 ste:	(VF8CNMSG,float) (TRJ47M2O,int) (QKXK3RBJ,char*) (MHM0L2YO,int) (XW06XIBU,double) (ELQ3ED6E,None) (VMMJR1GS,float) (HTHCF91O,None) 
-T[73]: 0 ste:	
-T[74]: 3 ste:	(BRKEL802,float) (Z6QQC0XN,char*) (J98D42HR,char*) 
-T[75]: 5 ste:	(JH9PRH1Y,int) (OWLZK5SL,char) (WO7F2NEB,int) (UN4IFWAJ,char*) (EJTYD9YB,double) 
-T[76]: 4 ste:	(S8JZABVY,float) (PX4OHN8H,double) (BBUP8ONE,double) (AQ767BNH,None) 
-T[77]: 2 ste:	(QDS4G6T0,None) (LUG4ZYQE,int) 
-T[78]: 5 ste:	(RRY5LYT6,char*) (DGDXNVKJ,float) (EY78WK43,int) (WZDTDRHN,char*) (T13YXFZ8,int) 
-T[79]: 1 ste:	(WI1VMD0H,char*) 
-T[80]: 2 ste:	(SWOUBEEU,None) (AD9X66DO,float) 
-T[81]: 2 ste:	(NLGT9VOY,int) (SQ2VTV7U,None) 
-T[82]: 2 ste:	(O9GCJSL6,None) (NQYQNZ59,char*) 
-T[83]: 3 ste:	(XEC0N6FH,char*) (YEVLHM0L,float) (D0ONN6HE,None) 
-T[84]: 1 ste:	(LEJL6LMV,None) 
-T[85]: 4 ste:	(FOMNWC78,int) (AHO72D74,char) (DP3TNCCB,int) (F7XY9VHB,char*) 
-T[86]: 1 ste:	(BEYK9BDM,char) 
-T[87]: 3 ste:	(G95VY61N,double) (JTG0A5DC,char) (I3BRGR6Y,None) 
-T[88]: 3 ste:	(NADRST77,double) (RFU2BI1T,float) (YEB4IFT1,None) 
-T[89]: 3 ste:	(UURUS6PZ,int) (NBE5ANWC,double) (DAK4KRCC,None) 
-T[90]: 2 ste:	(CW2Y442S,float) (QCXT4VT6,float) 
-T[91]: 6 ste:	(PQVQ5IJF,float) (H3WOM8M8,char*) (YY4SSK4Y,int) (EOA5X0U7,double) (L33V7HJO,double) (AKBULYT8,float) 
-T[92]: 2 ste:	(IQJS77P0,int) (NES88HFY,double) 
-T[93]: 2 ste:	(V9P8FYDL,int) (ADQX9SO7,None) 
-T[94]: 3 ste:	(TZ9OEWRL,char*) (SW11STRX,float) (CNELNQTN,char) 
-T[95]: 1 ste:	(BEG2GYQ7,float) 
-T[96]: 4 ste:	(YFO47FHI,char) (KDACQUO5,double) (EN3F4IUA,None) (JEBPEDY3,float) 
-T[97]: 5 ste:	(WTHMK77H,float) (IU8L7XR0,char) (VOCKI5JH,float) (UK6KJUP8,double) (Q8A47JVJ,char*) 
-T[98]: 6 ste:	(Q03U34IS,int) (ML2X0WKU,double) (YT5KHWQK,None) (W8NR5RJ1,char*) (NHKBOYW8,float) (OQU5ZRGX,None) 
-T[99]: 3 ste:	(VZBDU5TO,float) (LOAWU0FT,double) (OBJ54WPB,double) 
-T[100]: 5 ste:	(FPF32BX5,double) (EFV0XTXF,char*) (C958GGMG,None) (SKY30GF3,float) (LRV80TNG,double) 
+T[40]: 3 ste:	(NKS06RNP,None) (O9WJRFYO,None) (GDXXFT0W,int) 
+T[41]: 4 ste:	(QXP396CQ,double) (VD6N3J11,char) (WBQ33ORF,char) (CN30I59G,int) 
+T[42]: 7 ste:	(N1LAQGQ9,float) (SO4ENBS1,char*) (ISA1C955,None) (VYL5EZ5P,double) (Q7K25F8U,None) (ODGC9014,int) (EMXOEJCI,char) 
+T[43]: 3 ste:	(AVKTY0U4,None) (WEJA5AOV,int) (P86PA23V,float) 
+T[44]: 3 ste:	(AHAGMCZQ,double) (N5UYN1PD,char*) (CWY7THFJ,float) 
+T[45]: 2 ste:	(KR11GPSX,int) (D2VDKSE4,None) 
+T[46]: 1 ste:	(DUQTOXBD,None) 
+T[47]: 4 ste:	(PONNHRIL,float) (ZW1OZHZ6,double) (OZEVK3U0,double) (P91ZVS1Y,char*) 
+T[48]: 4 ste:	(P0XDAZWZ,None) (VF95O3K8,int) (N7V4EDJR,None) (ZP6H6EK7,None) 
+T[49]: 8 ste:	(SQN5OUIK,double) (T12YXW77,None) (MRT9PCEI,float) (NQ944UX8,float) (MDXYW6WN,int) (YNHJMQQS,float) (HYLZRMZQ,double) (FG4HDLHS,float) 
+T[50]: 2 ste:	(HOMVP3Z5,float) (UJCPNR5S,int) 
+T[51]: 4 ste:	(B8C6UGC8,None) (ZXVXPHJM,double) (WU5PN0JN,None) (PJJ5C7IV,int) 
+T[52]: 1 ste:	(GS5F43KN,char*) 
+T[53]: 2 ste:	(QLC6E0K8,char) (HEYP28Z1,float) 
+T[54]: 3 ste:	(HOU9OYPO,float) (LERNWTAJ,double) (MNDBB10P,char*) 
+T[55]: 2 ste:	(U91X2LHA,char*) (IRGGO49T,None) 
+T[56]: 5 ste:	(BDNC2EBZ,int) (OVXYCK7G,None) (S8XGK15L,char) (IRUDQX5Q,float) (E1L5S65C,int) 
+T[57]: 2 ste:	(JVKQFNB9,float) (S6KPLK8O,float) 
+T[58]: 3 ste:	(K0KWJ5JH,char) (UCBAS17F,char) (RKKHZKNN,char) 
+T[59]: 2 ste:	(FMI7XATS,float) (XB8JWSEP,char) 
+T[60]: 2 ste:	(BY3ZXUS4,None) (BCBCZM6E,char*) 
+T[61]: 1 ste:	(SK8LO4UE,None) 
+T[62]: 3 ste:	(HAZ893PZ,None) (NEN5X0EN,char) (IVPRYR6H,char) 
+T[63]: 4 ste:	(N241JUKZ,double) (PD7H15G1,char*) (IKZ0D5YW,char*) (L6Q3AH1K,int) 
+T[64]: 2 ste:	(TSZGFL9V,int) (M8QKGVRN,None) 
+T[65]: 6 ste:	(JRZS8106,char*) (DXEV2X0A,char) (AN5BCPBB,char*) (WYZTBOJ1,int) (E38LD0L4,char*) (JSZKA05R,char*) 
+T[66]: 7 ste:	(XWTKA411,None) (O4E8WMCA,float) (D1ARALHJ,None) (E5OMOEOJ,float) (RWF0XB44,None) (DLCPWZP2,float) (SEX6C45F,int) 
+T[67]: 3 ste:	(AJ0PUHE9,int) (FQ1CGH4Y,char*) (V5ATXDBR,char*) 
+T[68]: 1 ste:	(VVV5UOHP,double) 
+T[69]: 4 ste:	(YSMIG6C1,None) (ZF6LOAXZ,char*) (J500RR73,int) (OI1DAW4W,None) 
+T[70]: 5 ste:	(OGQVZRDH,int) (CXNV9RAP,char) (EDSF722C,int) (DP72KEXZ,int) (EHVPMHFN,None) 
+T[71]: 5 ste:	(YVAA9FNH,char*) (HFP5YIKC,None) (B3QMXPHE,char) (P0HUQBF6,int) (H0ZJT0J3,double) 
+T[72]: 2 ste:	(E5XY1POP,None) (BL2XW6R4,int) 
+T[73]: 2 ste:	(QEF6G1B7,None) (MDQ9TPGB,double) 
+T[74]: 2 ste:	(SL56FGEL,None) (J21N51N7,char*) 
+T[75]: 3 ste:	(XL1S3IV9,None) (E2WQG8B3,float) (MQM1YUPY,double) 
+T[76]: 2 ste:	(XEZIMU2L,int) (R8RFZ1AF,float) 
+T[77]: 1 ste:	(EB7HM2CM,float) 
+T[78]: 7 ste:	(QOGPJXCX,float) (QJAVMGQM,None) (EF2H19PV,char*) (FJS2MJN1,float) (VO7C92B0,char) (XPQR436V,char*) (J2H5AZSL,None) 
+T[79]: 3 ste:	(C95QBDEH,int) (RYLY4DIC,char*) (B55S97PV,float) 
+T[80]: 4 ste:	(ECVKHU92,char) (Z2V4IIC2,char*) (PFA6NPUR,char) (M0K7CBFC,int) 
+T[81]: 3 ste:	(ZWBL9MNF,int) (JQB3OCVN,char) (RR1MWSXY,double) 
+T[82]: 1 ste:	(WNRV4WCX,float) 
+T[83]: 2 ste:	(JAD20K5S,int) (UQLEJKDM,char) 
+T[84]: 3 ste:	(BNL0XWI8,int) (X2EHAR1S,int) (HDMPO82Y,double) 
+T[85]: 3 ste:	(UO18H6XR,char*) (A9VVASR3,None) (SK3LE0OS,double) 
+T[86]: 0 ste:	
+T[87]: 2 ste:	(SO6YSOM7,char*) (LZPGKF7S,double) 
+T[88]: 1 ste:	(YPE2SZAQ,None) 
+T[89]: 2 ste:	(IO0J69GU,None) (MPMEBOIJ,char*) 
+T[90]: 3 ste:	(LAVATHIC,char*) (T4G72EPE,double) (EZW35N3T,float) 
+T[91]: 3 ste:	(TMXDLE90,None) (CK86MH9F,double) (LWW352AF,None) 
+T[92]: 1 ste:	(FFARPJXF,int) 
+T[93]: 3 ste:	(SQI92TPK,int) (RCQB5KPD,None) (URCVRV67,double) 
+T[94]: 3 ste:	(NX90U6IV,int) (QIZHLPO7,char) (NRE7ZB53,int) 
+T[95]: 4 ste:	(CO9LXEQP,double) (Z7CP5L0D,None) (BLOHL2KK,char) (ZV4K66ZA,float) 
+T[96]: 0 ste:	
+T[97]: 2 ste:	(MAHCM962,int) (AZYC8973,double) 
+T[98]: 2 ste:	(NO19DX1K,None) (PDXZ28G4,int) 
+T[99]: 1 ste:	(KTDOZAT4,None) 
+T[100]: 2 ste:	(T0X0ITEO,float) (CEUSJX91,char*) 
 
 Number of entries in table: 101
 Number of probes into table: 300
-Number of probes that immediately found entry: 99
+Number of probes that immediately found entry: 97
 Maximum entries searched: 8
 
 ===== Table (7) =======
-T[0]: 2 ste:	(KBQQTZ5Z,float) (E9RS8OPR,None) 
-T[1]: 2 ste:	(IPNFJSD1,char) (MDT718RG,float) 
-T[2]: 2 ste:	(SOP13311,char*) (T1ISM9SZ,None) 
+T[0]: 0 ste:	
+T[1]: 0 ste:	
+T[2]: 1 ste:	(GD835BYH,None) 
 T[3]: 0 ste:	
-T[4]: 1 ste:	(GWY1ZGAM,None) 
-T[5]: 1 ste:	(QD7G4DOG,None) 
-T[6]: 1 ste:	(SFAVE3VK,float) 
-T[7]: 1 ste:	(ILC9LAAL,char*) 
-T[8]: 1 ste:	(XV91PCZU,char*) 
-T[9]: 0 ste:	
-T[10]: 1 ste:	(MXYUOJKK,double) 
-T[11]: 2 ste:	(QU419W8Q,double) (HVPC11AD,None) 
+T[4]: 0 ste:	
+T[5]: 2 ste:	(BKS9KW93,int) (RXG61VBZ,None) 
+T[6]: 0 ste:	
+T[7]: 2 ste:	(AUSEY9QN,None) (WKLJMUCO,float) 
+T[8]: 1 ste:	(THKCFVGN,char*) 
+T[9]: 1 ste:	(L64QSPGJ,int) 
+T[10]: 2 ste:	(FDRE1017,None) (XP3401Z0,char*) 
+T[11]: 0 ste:	
 T[12]: 0 ste:	
-T[13]: 4 ste:	(LDTFEII9,double) (CNY4DVIE,char) (G806V5ZQ,float) (LDBQ1OJ9,None) 
-T[14]: 1 ste:	(L7CD4KO9,None) 
-T[15]: 2 ste:	(I79K5OVU,float) (PYUXG7S1,double) 
-T[16]: 1 ste:	(X2MQRYXZ,double) 
-T[17]: 0 ste:	
-T[18]: 0 ste:	
-T[19]: 2 ste:	(D7HODB52,char*) (Q08BKL2B,char) 
-T[20]: 0 ste:	
-T[21]: 3 ste:	(KNGKWQW6,double) (URSZVL1B,char*) (IRC0Z2RJ,int) 
+T[13]: 0 ste:	
+T[14]: 1 ste:	(HGH215S4,float) 
+T[15]: 0 ste:	
+T[16]: 2 ste:	(GMH9R1CD,float) (YUJGOIE0,int) 
+T[17]: 3 ste:	(YTRA5PSM,float) (HDY4UG6S,float) (Y754565R,char*) 
+T[18]: 1 ste:	(P8EPFK19,float) 
+T[19]: 2 ste:	(FS6ZMPYQ,double) (TR9Y5VQM,float) 
+T[20]: 2 ste:	(VFKKFUEG,int) (KG12PSCG,char*) 
+T[21]: 1 ste:	(PPT26ZUG,double) 
 T[22]: 0 ste:	
-T[23]: 1 ste:	(KB86T4GR,int) 
-T[24]: 2 ste:	(VIZHUGU6,float) (GZ466KI9,double) 
-T[25]: 1 ste:	(ZBUWSNI8,None) 
-T[26]: 1 ste:	(SNJ6D1TS,double) 
-T[27]: 0 ste:	
-T[28]: 0 ste:	
-T[29]: 1 ste:	(TRLHKEIK,float) 
-T[30]: 1 ste:	(O4NUUA8D,int) 
-T[31]: 3 ste:	(LIBUBLAW,int) (BD307BS2,double) (N1H08PWN,None) 
-T[32]: 0 ste:	
-T[33]: 1 ste:	(O1FWA8JD,char) 
-T[34]: 2 ste:	(O0PKQLMM,int) (HAYHUWR6,int) 
-T[35]: 0 ste:	
-T[36]: 2 ste:	(KMPXB1ED,None) (BX7OUCAJ,char*) 
-T[37]: 1 ste:	(A7TSRZ0C,None) 
-T[38]: 1 ste:	(CDA85IBN,char*) 
-T[39]: 2 ste:	(WZOS0AL8,int) (UJHXX4NW,char*) 
-T[40]: 0 ste:	
-T[41]: 1 ste:	(MGBR44M1,None) 
-T[42]: 1 ste:	(X081YUVB,double) 
-T[43]: 0 ste:	
-T[44]: 1 ste:	(Z33TCR50,double) 
-T[45]: 0 ste:	
-T[46]: 2 ste:	(SCH5F7FA,None) (HMFKNC7W,None) 
-T[47]: 0 ste:	
-T[48]: 1 ste:	(DA4LZ51S,char) 
-T[49]: 0 ste:	
-T[50]: 3 ste:	(FMMESS13,int) (G2MMZOXN,None) (G3FN2CQ5,int) 
-T[51]: 1 ste:	(P6NYY3EQ,int) 
-T[52]: 1 ste:	(R4AH0SVS,char*) 
-T[53]: 1 ste:	(YI3AQOEC,float) 
-T[54]: 1 ste:	(K8XT2KXG,None) 
-T[55]: 1 ste:	(C5L67SAQ,char*) 
+T[23]: 0 ste:	
+T[24]: 4 ste:	(P067P8VJ,float) (D561VEHO,char*) (H2TR2E0J,char) (SH9H1YY3,int) 
+T[25]: 2 ste:	(KUHMAH9Y,char) (GLC8DQ5J,None) 
+T[26]: 2 ste:	(BPXGID1T,int) (ESPLJX86,None) 
+T[27]: 1 ste:	(YM35OORC,char*) 
+T[28]: 1 ste:	(PIK6CDW5,char) 
+T[29]: 1 ste:	(BR5SNJAL,double) 
+T[30]: 0 ste:	
+T[31]: 1 ste:	(CZR1TMBD,char) 
+T[32]: 1 ste:	(J2PD7LNE,float) 
+T[33]: 1 ste:	(D69CGZDE,char) 
+T[34]: 0 ste:	
+T[35]: 1 ste:	(NZNWBRC0,float) 
+T[36]: 1 ste:	(FC232Q6R,float) 
+T[37]: 0 ste:	
+T[38]: 1 ste:	(MURHK88X,int) 
+T[39]: 1 ste:	(ZV51YIRY,float) 
+T[40]: 2 ste:	(ZM9MHN5D,None) (JD8NOTZ6,float) 
+T[41]: 0 ste:	
+T[42]: 1 ste:	(QZX7L7CV,char*) 
+T[43]: 1 ste:	(DCU6QFHA,double) 
+T[44]: 0 ste:	
+T[45]: 1 ste:	(HBJRQNTW,float) 
+T[46]: 1 ste:	(AKBACLGD,None) 
+T[47]: 4 ste:	(EBAXQSWR,int) (M7RWEHDE,double) (JIA7V6CD,char*) (P101O7KT,char) 
+T[48]: 1 ste:	(CS43B3FJ,None) 
+T[49]: 1 ste:	(K4VJG1IC,None) 
+T[50]: 1 ste:	(PPJKCNHB,None) 
+T[51]: 1 ste:	(XQAFL8W8,char*) 
+T[52]: 1 ste:	(Q8O3BPS2,None) 
+T[53]: 1 ste:	(ZRO3SEU0,char) 
+T[54]: 1 ste:	(CJYJHMBF,float) 
+T[55]: 1 ste:	(TSN5EO4O,double) 
 T[56]: 0 ste:	
-T[57]: 0 ste:	
-T[58]: 3 ste:	(Y673D0UF,None) (VQIYMX74,char*) (XPGR4AAS,None) 
+T[57]: 1 ste:	(JC9KR1HC,float) 
+T[58]: 0 ste:	
 T[59]: 0 ste:	
-T[60]: 3 ste:	(W01I3WXA,None) (BTM33FNJ,char) (WB0B8DSP,char*) 
-T[61]: 1 ste:	(N1OXH9GA,None) 
-T[62]: 0 ste:	
+T[60]: 0 ste:	
+T[61]: 2 ste:	(UL2MP2TP,double) (XMN86FSO,int) 
+T[62]: 1 ste:	(WUPEX1WG,double) 
 T[63]: 0 ste:	
 T[64]: 0 ste:	
-T[65]: 4 ste:	(Q9ZBNCHC,char) (HM4DPAPW,float) (QNRYYKJF,None) (VXYODXSN,char*) 
-T[66]: 0 ste:	
-T[67]: 1 ste:	(GF0Y0O1V,None) 
-T[68]: 1 ste:	(AQVNNC8J,char*) 
-T[69]: 0 ste:	
-T[70]: 2 ste:	(NZ7KV7X6,None) (KSDNZ6VX,None) 
-T[71]: 2 ste:	(EXSTCKNF,None) (N8YFV1N7,None) 
-T[72]: 3 ste:	(E3JPAXSO,char) (O54IHWEI,None) (ZT5QGQUH,None) 
-T[73]: 0 ste:	
-T[74]: 2 ste:	(R5O68MA4,int) (SN1O8P1Z,float) 
-T[75]: 2 ste:	(QUHOZII3,int) (MCUTJHYQ,char*) 
-T[76]: 1 ste:	(K86YCRKA,double) 
-T[77]: 2 ste:	(B3SLDA4M,None) (SNLMM0G8,char*) 
-T[78]: 0 ste:	
-T[79]: 0 ste:	
-T[80]: 1 ste:	(EQJJEY0V,double) 
+T[65]: 1 ste:	(F4IQYG68,float) 
+T[66]: 1 ste:	(HAR63SOP,int) 
+T[67]: 0 ste:	
+T[68]: 2 ste:	(X3FWZQEF,None) (AQSO1ZQK,int) 
+T[69]: 1 ste:	(E0PF48Y4,double) 
+T[70]: 0 ste:	
+T[71]: 0 ste:	
+T[72]: 2 ste:	(CQGIL17J,char*) (F3VNRI0V,float) 
+T[73]: 1 ste:	(U38IH32H,None) 
+T[74]: 2 ste:	(ZA1XCVBT,int) (ZEA47AX1,double) 
+T[75]: 1 ste:	(ZEJ7L87A,double) 
+T[76]: 0 ste:	
+T[77]: 1 ste:	(HXVQ8LD0,char) 
+T[78]: 1 ste:	(JVH41BWJ,char) 
+T[79]: 2 ste:	(EJWJAAXC,char) (DG5IW2JY,char*) 
+T[80]: 0 ste:	
 T[81]: 0 ste:	
-T[82]: 1 ste:	(GE44RN1T,float) 
-T[83]: 0 ste:	
-T[84]: 1 ste:	(GQXTYQQT,char) 
-T[85]: 2 ste:	(IBUY71YQ,double) (H8AKVRQ9,float) 
-T[86]: 0 ste:	
-T[87]: 2 ste:	(G32M2878,None) (YOVMHIE7,None) 
-T[88]: 0 ste:	
-T[89]: 0 ste:	
-T[90]: 0 ste:	
-T[91]: 1 ste:	(B9VPT375,double) 
+T[82]: 2 ste:	(KC6O1Z03,None) (OWZMPH0F,None) 
+T[83]: 1 ste:	(GEWTS6ZY,char*) 
+T[84]: 1 ste:	(OUUNS7EM,None) 
+T[85]: 0 ste:	
+T[86]: 1 ste:	(MBC60OD9,float) 
+T[87]: 1 ste:	(C3XJF2Q2,int) 
+T[88]: 1 ste:	(OTQGQ9XB,char*) 
+T[89]: 1 ste:	(R539XBQ9,None) 
+T[90]: 3 ste:	(ZRD63ND1,float) (G36O4UZG,None) (O39ENKAD,float) 
+T[91]: 0 ste:	
 T[92]: 0 ste:	
-T[93]: 2 ste:	(A8CUBJIL,None) (ZPUDL7OA,int) 
-T[94]: 0 ste:	
-T[95]: 0 ste:	
-T[96]: 0 ste:	
-T[97]: 1 ste:	(ABGY8K79,char*) 
+T[93]: 1 ste:	(X4FY9K52,char) 
+T[94]: 2 ste:	(ETXM38CU,None) (RFLEKXH6,char) 
+T[95]: 2 ste:	(M8HRNA9F,double) (OHVMEZ22,float) 
+T[96]: 1 ste:	(DSZNROR5,char*) 
+T[97]: 2 ste:	(ZPYS7OR7,None) (LWDBRR43,None) 
 T[98]: 0 ste:	
-T[99]: 0 ste:	
-T[100]: 2 ste:	(QG1U6WFP,char*) (E4XU4B62,char) 
+T[99]: 2 ste:	(Z98GRAN0,int) (C9XQAO20,char*) 
+T[100]: 3 ste:	(VKR7EM4P,double) (WIGQ5E2Y,int) (CFBVAWSM,char) 
 
 Number of entries in table: 101
 Number of probes into table: 100
-Number of probes that immediately found entry: 62
+Number of probes that immediately found entry: 69
 Maximum entries searched: 4
 
 ===== Table (8) =======
-T[0]: 1 ste:	(LWEZNOAK,char) 
-T[1]: 3 ste:	(RG2ECRHT,None) (W9QB2S4I,None) (MM4DYW5N,double) 
-T[2]: 2 ste:	(T162RWU1,int) (S863VLHU,None) 
-T[3]: 1 ste:	(K1PT5PC2,None) 
-T[4]: 1 ste:	(H0N8ENS6,char) 
-T[5]: 4 ste:	(UMPFEQ4W,char*) (QT6TSPT6,char*) (FVLVD77G,char) (YE3KTTDX,double) 
-T[6]: 7 ste:	(LTKHB2S2,double) (TRCVO9CN,float) (WGS0BNQV,int) (RFBSB34K,char*) (H37GM8P3,char) (GLJA8IA5,char*) (PGRW59H7,None) 
-T[7]: 3 ste:	(GBW4DWQT,char) (Y6GII0YV,float) (KXCZQG0O,None) 
-T[8]: 1 ste:	(J533LB72,double) 
-T[9]: 1 ste:	(OKLTALN1,char) 
-T[10]: 1 ste:	(OS3FWMUX,int) 
-T[11]: 1 ste:	(EB5FTM5K,double) 
-T[12]: 1 ste:	(ZCW8DAK2,char*) 
-T[13]: 1 ste:	(G18EJO6B,char) 
-T[14]: 1 ste:	(COBZZJXT,int) 
-T[15]: 1 ste:	(S8YXH2IW,float) 
-T[16]: 2 ste:	(WHLJC0YP,char) (FGJVUEFE,int) 
-T[17]: 2 ste:	(LWEFMXA5,char) (LLETR5HM,None) 
-T[18]: 2 ste:	(NLGGYJ4O,char) (XDG3VAXJ,int) 
-T[19]: 1 ste:	(XRAFJMQS,None) 
-T[20]: 0 ste:	
-T[21]: 3 ste:	(QUHSHZW7,int) (NUJ652CR,char*) (P6VJV8L4,double) 
-T[22]: 2 ste:	(J4AZ8X6J,int) (FWYLRDVL,int) 
-T[23]: 1 ste:	(L5JSFYRJ,double) 
-T[24]: 2 ste:	(IWFVJ3LZ,None) (PTN9I7ZH,int) 
-T[25]: 2 ste:	(XG9AZC0W,char*) (VTI7LGZK,None) 
-T[26]: 2 ste:	(MVGQIEEO,float) (K4FV5EDL,None) 
-T[27]: 3 ste:	(AIRUORV9,double) (UJQI49ZN,char*) (BBY5Q5IG,char*) 
-T[28]: 3 ste:	(V9ITGSMU,float) (SGMKOME6,int) (DM5I345Q,char) 
-T[29]: 0 ste:	
-T[30]: 2 ste:	(J9NV83WR,None) (KU23DXNM,int) 
-T[31]: 2 ste:	(VTCNDOH6,None) (N29RBS6C,float) 
-T[32]: 6 ste:	(XC0S24FZ,float) (HZN93KG6,char*) (OE343TZR,None) (J2AL2T5I,int) (WULRMU1V,char*) (N1S5EYWG,char) 
-T[33]: 0 ste:	
-T[34]: 0 ste:	
-T[35]: 2 ste:	(VZ7SOIYH,int) (YJFO3RUA,float) 
-T[36]: 2 ste:	(A9N8NAWO,int) (HOJXZVNA,None) 
-T[37]: 2 ste:	(GUK43BW4,double) (FRPOOXMG,float) 
-T[38]: 4 ste:	(U7UNX1OW,int) (DTO3IK6X,char*) (X2HQDJ1A,None) (UTNIBUG4,double) 
-T[39]: 3 ste:	(RPOSMGGM,None) (UB4HDZYQ,char) (TG536OGU,float) 
-T[40]: 1 ste:	(Z1K61CS9,char) 
-T[41]: 1 ste:	(X1HS2STQ,None) 
-T[42]: 3 ste:	(TDJLYRUX,int) (JWQPQMGF,char*) (WVZLHAZ2,None) 
-T[43]: 1 ste:	(JVDVIJ4G,None) 
-T[44]: 1 ste:	(O6FM1SLI,None) 
+T[0]: 2 ste:	(DO2L2U7M,None) (SSI9LT9L,double) 
+T[1]: 0 ste:	
+T[2]: 3 ste:	(RK7146Q3,char*) (FD7CL36Z,float) (A0AV07DF,double) 
+T[3]: 3 ste:	(AAI1D1HB,char) (GRTYENB6,float) (GCXLZBB6,char*) 
+T[4]: 1 ste:	(TQ3AEL9G,char*) 
+T[5]: 0 ste:	
+T[6]: 0 ste:	
+T[7]: 1 ste:	(OVGFVKKC,float) 
+T[8]: 2 ste:	(HDEMB6DV,char*) (ENR3KY8R,None) 
+T[9]: 3 ste:	(PMA1D9NP,None) (ZNFQW0DY,double) (JSICRME9,float) 
+T[10]: 3 ste:	(RRPN89PY,None) (KC0RLBA7,None) (XLCZMFQL,char) 
+T[11]: 2 ste:	(SNJQN4X4,float) (URPTNY8M,char*) 
+T[12]: 2 ste:	(GBN351U4,double) (DMDWWJKV,double) 
+T[13]: 4 ste:	(UOCBOX5U,char) (D5K3WHRL,int) (Z76T0LZT,double) (YY1UDFE0,None) 
+T[14]: 4 ste:	(KV1HUCCL,double) (DWCCPQME,int) (BE99X3ID,double) (BIYQNDBH,int) 
+T[15]: 3 ste:	(NTJ8XLWO,char) (QGRUR81L,char) (YBFVLOR3,None) 
+T[16]: 4 ste:	(WQC35SHB,int) (P6Y5EDZ5,None) (JOLMXDRU,None) (Y3C3IC99,None) 
+T[17]: 3 ste:	(X11HYUCP,None) (JA3ALD1F,double) (A52FTZ2D,float) 
+T[18]: 2 ste:	(XQMYZXIF,float) (KGPIRJ73,int) 
+T[19]: 0 ste:	
+T[20]: 1 ste:	(X2QGJ3YW,float) 
+T[21]: 3 ste:	(JR02VPNB,None) (M165LHYP,float) (N16SZJT4,None) 
+T[22]: 3 ste:	(AK4KKAG9,None) (P358MD2S,float) (IOY9BN5D,char) 
+T[23]: 3 ste:	(ZDYU96JA,None) (YSGYUS2F,char) (VQF9JJHM,char*) 
+T[24]: 2 ste:	(UR3P60MN,None) (UQQ590WX,double) 
+T[25]: 2 ste:	(PJ8N53UW,double) (N2EEJBIT,int) 
+T[26]: 2 ste:	(KZ63N8L6,double) (B5Y0XYXE,double) 
+T[27]: 1 ste:	(FL3DO325,int) 
+T[28]: 4 ste:	(DSXR41FG,None) (KSGWVDTW,None) (EWW46IKJ,int) (ZY7VCU9O,int) 
+T[29]: 2 ste:	(BCR6JJXE,None) (VFYZJH6P,None) 
+T[30]: 1 ste:	(JF4T3KEI,float) 
+T[31]: 1 ste:	(RBI35OM0,float) 
+T[32]: 0 ste:	
+T[33]: 2 ste:	(B4AJQYRG,int) (SQW7M08X,float) 
+T[34]: 1 ste:	(CFS3ITUD,None) 
+T[35]: 1 ste:	(APYLBAAU,None) 
+T[36]: 3 ste:	(DD1PPD9D,None) (BLNTBJOT,float) (GVCSG2MG,double) 
+T[37]: 4 ste:	(RJDKQDSY,float) (LPGSUWO6,None) (SV1PKVBR,float) (LAW099T5,double) 
+T[38]: 3 ste:	(HU5G76GD,None) (P4I5CENX,char*) (L40G9W73,int) 
+T[39]: 2 ste:	(APLLWKMZ,double) (VPLUAQJC,float) 
+T[40]: 1 ste:	(W3XF0VKT,char*) 
+T[41]: 2 ste:	(JERT5GQT,char*) (QFVG21FH,char*) 
+T[42]: 2 ste:	(RCFBYHGL,int) (PNG6MJXY,None) 
+T[43]: 3 ste:	(B8NQS7IK,None) (F33UN7JG,None) (IS7LUV49,None) 
+T[44]: 6 ste:	(K4V7YCJA,char) (LX9XKFHH,double) (VXKQ1FFD,int) (ZT5AGNEE,int) (Q7BNW8II,char*) (AF7CXN1F,char*) 
 T[45]: 0 ste:	
-T[46]: 3 ste:	(FM80SNMN,int) (C6S40L8V,None) (N338T9E1,double) 
-T[47]: 1 ste:	(MQV40BX4,char*) 
-T[48]: 2 ste:	(AHM7RXD8,int) (GLUXBKVB,char*) 
-T[49]: 4 ste:	(K69PMXWT,char*) (OXOO74DR,int) (HEYWB2AN,double) (TTDTJLZV,char) 
-T[50]: 2 ste:	(Z5LOB5BQ,char*) (M2Q9AFTI,int) 
-T[51]: 2 ste:	(BXKKBVD6,None) (XG0ONF6H,float) 
-T[52]: 2 ste:	(TOXN5FZQ,char*) (KZCY5DCK,None) 
-T[53]: 4 ste:	(DWU0CD6W,None) (FSO7SQJA,char) (VIU07PIM,float) (D2ORWHGE,None) 
-T[54]: 1 ste:	(SUHIHUOY,char*) 
-T[55]: 0 ste:	
-T[56]: 1 ste:	(VHIQ6QTB,char) 
-T[57]: 2 ste:	(NYKD5845,char*) (PVL46VKY,float) 
-T[58]: 4 ste:	(FLWK3DYC,None) (TB5102AB,None) (GOKSYS48,float) (WPNQM4FN,double) 
-T[59]: 3 ste:	(XHY1ULIH,double) (AP6NXB8A,None) (WUPCUJ18,double) 
-T[60]: 0 ste:	
-T[61]: 3 ste:	(CC8NFTUO,double) (N9ZAZOUF,None) (Z7NVHYTG,char*) 
-T[62]: 2 ste:	(T2EFCYCL,None) (SGGGW11R,int) 
-T[63]: 5 ste:	(AJQ3VFNJ,char) (ZN0D1UED,int) (I182YCV4,None) (OEJHGOKC,char) (T6MX9L8B,int) 
-T[64]: 1 ste:	(QPHW9MSB,double) 
-T[65]: 1 ste:	(D6DDQ83H,int) 
-T[66]: 1 ste:	(NL6LQGXJ,float) 
-T[67]: 1 ste:	(NLZ95E88,None) 
-T[68]: 0 ste:	
-T[69]: 3 ste:	(LYQ68J4S,char*) (VAIWZ841,char) (NKTLVHWC,char) 
-T[70]: 0 ste:	
-T[71]: 5 ste:	(JT2WAXBQ,None) (UQ30BV24,None) (LFJM5XZ6,char) (YZ3XL1R3,double) (MU2BM9KN,float) 
-T[72]: 0 ste:	
-T[73]: 0 ste:	
-T[74]: 5 ste:	(Q4UT1J5C,double) (JFI925DB,None) (BJ1K84T5,None) (KSQOA9F2,float) (CUDUFMV8,double) 
-T[75]: 3 ste:	(W8HNHCYC,None) (LD0OYY8U,double) (FWZC89GY,float) 
-T[76]: 2 ste:	(JL5M75K1,None) (JD5TFGEZ,double) 
-T[77]: 1 ste:	(LCK5FS8J,int) 
-T[78]: 2 ste:	(C85LW99H,None) (Z00COIL5,None) 
-T[79]: 3 ste:	(LZW4IOB1,float) (ZJUKE8UD,float) (WUT90S2P,float) 
-T[80]: 2 ste:	(XKU2NEXZ,int) (KLFRZEFF,char) 
-T[81]: 1 ste:	(BS6S078H,int) 
-T[82]: 4 ste:	(VACLM6NO,None) (UARLRL62,None) (E1AAOQKY,char) (LHE0RALV,char*) 
-T[83]: 1 ste:	(TSY9XXDD,char) 
-T[84]: 2 ste:	(Z2EPYFN0,float) (JG14BC1J,int) 
-T[85]: 1 ste:	(IBFMDGDR,char) 
-T[86]: 5 ste:	(NCYFIE50,None) (SX77OCSV,char) (D1M0L5PA,None) (W7BAQOMG,None) (UJF65KXF,double) 
-T[87]: 2 ste:	(TWJ4XDDN,int) (TM7TPHBQ,float) 
-T[88]: 2 ste:	(Q7E4R364,None) (QWQGKVZG,double) 
-T[89]: 3 ste:	(CJ06HBJ8,double) (TDEEPTAV,int) (TQGUVQME,int) 
-T[90]: 1 ste:	(J42TFD8W,double) 
-T[91]: 3 ste:	(QCW7AUO4,double) (WSV8YH39,char) (JVYHLUKQ,char) 
-T[92]: 2 ste:	(SZM6PMUZ,None) (KXTC2JSX,None) 
-T[93]: 5 ste:	(SY9LG4YG,float) (ZVLK0LNY,float) (TQC660SC,double) (NT2JNRUG,float) (GN0G6X38,int) 
-T[94]: 2 ste:	(EQBUYIL4,float) (RJ0VQ0HK,int) 
-T[95]: 1 ste:	(HY9QGBZ8,int) 
-T[96]: 1 ste:	(QF4KWO97,double) 
-T[97]: 1 ste:	(KC5L3HQU,float) 
+T[46]: 3 ste:	(SV1DH6C7,char) (EBGLCFEZ,None) (R1AG4GFA,int) 
+T[47]: 7 ste:	(HW84UKR7,char*) (R3M6S81J,char) (I6E0S9I8,char) (Q8N65LSZ,None) (LR0HPLLG,float) (Y3TF9V38,char*) (VDV948GS,None) 
+T[48]: 5 ste:	(EP907UX1,None) (VQG6HWBC,None) (L6PPC927,None) (JCS8LBVF,float) (QLH7OFHD,float) 
+T[49]: 0 ste:	
+T[50]: 2 ste:	(ZED5UFFB,char) (KQ42CDH4,None) 
+T[51]: 1 ste:	(YALPR6YL,None) 
+T[52]: 0 ste:	
+T[53]: 5 ste:	(DLG68ZM8,None) (TR1Z1WL4,None) (WH9SWVA7,None) (BGG9EQYG,int) (WSYI65QO,int) 
+T[54]: 2 ste:	(YUM6H6N3,None) (SMOTRHWY,char) 
+T[55]: 2 ste:	(XIRRLKSL,None) (I9IQ4G5A,None) 
+T[56]: 1 ste:	(JSDLSKMJ,None) 
+T[57]: 1 ste:	(Y1BP20SB,int) 
+T[58]: 0 ste:	
+T[59]: 1 ste:	(YBRKGQX5,int) 
+T[60]: 1 ste:	(T3A8B1A8,double) 
+T[61]: 3 ste:	(SHF8XTK9,None) (WT263337,None) (PKNL6N7I,int) 
+T[62]: 1 ste:	(C9URJHTP,None) 
+T[63]: 3 ste:	(L1J6QX3G,int) (AV6F5S6F,None) (P8Q9QNU5,None) 
+T[64]: 1 ste:	(X3GV044A,char*) 
+T[65]: 0 ste:	
+T[66]: 3 ste:	(PYJCFQ7N,char) (OHBX4S27,char) (GPS9RIFU,float) 
+T[67]: 2 ste:	(HGCD3V32,char) (X4HGJRKL,None) 
+T[68]: 3 ste:	(K83VT9OQ,int) (L0B837P7,int) (NGZBPHRX,None) 
+T[69]: 0 ste:	
+T[70]: 1 ste:	(VWUTAINP,None) 
+T[71]: 0 ste:	
+T[72]: 2 ste:	(FKSB730T,None) (X4XZAXP4,int) 
+T[73]: 2 ste:	(JG1X0H53,char) (YOVTO09B,double) 
+T[74]: 2 ste:	(M4CL96SH,float) (CZPHPW5T,int) 
+T[75]: 5 ste:	(QXOOU5DS,int) (TRJ0ECSB,None) (H98IYGJV,None) (COVJ47MA,char) (UZLCUQD2,char) 
+T[76]: 1 ste:	(GI5QDUJM,char*) 
+T[77]: 1 ste:	(QX0NYEHW,None) 
+T[78]: 1 ste:	(PKFPDCGU,int) 
+T[79]: 1 ste:	(JBICVU1E,float) 
+T[80]: 2 ste:	(WADN45L8,None) (ZOM756A5,None) 
+T[81]: 3 ste:	(HCIQK1KK,char*) (KXLP32CM,char) (ZNZMN1CU,char) 
+T[82]: 1 ste:	(YFOUZYFS,None) 
+T[83]: 3 ste:	(D7Q0OLG0,char*) (CN15ZZR5,None) (KVSQFANK,float) 
+T[84]: 2 ste:	(TPGR4D6X,None) (R8W2WNAD,char) 
+T[85]: 1 ste:	(MT8RJMV3,None) 
+T[86]: 2 ste:	(J8OGPJYY,None) (O0VRNHV5,double) 
+T[87]: 1 ste:	(H9O4BK30,None) 
+T[88]: 5 ste:	(ICQIWZFA,double) (HN5H668M,char) (OTIV1SNP,None) (N92M5CQJ,char*) (P3PSNB0L,char) 
+T[89]: 2 ste:	(JGBHFKH9,char*) (KAI53MDF,None) 
+T[90]: 1 ste:	(WCEN2KEK,int) 
+T[91]: 4 ste:	(Y2CM47LU,float) (W3UC9YSW,int) (UPO3YOQG,char) (XCXC7UQR,char) 
+T[92]: 2 ste:	(PZ54J4IQ,float) (JHJGM6SV,None) 
+T[93]: 1 ste:	(BUGAR1RV,char*) 
+T[94]: 3 ste:	(OUL0XD8Z,None) (IQPGPFTT,char) (FSM2M4MW,double) 
+T[95]: 2 ste:	(BPAM9Y46,None) (H0WHP4K6,None) 
+T[96]: 1 ste:	(H5V3TD79,char*) 
+T[97]: 2 ste:	(KZA6AYDF,char) (UY6XS6Q5,None) 
 T[98]: 0 ste:	
-T[99]: 7 ste:	(IYXFZUVR,int) (Y3CUYFYC,char*) (XSXVNP8L,None) (O6U528EP,int) (SK9GX2PN,int) (KRJ9Z0I0,None) (U4AL5JUN,char) 
-T[100]: 0 ste:	
+T[99]: 1 ste:	(AS11FC81,double) 
+T[100]: 1 ste:	(YM1VTSAZ,None) 
 
 Number of entries in table: 101
 Number of probes into table: 200
@@ -651,111 +651,111 @@ Number of probes that immediately found entry: 88
 Maximum entries searched: 7
 
 ===== Table (9) =======
-T[0]: 1 ste:	(QBTZDTK6,int) 
+T[0]: 0 ste:	
 T[1]: 0 ste:	
 T[2]: 0 ste:	
-T[3]: 1 ste:	(UG38EJ0T,double) 
-T[4]: 0 ste:	
+T[3]: 1 ste:	(H7HA0QC1,char*) 
+T[4]: 1 ste:	(CR5JIPQY,None) 
 T[5]: 0 ste:	
-T[6]: 1 ste:	(LOF3CRV5,char*) 
-T[7]: 1 ste:	(OCSFGAKX,None) 
+T[6]: 1 ste:	(OX97YZCN,None) 
+T[7]: 0 ste:	
 T[8]: 0 ste:	
-T[9]: 0 ste:	
-T[10]: 0 ste:	
+T[9]: 3 ste:	(CSS5H7EP,int) (WQ99UO1Y,float) (WSVZFPCM,char*) 
+T[10]: 1 ste:	(ZQ0GXK0K,char*) 
 T[11]: 0 ste:	
-T[12]: 0 ste:	
+T[12]: 1 ste:	(H3OXK0YH,double) 
 T[13]: 0 ste:	
-T[14]: 3 ste:	(F1U70T9U,char*) (HQH69EA2,double) (PNM900M7,double) 
-T[15]: 1 ste:	(JILKQDMT,None) 
+T[14]: 3 ste:	(MEEL6RAW,float) (ZHE5WG0Z,int) (KA5MAM18,None) 
+T[15]: 2 ste:	(IRF2T58F,None) (PQQIZ4OI,int) 
 T[16]: 0 ste:	
-T[17]: 0 ste:	
+T[17]: 2 ste:	(OLQM4CT0,double) (IFS2NBD9,double) 
 T[18]: 0 ste:	
-T[19]: 0 ste:	
-T[20]: 1 ste:	(T4CZQLX9,None) 
-T[21]: 0 ste:	
+T[19]: 2 ste:	(X28KDGYG,char) (TIWLSS66,char) 
+T[20]: 1 ste:	(XC6CIBVM,None) 
+T[21]: 1 ste:	(IOMH8VV5,float) 
 T[22]: 0 ste:	
-T[23]: 1 ste:	(DOJQM7DD,None) 
+T[23]: 1 ste:	(REWNWDNF,None) 
 T[24]: 0 ste:	
-T[25]: 1 ste:	(GU4LCQQR,char) 
-T[26]: 0 ste:	
+T[25]: 0 ste:	
+T[26]: 2 ste:	(Z4DHONHI,None) (T84Q11AS,char) 
 T[27]: 0 ste:	
-T[28]: 0 ste:	
+T[28]: 1 ste:	(ILDQ2YC2,None) 
 T[29]: 0 ste:	
-T[30]: 2 ste:	(P1GH5VCJ,char*) (PXO0ORHG,None) 
+T[30]: 2 ste:	(R1Z5HOM2,char) (NZH59DL3,double) 
 T[31]: 0 ste:	
 T[32]: 0 ste:	
-T[33]: 2 ste:	(KQFS3YSE,None) (W4F8RO5T,None) 
-T[34]: 0 ste:	
+T[33]: 1 ste:	(M03I81M6,char*) 
+T[34]: 2 ste:	(ZHUTCCKW,float) (Q1CO01RC,float) 
 T[35]: 0 ste:	
-T[36]: 1 ste:	(YF8PXKJO,double) 
-T[37]: 0 ste:	
-T[38]: 1 ste:	(B45C7R0B,char) 
+T[36]: 0 ste:	
+T[37]: 1 ste:	(UHJ9DO04,char) 
+T[38]: 0 ste:	
 T[39]: 0 ste:	
-T[40]: 1 ste:	(YR9S5FXW,char*) 
+T[40]: 1 ste:	(HAH8SLM1,int) 
 T[41]: 0 ste:	
 T[42]: 0 ste:	
-T[43]: 1 ste:	(XK7BRYYP,char*) 
-T[44]: 1 ste:	(MWDBM9F2,float) 
-T[45]: 1 ste:	(SMSSMWSC,double) 
-T[46]: 1 ste:	(OEFZGRZ7,None) 
+T[43]: 1 ste:	(B44PTDOS,int) 
+T[44]: 0 ste:	
+T[45]: 1 ste:	(LGEV2I45,None) 
+T[46]: 0 ste:	
 T[47]: 0 ste:	
 T[48]: 0 ste:	
-T[49]: 1 ste:	(N233MWPD,char*) 
-T[50]: 1 ste:	(KFO7P4CG,None) 
+T[49]: 0 ste:	
+T[50]: 0 ste:	
 T[51]: 0 ste:	
-T[52]: 1 ste:	(DPZEZXRJ,double) 
-T[53]: 1 ste:	(SV57W65L,None) 
-T[54]: 4 ste:	(T890PFZO,float) (VQM78M73,None) (K3TNV344,float) (ATIXLFU8,None) 
+T[52]: 0 ste:	
+T[53]: 1 ste:	(X647RMYL,double) 
+T[54]: 2 ste:	(NMR5XO35,char) (VBK7QDFX,double) 
 T[55]: 0 ste:	
-T[56]: 3 ste:	(JTAXASWT,double) (M46RYSN8,char*) (XHG9QQK5,double) 
+T[56]: 1 ste:	(O6EGPSC3,None) 
 T[57]: 0 ste:	
-T[58]: 1 ste:	(R6HFRZJW,float) 
-T[59]: 1 ste:	(O8PMMMPC,int) 
-T[60]: 0 ste:	
-T[61]: 0 ste:	
-T[62]: 2 ste:	(W007CA2F,None) (W5QSNQS4,char*) 
+T[58]: 0 ste:	
+T[59]: 0 ste:	
+T[60]: 1 ste:	(TMZDARZX,char*) 
+T[61]: 1 ste:	(IEITW3Q6,None) 
+T[62]: 0 ste:	
 T[63]: 0 ste:	
 T[64]: 0 ste:	
 T[65]: 0 ste:	
-T[66]: 0 ste:	
+T[66]: 1 ste:	(CMOXU4XX,char) 
 T[67]: 0 ste:	
-T[68]: 1 ste:	(ST6TSC9H,float) 
-T[69]: 1 ste:	(F0U7DG4V,double) 
-T[70]: 1 ste:	(P03PRV1Q,None) 
-T[71]: 0 ste:	
+T[68]: 0 ste:	
+T[69]: 0 ste:	
+T[70]: 0 ste:	
+T[71]: 1 ste:	(X7P9CGXM,float) 
 T[72]: 0 ste:	
 T[73]: 0 ste:	
-T[74]: 0 ste:	
+T[74]: 1 ste:	(EPBV30R7,None) 
 T[75]: 0 ste:	
 T[76]: 0 ste:	
 T[77]: 0 ste:	
-T[78]: 0 ste:	
-T[79]: 1 ste:	(TEYADYNT,double) 
-T[80]: 0 ste:	
+T[78]: 1 ste:	(Y74904UM,double) 
+T[79]: 0 ste:	
+T[80]: 1 ste:	(QK3GUW42,double) 
 T[81]: 0 ste:	
-T[82]: 1 ste:	(YVSFBG4N,float) 
+T[82]: 0 ste:	
 T[83]: 0 ste:	
 T[84]: 0 ste:	
 T[85]: 0 ste:	
-T[86]: 1 ste:	(T916QUC5,float) 
-T[87]: 1 ste:	(Y967ZIHJ,None) 
-T[88]: 0 ste:	
-T[89]: 3 ste:	(PD83N8RL,int) (WDCXE1MR,None) (KCD8Z1TX,float) 
+T[86]: 1 ste:	(B85MUK9M,float) 
+T[87]: 0 ste:	
+T[88]: 1 ste:	(EGTS5LMS,None) 
+T[89]: 1 ste:	(GQT26BN2,char*) 
 T[90]: 0 ste:	
-T[91]: 1 ste:	(KZTYYRND,None) 
-T[92]: 1 ste:	(RZ7Z5FYJ,char*) 
-T[93]: 0 ste:	
-T[94]: 0 ste:	
+T[91]: 0 ste:	
+T[92]: 0 ste:	
+T[93]: 1 ste:	(FIDIQT3S,char) 
+T[94]: 2 ste:	(FDD3SN77,None) (UDIX6POK,None) 
 T[95]: 0 ste:	
 T[96]: 0 ste:	
 T[97]: 0 ste:	
-T[98]: 1 ste:	(WCKIA0C7,None) 
+T[98]: 1 ste:	(HMMWJWOC,None) 
 T[99]: 0 ste:	
 T[100]: 0 ste:	
 
 Number of entries in table: 101
 Number of probes into table: 50
 Number of probes that immediately found entry: 38
-Maximum entries searched: 4
+Maximum entries searched: 3
 
 ------------------done-------------------

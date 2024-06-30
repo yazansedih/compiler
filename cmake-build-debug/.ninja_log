@@ -20,3 +20,8 @@
 9	517	7413570092445690	CMakeFiles/compiler.dir/main.cpp.obj	51f2f686a09aeb0a
 16	585	7413570092515063	CMakeFiles/compiler.dir/parser/parser.cpp.obj	b5b000e584331be7
 589	729	7413570098242998	compiler.exe	dcb53966e0dbc040
+71	656	7414295886806817	CMakeFiles/compiler.dir/symbolTable/stlist.cpp.obj	eeaf17ebc5f6ebec
+34	764	7414295886438308	CMakeFiles/compiler.dir/main.cpp.obj	51f2f686a09aeb0a
+52	815	7414295886618410	CMakeFiles/compiler.dir/parser/parser.cpp.obj	b5b000e584331be7
+61	983	7414295886704169	CMakeFiles/compiler.dir/symbolTable/stable.cpp.obj	7f62caf6d6ad9dd6
+983	1147	7414295895925460	compiler.exe	dcb53966e0dbc040
