@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
     int Sizes[10] = {29, 29, 17, 23, 37, 31, 101, 101, 101, 101};
     int ElementsCount[10] = {100, 100, 100, 100, 100, 150, 300, 100, 200, 50};
 
-    STable ST2(Sizes[8]); // Initil table with 29 elements
+    STable ST2(Sizes[8], 0); // Initil table with 29 elements
     k = 0;
     for (k = 0; k < 10; k++)
     {

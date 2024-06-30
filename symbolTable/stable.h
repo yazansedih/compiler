@@ -5,7 +5,6 @@
 class STable
 {
 private:
-    unsigned long Size;
     STList *Table; // Dynamic Array of size = Size
     void init(int size);
     unsigned long ElfHash(char *str);
@@ -15,6 +14,8 @@ private:
     int number_hits = 0;      // Number of probes that immediately found entry
     int max_search_dist = -1; // Maximum entries searched
 public:
+    unsigned long Size;
+
     STable *next;
     STable();
     ~STable();
