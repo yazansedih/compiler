@@ -8,3 +8,4 @@ int var7 0
 float var8 0
 char var9 0
 int x12 0
+int x12 0
