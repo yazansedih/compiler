@@ -9,11 +9,11 @@ STList::STList()
     Head = NULL;
 }
 /**
- * @brief STList::FindEntry: search (linear search) the list and compare the name to the ones in the list
+ * @brief STList::GetSymbol: search (linear search) the list and compare the name to the ones in the list
  * @param name : Given name to find
  * @return : If name is found found return NULL otherwise reaturn a pointer to the Node
  */
-STEntry *STList::FindEntry(char *name)
+STEntry *STList::GetSymbol(char *name)
 {
     STEntry *ste = Head;
     while (ste != NULL)
@@ -25,15 +25,15 @@ STEntry *STList::FindEntry(char *name)
     return NULL;
 }
 /**
- * @brief STList::AddEntry : Call FindEntry, if name is alread in table return false, otherwise add it to the list
+ * @brief STList::PutSymbol : Call GetSymbol, if name is alread in table return false, otherwise add it to the list
  *                           Add it as the first Entry, like a stack which is fastest. Update Counter and Head
  * @param name : Name of Entry (variable)
  * @param type : Type of variable
  * @return : True if the node is added and False if the Entry Already exists in the Table
  */
-STEntry *STList::AddEntry(char *name, STE_TYPE type)
+STEntry *STList::PutSymbol(char *name, STE_TYPE type)
 {
-    STEntry *ste = FindEntry(name);
+    STEntry *ste = GetSymbol(name);
     if (ste)
     {
         return ste;

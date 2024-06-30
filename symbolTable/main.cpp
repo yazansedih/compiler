@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
         n = getIdetifier(fp, str, type);
         if (n == 3)
         {
-            Added = ST.AddEntry(str, type);
+            Added = ST.PutSymbol(str, type);
             if (!Added)
                 fprintf(fout, "Entry %s Already Exists\n", str);
         }
@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
         for (i = 0; i < ElementsCount[k]; i++) // create a 100 element table
         {
             getRandIdentifier(str, type);
-            Added = ST2.AddEntry(str, type);
+            Added = ST2.PutSymbol(str, type);
             if (!Added)
                 fprintf(fout, "Entry %s Already Exists\n", str);
         }

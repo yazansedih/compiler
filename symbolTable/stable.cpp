@@ -64,7 +64,7 @@ unsigned long STable::ElfHash(char *str)
     return h % Size;
 }
 
-bool STable::AddEntry(char *name, STE_TYPE type)
+bool STable::PutSymbol(char *name, STE_TYPE type)
 {
     if (foldCase)
     {
@@ -77,7 +77,7 @@ bool STable::AddEntry(char *name, STE_TYPE type)
         }
     }
     unsigned long index = ElfHash(name);
-    bool Added = Table[index].AddEntry(name, type);
+    bool Added = Table[index].PutSymbol(name, type);
     if (Added)
     {
         number_probes++;
@@ -96,7 +96,7 @@ bool STable::AddEntry(char *name, STE_TYPE type)
 STEntry *STable::FindInScope(char *name) // may be find and print entry
 {
     unsigned long index = ElfHash(name);
-    STEntry *ste = Table[index].FindEntry(name);
+    STEntry *ste = Table[index].GetSymbol(name);
     if (ste)
     {
         return ste;
@@ -153,7 +153,7 @@ STable *STable::exit_scope(STable *s)
     return s;
 }
 
-STEntry *STable::FindEntry(char *name)
+STEntry *STable::GetSymbol(char *name)
 {
     STable *temp = this;
     STEntry *entry;
@@ -171,7 +171,7 @@ STEntry *STable::FindEntry(char *name)
 
 void STable::FindAndPrintEntry(char *name, FILE *fp)
 {
-    STEntry *entry = FindEntry(name);
+    STEntry *entry = GetSymbol(name);
     if (entry != nullptr)
         fprintf(fp, "\nfound\n");
     else
@@ -187,21 +187,21 @@ char *ToLowerCase(char *str)
     return str;
 }
 
-STEntry *STable::GetSymbol(char *str)
-{
-    unsigned long index = ElfHash(str);
-    STEntry *ste = slots[index]->FindEntry(str);
-    if (ste)
-        return ste;
-    else
-        return NULL;
-}
+// STEntry *STable::GetSymbol(char *str)
+// {
+//     unsigned long index = ElfHash(str);
+//     STEntry *ste = slots[index]->GetSymbol(str);
+//     if (ste)
+//         return ste;
+//     else
+//         return NULL;
+// }
 
-STEntry *STable::PutSymbol(char *str, STE_TYPE type)
-{
-    if (this->foldCase)
-        str = ToLowerCase(str);
-    unsigned long index = ElfHash(str);
-    STEntry *Added = slots[index]->AddEntry(str, type);
-    return Added;
-}
+// STEntry *STable::PutSymbol(char *str, STE_TYPE type)
+// {
+//     if (this->foldCase)
+//         str = ToLowerCase(str);
+//     unsigned long index = ElfHash(str);
+//     STEntry *Added = slots[index]->PutSymbol(str, type);
+//     return Added;
+// }

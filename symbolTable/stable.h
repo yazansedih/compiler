@@ -26,12 +26,12 @@ public:
     void Reset(unsigned long size);
     STable *enter_scope(STable *s); /*Inform the symbol table that the parser is entering a new scope */
     STable *exit_scope(STable *s);  /*Inform the symbol table that the parser is leaving a scope.*/
-    STEntry *GetSymbol(char *str);
+    // STEntry *GetSymbol(char *str);
 
-    STEntry *PutSymbol(char *str, STE_TYPE type);
-    bool AddEntry(char *name, STE_TYPE type);
+    // STEntry *PutSymbol(char *str, STE_TYPE type);
+    bool PutSymbol(char *name, STE_TYPE type);
     STEntry *FindInScope(char *name); // finds and prints the Entry if it exist
-    STEntry *FindEntry(char *name);
+    STEntry *GetSymbol(char *name);
     void FindAndPrintEntry(char *name, FILE *fp);
     void PrintAll(FILE *fp);
     void Clear();

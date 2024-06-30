@@ -77,13 +77,13 @@ AST *Parser::parseDecl()
         consume(lx_identifier);
         consume(lx_colon);
         STE_TYPE type = parseType();
-        bool added = symbolTable->AddEntry(name, type);
+        bool added = symbolTable->PutSymbol(name, type);
         if (added == false)
         {
             printf("Line %d : Entry %s Already exist\n", scanner.Fd->getLineNum() + 1, name);
             exit(0);
         }
-        STEntry *entry = symbolTable->FindEntry(name);
+        STEntry *entry = symbolTable->GetSymbol(name);
         AST *node = make_ast_node(2, ast_var_decl, entry, type);
         return node;
     }
@@ -96,8 +96,8 @@ AST *Parser::parseDecl()
         consume(lx_eq);
         AST *expr = parseExpr();
         int value = eval_ast_expr(fd, expr);
-        symbolTable->AddEntry(name, STE_CONST);
-        STEntry *entry = symbolTable->FindEntry(name);
+        symbolTable->PutSymbol(name, STE_CONST);
+        STEntry *entry = symbolTable->GetSymbol(name);
         return make_ast_node(2, ast_const_decl, entry, value);
     }
     // im here
@@ -113,13 +113,13 @@ AST *Parser::parseDecl()
         consume(lx_colon);
         STE_TYPE type = parseType();
         AST *body = parseBlock(true);
-        bool added = symbolTable->AddEntry(name, type);
+        bool added = symbolTable->PutSymbol(name, type);
         if (added == false)
         {
             printf("Line %d : Entry %s Already exist\n", scanner.Fd->getLineNum() + 1, name);
             exit(0);
         }
-        STEntry *entry = symbolTable->FindEntry(name);
+        STEntry *entry = symbolTable->GetSymbol(name);
         return make_ast_node(4, ast_routine_decl, entry, formals, type, body);
     }
     else if (currentToken->type == kw_procedure)
@@ -132,8 +132,8 @@ AST *Parser::parseDecl()
         ste_list *formals = new ste_list;
         formals = parseFormalList();
         AST *body = parseBlock(false);
-        symbolTable->AddEntry(name, STE_NONE);
-        STEntry *entry = symbolTable->FindEntry(name);
+        symbolTable->PutSymbol(name, STE_NONE);
+        STEntry *entry = symbolTable->GetSymbol(name);
         return make_ast_node(4, ast_routine_decl, entry, formals, STE_NONE, body);
     }
     return nullptr;
@@ -187,13 +187,13 @@ ste_list *Parser::parseFormals()
     consume(lx_identifier);
     consume(lx_colon);
     STE_TYPE type = parseType();
-    bool added = symbolTable->AddEntry(name, type);
+    bool added = symbolTable->PutSymbol(name, type);
     if (added == false)
     {
         printf("Line %d : Entry %s Already exist\n", scanner.Fd->getLineNum() + 1, name);
         exit(0);
     }
-    STEntry *entry = symbolTable->FindEntry(name);
+    STEntry *entry = symbolTable->GetSymbol(name);
     ste_list *s = new ste_list;
     s->head = entry;
     s->tail = parseFormalsPrime();
@@ -227,7 +227,7 @@ AST *Parser::parseStmt()
         char *name = new char[64];
         if (currentToken->type == lx_identifier)
             strcpy(name, currentToken->str_ptr);
-        STEntry *entry = symbolTable->FindEntry(name);
+        STEntry *entry = symbolTable->GetSymbol(name);
         consume(lx_identifier);
         consume(lx_colon_eq);
         AST *lower_bound = parseExpr();
@@ -245,7 +245,7 @@ AST *Parser::parseStmt()
         char *name = new char[64];
         if (currentToken->type == lx_identifier)
             strcpy(name, currentToken->str_ptr);
-        STEntry *entry = symbolTable->FindEntry(name);
+        STEntry *entry = symbolTable->GetSymbol(name);
         consume(lx_identifier);
         consume(lx_rparen);
         return make_ast_node(1, ast_read, entry);
@@ -257,7 +257,7 @@ AST *Parser::parseStmt()
         char *name = new char[64];
         if (currentToken->type == lx_identifier)
             strcpy(name, currentToken->str_ptr);
-        STEntry *entry = symbolTable->FindEntry(name);
+        STEntry *entry = symbolTable->GetSymbol(name);
         consume(lx_identifier);
         consume(lx_rparen);
         return make_ast_node(1, ast_write, entry);
@@ -275,7 +275,7 @@ AST *Parser::parseStmt()
         char *name = new char[64];
         if (currentToken->type == lx_identifier)
             strcpy(name, currentToken->str_ptr);
-        STEntry *entry = symbolTable->FindEntry(name);
+        STEntry *entry = symbolTable->GetSymbol(name);
         consume(lx_identifier);
         return parseIdTail(entry);
     }
@@ -373,13 +373,13 @@ STEntry *Parser::parseVarDecl()
         consume(lx_identifier);
         consume(lx_colon);
         STE_TYPE type = parseType();
-        bool added = symbolTable->AddEntry(name, type);
+        bool added = symbolTable->PutSymbol(name, type);
         if (added == false)
         {
             printf("Line %d : Entry %s Already exist\n", scanner.Fd->getLineNum() + 1, name);
             exit(0);
         }
-        return symbolTable->FindEntry(name);
+        return symbolTable->GetSymbol(name);
     }
     return nullptr;
 }
@@ -621,7 +621,7 @@ AST *Parser::parseValue()
         char *name = new char[64];
         if (currentToken->type == lx_identifier)
             strcpy(name, currentToken->str_ptr);
-        STEntry *entry = symbolTable->FindEntry(name);
+        STEntry *entry = symbolTable->GetSymbol(name);
         consume(lx_identifier);
         ast_list *list = parseValueTail();
         if (list == nullptr)
